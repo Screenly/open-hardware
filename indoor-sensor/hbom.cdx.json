@@ -1,0 +1,178 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:9fdea428-b345-471b-adad-c03e7715acdb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-05-05T12:00:00Z",
+    "component": {
+      "type": "device",
+      "bom-ref": "esp32-room-sensor",
+      "name": "ESP32 Room Sensor",
+      "version": "1"
+    }
+  },
+  "components": [
+    {
+      "type": "device",
+      "bom-ref": "esp32-devkit-v1",
+      "supplier": {
+        "name": "Espressif Systems",
+        "url": [
+          "https://www.espressif.com/"
+        ]
+      },
+      "name": "ESP32 DevKit V1",
+      "description": "Wi-Fi/Bluetooth development board based on the ESP32 microcontroller (ESP-WROOM-32 module)",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://www.espressif.com/en/products/devkits/esp32-devkitc/overview"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:device:quantity",
+          "value": "1"
+        },
+        {
+          "name": "cdx:device:function",
+          "value": "microcontroller"
+        },
+        {
+          "name": "cdx:device:location",
+          "value": "stripboard"
+        },
+        {
+          "name": "cdx:device:deviceType",
+          "value": "thru-hole"
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "bom-ref": "dht22-sensor",
+      "supplier": {
+        "name": "Aosong Electronics Co., Ltd",
+        "url": [
+          "https://www.aosong.com/"
+        ]
+      },
+      "name": "DHT22",
+      "description": "Digital temperature and humidity sensor (AM2302)",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://download.mikroe.com/documents/datasheets/DHT22_datasheet.pdf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:device:quantity",
+          "value": "1"
+        },
+        {
+          "name": "cdx:device:function",
+          "value": "sensor"
+        },
+        {
+          "name": "cdx:device:location",
+          "value": "stripboard"
+        },
+        {
+          "name": "cdx:device:deviceType",
+          "value": "thru-hole"
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "bom-ref": "ccs811-sensor",
+      "supplier": {
+        "name": "ams AG",
+        "url": [
+          "https://www.ams.com/"
+        ]
+      },
+      "name": "CCS811",
+      "description": "Digital VOC/eCO2 air quality sensor module (CCS811 on CJMCU-811 breakout)",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://ams.com/documents/20143/36005/CCS811_DS000459_7-00.pdf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:device:quantity",
+          "value": "1"
+        },
+        {
+          "name": "cdx:device:function",
+          "value": "sensor"
+        },
+        {
+          "name": "cdx:device:location",
+          "value": "stripboard"
+        },
+        {
+          "name": "cdx:device:deviceType",
+          "value": "thru-hole"
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "bom-ref": "resistor-4k7",
+      "supplier": {
+        "name": "Multicomp",
+        "url": [
+          "https://www.multicomp-pro.com/"
+        ]
+      },
+      "name": "4.7kΩ Resistor",
+      "description": "4.7 kΩ pull-up resistor",
+      "properties": [
+        {
+          "name": "cdx:device:quantity",
+          "value": "1"
+        },
+        {
+          "name": "cdx:device:function",
+          "value": "resistor"
+        },
+        {
+          "name": "cdx:device:location",
+          "value": "stripboard"
+        },
+        {
+          "name": "cdx:device:deviceType",
+          "value": "thru-hole"
+        }
+      ]
+    },
+    {
+      "type": "device",
+      "bom-ref": "stripboard",
+      "supplier": {
+        "name": "Vero Technologies",
+        "url": [
+          "https://www.verotl.com/"
+        ]
+      },
+      "name": "Stripboard",
+      "description": "Prototype stripboard used as circuit base for assembly",
+      "properties": [
+        {
+          "name": "cdx:device:quantity",
+          "value": "1"
+        },
+        {
+          "name": "cdx:device:function",
+          "value": "board"
+        }
+      ]
+    }
+  ]
+}
+
