@@ -1,0 +1,232 @@
+(footprint "BatteryHolder_MYOUNG_MY-2032-08_CR2032"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MYOUNG MY-2032-08 CR2032 coin cell retainer clip (+), SMD, 4.4 mm high, phosphor bronze; the negative contact is a PCB pad (gold or nickel finish, no vias, no paste). Tab pads per MYOUNG PCB layout; negative pad D17.8. Also fits Keystone 3034. Origin at the cell centre.")
+	(tags "battery holder retainer clip coin cell CR2032 20mm SMD MYOUNG MY-2032-08 Keystone 3034")
+	(property "Reference" "J?"
+		(at 0 -11.5 0)
+		(layer "F.SilkS")
+		(uuid "88822ece-79f4-47b8-ae81-cb01869434c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BatteryHolder_MYOUNG_MY-2032-08_CR2032"
+		(at 0 11.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "064c8158-a18e-4049-8664-f7b18c5248be")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "43e7f435-0193-4e0e-a681-69d01307ea0c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "30de0aed-c3f7-474f-b42b-ef09510ec5d4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_arc
+		(start -9.546 -4)
+		(mid 0 -10.35)
+		(end 9.546 -4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "44ea3077-4505-4464-86e5-9f4f3e664216")
+	)
+	(fp_arc
+		(start 9.546 4)
+		(mid 0 10.35)
+		(end -9.546 4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e38cded1-57ef-49ee-9d63-e279c0268da8")
+	)
+	(fp_line
+		(start -12.75 -10.5)
+		(end 12.75 -10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a6d0ac15-4fa6-47eb-b073-560d3155779f")
+	)
+	(fp_line
+		(start -12.75 10.5)
+		(end -12.75 -10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5c092f60-67c9-4039-a071-4d2664d432f2")
+	)
+	(fp_line
+		(start 12.75 -10.5)
+		(end 12.75 10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "814fbe38-f386-4409-8894-2c568b7038ce")
+	)
+	(fp_line
+		(start 12.75 10.5)
+		(end -12.75 10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0a568784-f704-41e4-a4a9-10de0583540d")
+	)
+	(fp_line
+		(start -10.55 -7.6)
+		(end 10.55 -7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5590de80-0f22-4a0d-8949-f43afd9dd5f3")
+	)
+	(fp_line
+		(start -10.55 7.6)
+		(end -10.55 -7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "93c0a745-0c4a-4b17-88b5-6b446211ef9d")
+	)
+	(fp_line
+		(start 10.55 -7.6)
+		(end 10.55 7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4c233e11-594f-454a-9887-f4485390cff2")
+	)
+	(fp_line
+		(start 10.55 7.6)
+		(end -10.55 7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a5e1509c-d831-4953-baa3-08ddf2c12258")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 10 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c9c5f477-a23d-4958-88b4-37d2f012d3dd")
+	)
+	(fp_text user "+"
+		(at -10.9 -4.4 0)
+		(layer "F.SilkS")
+		(uuid "e8c4a6b8-1883-47bc-8f30-59f6e65c4432")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "f71588da-f73b-43d3-9d3f-9773bd892c7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -11.25 0)
+		(size 2.5 7.1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "912a1969-9630-484c-b01c-1941550c1314")
+	)
+	(pad "1" smd rect
+		(at -11 0)
+		(size 2 5.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1e93226d-c38f-4e34-ac90-0e4d6ad60761")
+	)
+	(pad "1" smd rect
+		(at 11 0)
+		(size 2 5.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9d627edc-78b7-4626-a534-ef77d3da2cdd")
+	)
+	(pad "1" smd rect
+		(at 11.25 0)
+		(size 2.5 7.1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "ca2bd100-7ba4-4e0c-8f9f-c41f39ab1854")
+	)
+	(pad "2" smd circle
+		(at 0 0)
+		(size 17.8 17.8)
+		(layers "F.Cu" "F.Mask")
+		(uuid "9ae21d89-8941-4da6-ab58-ac91b5292883")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/BatteryHolder_Keystone_3034_1x20mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
