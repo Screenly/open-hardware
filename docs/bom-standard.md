@@ -61,14 +61,14 @@ Every item that is bought for a build has its own symbol, with its own `DesignCo
 
 Some items are part of the build but have no footprint of their own, such as a module plugged into board connectors or a battery on wire leads. They are drawn as separate symbols with KiCad's *Exclude from board* attribute: the symbol appears in the BOM, but not on the PCB.
 
-- The board side is a separate symbol with a footprint, usually a connector in `CON`.
+- The item it attaches to is a separate symbol with a footprint. Usually the off-board item is plugged into a connector on the board. In the reverse case, a module footprint can hold the pads of the connectors it plugs into, and the connectors are the off-board items.
 - An off-board item has no footprint, so it is matched by its `DesignConstraint` alone. Its `family` and keys must fully define the fit with the board side.
 
 Examples:
 
 | Item                          | Symbols                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------------- |
-| Raspberry Pi CM5              | `J1`, `J2`: board-to-board connectors (`CON`, on board). `U1`: CM5 (`MOD`, off-board).    |
+| Raspberry Pi CM5              | `U1`: CM5 (`MOD`, on board), with one footprint that holds both board-to-board connectors at the exact module spacing. `J1`, `J2`: the two connectors (`CON`, off-board). |
 | Battery on wire leads         | `J3`: wire-to-board connector (`CON`, on board). `BT1`: battery (`BAT`, off-board).       |
 | Coin cell in a holder         | `J4`: battery holder (`CON`, on board). `BT2`: coin cell (`BAT`, off-board).              |
 
