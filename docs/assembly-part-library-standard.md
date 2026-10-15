@@ -9,7 +9,7 @@ The Assembly Part Library contains parts that are not part of a KiCad design: bo
 Assembly parts differ from parts in the [Screenly KiCad Part Library](part-library-standard.md):
 
 - They have no KiCad symbols and no footprints.
-- They have no `DesignConstraint` and no parameter matching. Each assembly part is selected directly by its Screenly part number.
+- They have no class key fields and no parameter matching. Each assembly part is selected directly by its Screenly part number.
 - They have no reference prefix.
 
 Every assembly part has a Screenly part number, see the [Part Numbering Standard](part-numbering-standard.md).

@@ -6,10 +6,22 @@ How the Screenly KiCad Part Library is organized, and the definition of each par
 
 The Screenly KiCad Part Library is a KiCad symbol library, [`library/Screenly.kicad_sym`](../library/Screenly.kicad_sym), used by all Screenly designs.
 
+Every symbol in the library is based on one specific part and carries its identity:
+
+| Field          | Content                                                                          |
+| -------------- | -------------------------------------------------------------------------------- |
+| `PartNumber`   | Screenly part number, see [Part Numbering Standard](part-numbering-standard.md) |
+| `Manufacturer` | Manufacturer name                                                                |
+| `MfrPartNum`   | Manufacturer part number                                                         |
+
+The part must be registered in the company part database with the same manufacturer and manufacturer part number. The class of the symbol is the class code in its `PartNumber`.
+
+When the symbol is placed, these fields name the part the design is based on. The resolver can still choose another approved part that satisfies the instance's class key fields.
+
 Related standards:
 
 - [Part Numbering Standard](part-numbering-standard.md): class codes and part numbers.
-- [BOM Standard](bom-standard.md): how designs use classes in `DesignConstraint`, and how BOMs are resolved.
+- [BOM Standard](bom-standard.md): how designs use class key fields, and how BOMs are resolved.
 
 ## Footprints
 
@@ -18,9 +30,10 @@ The Screenly KiCad Footprint Library is a KiCad footprint library, [`library/Scr
 Every part placed on the board must be linked to a footprint in the Screenly KiCad Footprint Library:
 
 - Every symbol in the Screenly KiCad Part Library for a part on the board has its `Footprint` field set to a Screenly footprint.
-- Every part in the company part database lists its footprints from the Screenly KiCad Footprint Library only.
 - Off-board items, such as plug-in modules and batteries on wire leads, have no footprint. See [Off-board items](bom-standard.md#off-board-items).
 - Footprints from KiCad's built-in libraries or third-party libraries are not used directly. If one is needed, it is copied into the Screenly KiCad Footprint Library first.
+
+3D models are STEP files in [`library/3d-models`](../library/3d-models). Footprints reference them as `${SCREENLY_LIB}/3d-models/<file>`, where `SCREENLY_LIB` is a path variable that points to the `library` directory.
 
 ## Classes
 
@@ -30,36 +43,36 @@ The reference prefix is the letter or letters of the reference designator (`R` i
 
 Each key has:
 
-| Attribute  | Description                                                    |
-| ---------- | -------------------------------------------------------------- |
-| Unit       | Unit of the value. Values are written as in the [DesignConstraint syntax](bom-standard.md#designconstraint-syntax). |
-| Required   | Whether every `DesignConstraint` of the class must include it.  |
-| Comparison | How a part's value is checked against the constraint.          |
+| Attribute  | Description                                                                  |
+| ---------- | ---------------------------------------------------------------------------- |
+| Unit       | Unit of the value. Values are written as described in [Field values](#field-values). |
+| Required   | Whether every instance of the class must keep the field, with a value.       |
+| Comparison | How a part's value is checked against the field value.                      |
 
-In the Screenly KiCad Part Library, each key is an individual symbol field with the same name. In the company part database, all keys of a part are stored together in one JSON field.
+Each key is an individual symbol field with the same name as the key. Every symbol in the Screenly KiCad Part Library carries all keys of its class, filled in from the datasheet of the part the symbol is based on. When the symbol is placed in a design, the fields become the requirements for that instance (see [Class key fields](bom-standard.md#class-key-fields)).
 
-This document is the specification of each class. The class definitions in the company part database implement it and must match.
+This document is the specification of each class. The design checks and the resolver implement it.
 
-A class that has no definition below cannot be used in a `DesignConstraint` yet. Classes for parts that are not designed in KiCad are in the [Assembly Part Library Standard](assembly-part-library-standard.md).
+A class that has no definition below cannot be used in designs yet. Classes for parts that are not designed in KiCad are in the [Assembly Part Library Standard](assembly-part-library-standard.md).
 
 ### Rules
 
-- **Required keys have no defaults.** If a `DesignConstraint` leaves out a required key, CI fails and reports the instance and the missing keys.
+- **Required keys have no defaults.** If an instance is missing a required key field, or the field is empty, the design check fails and reports the instance and the missing keys.
 - **Some keys are required per type.** A class can make keys required only for certain members of a `set` key (for example, `vz` for Zener diodes). These are listed in the class definition and enforced like other required keys.
-- **Optional keys are not checked when left out.** Any part matches them.
-- **References use the class prefix.** Every instance's reference designator starts with its class's reference prefix. A mismatch fails CI.
-- **Sets have defined members.** Every key with a `set` comparison lists its allowed members in the class definition. A value that is not a listed member fails CI.
+- **Optional keys can be deleted.** A designer deletes an optional key field on an instance when its value is not critical. A deleted or empty optional field is not checked, so any part matches it.
+- **References use the class prefix.** Every instance's reference designator starts with its class's reference prefix. A mismatch fails the design check.
+- **Sets have defined members.** Every key with a `set` comparison lists its allowed members in the class definition. A value that is not a listed member fails the design check.
 
 ### Comparisons
 
 | Comparison | A part matches when its value is…                  | Typical keys                |
 | ---------- | -------------------------------------------------- | --------------------------- |
-| `exact`    | equal to the constraint                            | `value`                     |
-| `max`      | less than or equal to the constraint               | `tolerance`                 |
-| `min`      | greater than or equal to the constraint            | `power`, `voltage`, `flash` |
+| `exact`    | equal to the field value                           | `value`                     |
+| `max`      | less than or equal to the field value              | `tolerance`                 |
+| `min`      | greater than or equal to the field value           | `power`, `voltage`, `flash` |
 | `set`      | one of the listed values                           | `dielectric`                |
 | `pattern`  | matched by the glob pattern                        | `family`                    |
-| `range`    | a rated range that includes the constraint         | `vdd`                       |
+| `range`    | a rated range that includes the field value        | `vdd`                       |
 | `all`      | a set on the part that includes every listed value | `bands`                     |
 
 ### Family patterns
@@ -75,6 +88,17 @@ The `pattern` comparison uses a glob pattern matched against the manufacturer pa
 Rule: **every part number the pattern matches must be a drop-in replacement** (pinout, package, footprint and function). If any match is not, tighten the pattern. Other keys then filter within the family.
 
 To allow only one specific part, use its full part number with no wildcards.
+
+### Field values
+
+- Numeric values always include a unit, with SI prefixes (`p`, `n`, `u`, `m`, `k`, `M`): `10pF`, `4.7uF`, `0.1W`, `16V`, `10%`. `K` is also accepted for kilo.
+- Prefixes are case-sensitive, so `m` (milli) and `M` (mega) are different.
+- Resistance is written without the Ω symbol: `10K`, `4.7K`, `10m` (10 mΩ).
+- Memory and storage sizes use `KB`, `MB`, `GB`, `TB`.
+- Temperatures use `C`: `-20C`, `85C`.
+- Counts, such as mating cycles, are plain numbers: `5000`.
+- A set of values is separated by `|`: `X7R|X5R`.
+- `family` takes a glob pattern, see [Family patterns](#family-patterns).
 
 ## Class Definitions
 
@@ -143,8 +167,18 @@ Reference prefix: `AE`
 Examples:
 
 ```
-class ANT; type chip; family 2450AT18A100*; bands wifi_2g4; connector none;
-class ANT; type fpc; family 1461530100*; bands wifi_2g4|wifi_5g; connector ufl; cable 100mm;
+type       chip
+family     2450AT18A100*
+bands      wifi_2g4
+connector  none
+```
+
+```
+type       fpc
+family     1461530100*
+bands      wifi_2g4|wifi_5g
+connector  ufl
+cable      100mm
 ```
 
 ### `BAT`: Batteries
@@ -209,8 +243,19 @@ Reference prefix: `BT`
 Examples:
 
 ```
-class BAT; chemistry li_mno2; family *; size cr2032; voltage 3V; capacity 220mAh;
-class BAT; chemistry mn_li; family ML2020*; size ml2020; voltage 3V; capacity 45mAh;
+chemistry  li_mno2
+family     *
+size       cr2032
+voltage    3V
+capacity   220mAh
+```
+
+```
+chemistry  mn_li
+family     ML2020*
+size       ml2020
+voltage    3V
+capacity   45mAh
 ```
 
 ### `BJT`: Bipolar Junction Transistors
@@ -252,7 +297,14 @@ For dual and complementary types, the values apply to every transistor in the pa
 | `npn_prebiased` | NPN with built-in bias resistors (digital transistor)     |
 | `pnp_prebiased` | PNP with built-in bias resistors (digital transistor)     |
 
-Example: `class BJT; type npn; family MMBT3904*; vce 40V; ic 200mA;`
+Example:
+
+```
+type    npn
+family  MMBT3904*
+vce     40V
+ic      200mA
+```
 
 ### `BUZ`: Buzzers
 
@@ -295,7 +347,16 @@ Reference prefix: `BZ`
 | `active`  | Built-in oscillator, sounds when DC voltage is applied |
 | `passive` | No oscillator, driven with an AC or PWM signal         |
 
-Example: `class BUZ; type magnetic; drive passive; family *; voltage 3.3V; frequency 2.7kHz; spl 80dB;`
+Example:
+
+```
+type       magnetic
+drive      passive
+family     *
+voltage    3.3V
+frequency  2.7kHz
+spl        80dB
+```
 
 ### `CAB`: Cables and Cable Assemblies
 
@@ -342,7 +403,16 @@ Reference prefix: `W`
 | `same_side`     | Contacts on the same side at both ends (type A)     |
 | `opposite_side` | Contacts on opposite sides at the two ends (type B) |
 
-Example: `class CAB; type ffc; family 0151660?00*; length 100mm; conductors 22; pitch 0.5mm; contacts opposite_side;`
+Example:
+
+```
+type        ffc
+family      0151660?00*
+length      100mm
+conductors  22
+pitch       0.5mm
+contacts    opposite_side
+```
 
 ### `CAP`: Capacitors
 
@@ -399,8 +469,18 @@ Reference prefix: `C`
 Examples:
 
 ```
-class CAP; value 100nF; tolerance 10%; voltage 16V; dielectric X7R|X5R;
-class CAP; value 100uF; tolerance 20%; voltage 25V; technology aluminum_polymer; esr 30m;
+value       100nF
+tolerance   10%
+voltage     16V
+dielectric  X7R|X5R
+```
+
+```
+value       100uF
+tolerance   20%
+voltage     25V
+technology  aluminum_polymer
+esr         30m
 ```
 
 ### `CMC`: Common Mode Chokes
@@ -430,7 +510,14 @@ Reference prefix: `L`
 - `aec_q200` is `yes` when automotive qualification (AEC-Q200) is required. `yes` is its only value; leave it out otherwise.
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 
-Example: `class CMC; family DLW21SN900HQ2*; impedance 90; current 0.33A; cutoff 3GHz;`
+Example:
+
+```
+family     DLW21SN900HQ2*
+impedance  90
+current    0.33A
+cutoff     3GHz
+```
 
 ### `CON`: Connectors
 
@@ -493,9 +580,21 @@ Reference prefix: `J`
 Examples:
 
 ```
-class CON; interface board_to_board; family DF40C-100DS-0.4V(51);
-class CON; interface usb_c; family *; current 3A; durability 10000;
-class CON; interface pin_header; family *; plating gold;
+interface  board_to_board
+family     DF40C-100DS-0.4V(51)
+```
+
+```
+interface   usb_c
+family      *
+current     3A
+durability  10000
+```
+
+```
+interface  pin_header
+family     *
+plating    gold
 ```
 
 ### `DIO`: Diodes
@@ -573,9 +672,27 @@ Required keys per `type`:
 Examples:
 
 ```
-class DIO; type signal; family *; vr 75V; if 150mA;
-class DIO; type schottky; family *; vr 40V; if 1A; vf 0.5V;
-class DIO; type tvs; family SMAJ24A*; vrwm 24V; vclamp 38.9V; ppk 400W; direction unidirectional;
+type    signal
+family  *
+vr      75V
+if      150mA
+```
+
+```
+type    schottky
+family  *
+vr      40V
+if      1A
+vf      0.5V
+```
+
+```
+type       tvs
+family     SMAJ24A*
+vrwm       24V
+vclamp     38.9V
+ppk        400W
+direction  unidirectional
 ```
 
 ### `DIS`: Displays
@@ -636,7 +753,16 @@ Reference prefix: `DS`
 | `capacitive` | Projected capacitive touch |
 | `resistive`  | Resistive touch            |
 
-Example: `class DIS; type lcd; family SC1635*; diagonal 7in; resolution 720x1280; interface mipi_dsi; touch capacitive;`
+Example:
+
+```
+type        lcd
+family      SC1635*
+diagonal    7in
+resolution  720x1280
+interface   mipi_dsi
+touch       capacitive
+```
 
 ### `FBD`: Ferrite Beads
 
@@ -664,8 +790,16 @@ Reference prefix: `FB`
 Examples:
 
 ```
-class FBD; family *; impedance 600; current 0.5A;
-class FBD; family *; impedance 120; current 3A; dcr 40m;
+family     *
+impedance  600
+current    0.5A
+```
+
+```
+family     *
+impedance  120
+current    3A
+dcr        40m
 ```
 
 ### `FET`: Field-Effect Transistors
@@ -711,7 +845,16 @@ For dual and complementary types, the values apply to every transistor in the pa
 | `pmos`      | P-channel MOSFET, single or dual                 |
 | `nmos_pmos` | Complementary pair, one N-channel and one P-channel |
 
-Example: `class FET; type nmos; family AO3400*; vds 30V; id 3A; rds_on 50m; vgs 2.5V;`
+Example:
+
+```
+type    nmos
+family  AO3400*
+vds     30V
+id      3A
+rds_on  50m
+vgs     2.5V
+```
 
 ### `FUS`: Fuses and Protectors
 
@@ -762,8 +905,19 @@ Reference prefix: `F`
 Examples:
 
 ```
-class FUS; type fuse; family *; current 2A; voltage 32V; speed fast;
-class FUS; type ptc; family *; current 1.5A; voltage 6V; trip 3A;
+type     fuse
+family   *
+current  2A
+voltage  32V
+speed    fast
+```
+
+```
+type     ptc
+family   *
+current  1.5A
+voltage  6V
+trip     3A
 ```
 
 ### `IND`: Inductors
@@ -826,8 +980,23 @@ Required keys per `type`:
 Examples:
 
 ```
-class IND; type power; family *; value 2.2uH; tolerance 20%; irms 3A; isat 4A; dcr 50m; shielding shielded;
-class IND; type rf; family *; value 10nH; tolerance 2%; irms 300mA; q 30;
+type       power
+family     *
+value      2.2uH
+tolerance  20%
+irms       3A
+isat       4A
+dcr        50m
+shielding  shielded
+```
+
+```
+type       rf
+family     *
+value      10nH
+tolerance  2%
+irms       300mA
+q          30
 ```
 
 ### `LED`: Light Emitting Diodes
@@ -886,8 +1055,18 @@ Reference prefix: `D`
 Examples:
 
 ```
-class LED; color green; family *; if 20mA; lens diffused;
-class LED; color white_cool; family *; if 20mA; vf 3V; intensity 500mcd;
+color   green
+family  *
+if      20mA
+lens    diffused
+```
+
+```
+color      white_cool
+family     *
+if         20mA
+vf         3V
+intensity  500mcd
 ```
 
 ### `MCU`: Microcontrollers
@@ -914,7 +1093,13 @@ Reference prefix: `U`
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 - Microcontrollers contain firmware, so the [firmware-bearing parts](bom-standard.md#firmware-bearing-parts) rule applies. A microcontroller programmed before assembly is a `PSP` part, see the [Assembly Part Library Standard](assembly-part-library-standard.md).
 
-Example: `class MCU; family STM32L0?1C?T?; flash 32KB; vdd 3.3V;`
+Example:
+
+```
+family  STM32L0?1C?T?
+flash   32KB
+vdd     3.3V
+```
 
 ### `MIC`: Microphones
 
@@ -965,7 +1150,16 @@ Reference prefix: `MK`
 | `top`    | Sound enters from the top of the package |
 | `bottom` | Sound enters through a hole in the board |
 
-Example: `class MIC; type mems; output pdm; family ICS-41351*; port bottom; vdd 1.8V; sensitivity -26dBFS;`
+Example:
+
+```
+type         mems
+output       pdm
+family       ICS-41351*
+port         bottom
+vdd          1.8V
+sensitivity  -26dBFS
+```
 
 ### `MOD`: Modules
 
@@ -989,7 +1183,16 @@ Reference prefix: `U`
 - Modules usually contain firmware, so the [firmware-bearing parts](bom-standard.md#firmware-bearing-parts) rule applies.
 - A module that plugs into board connectors, such as the CM5, has a footprint that holds the pads of those connectors at the exact module spacing. The connectors themselves are separate `CON` symbols, placed as [off-board items](bom-standard.md#off-board-items) so they appear in the BOM.
 
-Example: `class MOD; family CM5?????; ram 4GB; storage 32GB; wireless yes;`
+Example:
+
+```
+family    CM5*
+ram       4GB
+storage   64GB
+wireless  yes
+temp_min  -20C
+temp_max  85C
+```
 
 ### `OSC`: Oscillators
 
@@ -1028,7 +1231,15 @@ Reference prefix: `X`
 | `lvpecl`       | Differential LVPECL                           |
 | `hcsl`         | Differential HCSL, typical for PCIe reference clocks |
 
-Example: `class OSC; family SiT1602BC-?3-33E-25.000000*; frequency 25MHz; stability 50ppm; vdd 3.3V; output cmos;`
+Example:
+
+```
+family     SiT1602BC-?3-33E-25.000000*
+frequency  25MHz
+stability  50ppm
+vdd        3.3V
+output     cmos
+```
 
 ### `PWR`: Power ICs
 
@@ -1077,8 +1288,22 @@ Reference prefix: `U`
 Examples:
 
 ```
-class PWR; topology ldo; family AP2112K-3.3*; vin_min 4.5V; vin_max 5.5V; vout 3.3V; iout 0.6A;
-class PWR; topology buck; family TPS6213?RGT*; vin_min 4.5V; vin_max 17V; vout adj; iout 3A; frequency 2.5MHz;
+topology  ldo
+family    AP2112K-3.3*
+vin_min   4.5V
+vin_max   5.5V
+vout      3.3V
+iout      0.6A
+```
+
+```
+topology   buck
+family     TPS6213?RGT*
+vin_min    4.5V
+vin_max    17V
+vout       adj
+iout       3A
+frequency  2.5MHz
 ```
 
 ### `RES`: Resistors
@@ -1119,8 +1344,17 @@ Reference prefix: `R`
 Examples:
 
 ```
-class RES; value 10K; tolerance 10%; power 0.1W;
-class RES; value 10m; tolerance 1%; power 0.5W; tempco 75ppm; technology metal_element;
+value      10K
+tolerance  10%
+power      0.1W
+```
+
+```
+value       10m
+tolerance   1%
+power       0.5W
+tempco      75ppm
+technology  metal_element
 ```
 
 ### `SNS`: Sensors
@@ -1188,8 +1422,19 @@ Required keys per `interface`:
 Examples:
 
 ```
-class SNS; measures temperature|humidity; family SHT40-AD1B*; interface i2c; address 0x44; vdd 3.3V;
-class SNS; measures light; family VEML7700*; interface i2c; address 0x10; vdd 3.3V;
+measures   temperature|humidity
+family     SHT40-AD1B*
+interface  i2c
+address    0x44
+vdd        3.3V
+```
+
+```
+measures   light
+family     VEML7700*
+interface  i2c
+address    0x10
+vdd        3.3V
 ```
 
 ### `SPK`: Speakers
@@ -1216,7 +1461,13 @@ Reference prefix: `LS`
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 - A speaker connected by wires is an [off-board item](bom-standard.md#off-board-items) with no footprint. The board connector is a separate `CON` symbol. Only speakers soldered to the board have a footprint.
 
-Example: `class SPK; family AS04008*; impedance 8; power 2W;`
+Example:
+
+```
+family     AS04008*
+impedance  8
+power      2W
+```
 
 ### `STO`: Storage Devices
 
@@ -1292,8 +1543,19 @@ Required keys per `type`:
 Examples:
 
 ```
-class STO; type microsd; family *; capacity 32GB; grade industrial; speed a1|u1;
-class STO; type nvme; family *; capacity 256GB; grade consumer|industrial; form m2_2230;
+type      microsd
+family    *
+capacity  32GB
+grade     industrial
+speed     a1|u1
+```
+
+```
+type      nvme
+family    *
+capacity  256GB
+grade     consumer|industrial
+form      m2_2230
 ```
 
 ### `SWC`: Switches
@@ -1359,8 +1621,19 @@ Reference prefix: `SW`
 Examples:
 
 ```
-class SWC; type tactile; family *; circuit spst_no; force 1.6N; height 5mm;
-class SWC; type slide; family *; circuit spdt; current 0.3A; voltage 6V;
+type     tactile
+family   *
+circuit  spst_no
+force    1.6N
+height   5mm
+```
+
+```
+type     slide
+family   *
+circuit  spdt
+current  0.3A
+voltage  6V
 ```
 
 ### `THR`: Thermal Elements
@@ -1410,8 +1683,17 @@ Required keys per `type`:
 Examples:
 
 ```
-class THR; type heatsink; family *; drawing THR-0001; resistance 8C/W;
-class THR; type thermal_pad; family *; conductivity 3W/mK; thickness 1mm;
+type        heatsink
+family      *
+drawing     THR-0001
+resistance  8C/W
+```
+
+```
+type          thermal_pad
+family        *
+conductivity  3W/mK
+thickness     1mm
 ```
 
 ### `XTL`: Crystals
@@ -1446,8 +1728,21 @@ Reference prefix: `Y`
 Examples:
 
 ```
-class XTL; family *; frequency 24MHz; tolerance 20ppm; stability 30ppm; load 12pF; esr 60;
-class XTL; family *; frequency 32.768kHz; tolerance 20ppm; stability 100ppm; load 12.5pF; esr 70K;
+family     *
+frequency  24MHz
+tolerance  20ppm
+stability  30ppm
+load       12pF
+esr        60
+```
+
+```
+family     *
+frequency  32.768kHz
+tolerance  20ppm
+stability  100ppm
+load       12.5pF
+esr        70K
 ```
 
 ## Open Items

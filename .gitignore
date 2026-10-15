@@ -1,0 +1,31 @@
+# KiCad lock files
+*.lck
+
+# KiCad backups
+*-backups/
+*.bak
+*.bck
+*-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
+*~
+
+# KiCad autosave files
+_autosave-*
+\#auto_saved_files\#
+
+# KiCad local history
+.history/
+
+# KiCad caches
+fp-info-cache
+*.kicad_prl
+
+# Legacy KiCad temporary files
+*.000
+*.$$$
+
+# Python
+__pycache__/
+*.pyc

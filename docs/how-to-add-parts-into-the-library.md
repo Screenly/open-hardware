@@ -65,6 +65,7 @@ Skip this step for [off-board items](bom-standard.md#off-board-items), such as c
 1. In the **Footprint Editor**, check whether a suitable footprint already exists in the `Screenly` library.
 2. If not, create one there. To reuse a footprint from KiCad's built-in or a third-party library, copy it into the `Screenly` library first. Designs never reference other footprint libraries directly.
 3. Check the pads against the recommended land pattern in the datasheet.
+4. Put the 3D models the footprint needs (STEP files) in [`library/3d-models`](../library/3d-models) and reference them as `${SCREENLY_LIB}/3d-models/<file>`. Copy only the files the footprint uses.
 
 ## 4. Add the Symbol
 
@@ -77,14 +78,17 @@ In the **Symbol Editor**, add the symbol to the `Screenly` library. Open **Symbo
 | `Footprint`   | The footprint from step 3, e.g. `Screenly:<footprint name>`. Leave it empty for off-board items. |
 | `Datasheet`   | URL of the official datasheet                                               |
 | `Description` | Short description of the part                                               |
+| `PartNumber`  | The Screenly part number from step 5                                        |
+| `Manufacturer`| Manufacturer name, exactly as registered in step 5                         |
+| `MfrPartNum`  | Manufacturer part number, exactly as registered in step 5                  |
 | Keywords      | Search keywords, including the manufacturer part number                     |
 | Class keys    | One field per key of the class, named exactly as the key. Add them with the **+** button in the fields table. |
 
 Then:
 
-1. **Fill in every class key from the datasheet.** Write values with units and SI prefixes as described in the [BOM Standard](bom-standard.md#designconstraint-syntax), and use only the listed members for set keys.
+1. **Fill in every class key from the datasheet.** Write values with units and SI prefixes as described in [Field values](part-library-standard.md#field-values), and use only the listed members for set keys. Fill in the optional keys too: designers delete the ones that are not critical when they place the symbol (see [Class key fields](bom-standard.md#class-key-fields)).
 2. **Choose the `family` pattern.** Every manufacturer part number the pattern matches must be a drop-in replacement for the part. List the part numbers it matches and check each one against the datasheet. If any of them is not a drop-in replacement, make the pattern narrower.
-3. **Remove all other fields.** Manufacturer names, alternative part numbers and supplier data don't belong in the symbol.
+3. **Remove all other fields.** Alternative part numbers and supplier data don't belong in the symbol.
 4. **Set the attributes** under **Symbol Properties**:
    - Parts on the board: **Exclude from bill of materials** and **Exclude from board** both off.
    - Off-board items: **Exclude from board** on, **Exclude from bill of materials** off.
@@ -97,7 +101,7 @@ Register the exact part that will be bought, by its manufacturer part number:
 tools/partsdb.py new <CLASS> --manufacturer '<Manufacturer>' --mpn '<MPN>' --description '<Description>'
 ```
 
-The tool checks that the part is not registered yet, assigns the next free part number in the class and prints it.
+The tool checks that the part is not registered yet, assigns the next free part number in the class and prints it. Write it into the symbol's `PartNumber` field.
 
 If the symbol's `family` pattern allows several parts and more than one of them will be bought, register each of them.
 
@@ -117,6 +121,13 @@ Locations are lowercase names, e.g. `screenly` or `contract_manufacturer`.
 2. Reopen the symbol and footprint in KiCad and check that they load without errors.
 3. Open a pull request with the symbol and footprint changes. Mention the datasheet revision you used and any values that were not in the datasheet. The part database is not part of this repository, so its changes are not part of the pull request.
 
+## Applying Library Changes While KiCad Is Open
+
+KiCad keeps loaded footprints in memory, so a footprint changed on disk is not picked up by a running KiCad, even after reopening the editors. To apply the change without restarting KiCad (tested with KiCad 10.0.7):
+
+1. In the **Footprint Editor**, open any other footprint, then open the changed footprint again. KiCad reloads it from disk.
+2. In the **PCB Editor**, right-click the placed footprint and choose **Update Footprint…** (or **Tools → Update Footprints from Library**), with 3D models included.
+
 ## Example: Raspberry Pi CM5
 
 | Step | Result |
@@ -124,7 +135,7 @@ Locations are lowercase names, e.g. `screenly` or `contract_manufacturer`.
 | 1. Class | `MOD` (Modules) |
 | 2. New part | `tools/partsdb.py find --mpn 'CM5*'` finds nothing |
 | 3. Footprint | One module footprint that holds both board-to-board connectors at the exact module spacing. The two connectors are added to designs as off-board `CON` symbols, so they appear in the BOM. |
-| 4. Symbol | `Reference` `U?`, `Value` `CM5104064`, `Datasheet` CM5 datasheet, `family` `CM5*`, `ram` `4GB`, `storage` `64GB`, `wireless` `yes`, `temp_min` `-20C`, `temp_max` `85C` (datasheet section 4.4) |
+| 4. Symbol | `Reference` `U?`, `Value` `CM5104064`, `PartNumber` `SRLY-MOD-000001`, `Manufacturer` `Raspberry Pi`, `MfrPartNum` `CM5104064`, `Datasheet` CM5 datasheet, `family` `CM5*`, `ram` `4GB`, `storage` `64GB`, `wireless` `yes`, `temp_min` `-20C`, `temp_max` `85C` (datasheet section 4.4) |
 | 5. Register | `tools/partsdb.py new MOD --manufacturer 'Raspberry Pi' --mpn CM5104064 --description 'Raspberry Pi Compute Module 5, wireless, 4GB RAM, 64GB eMMC'` prints `SRLY-MOD-000001` |
 
 `family CM5*` matches every CM5 variant, including the CM5 Lite, which has no eMMC. The `storage` key keeps the Lite out, so it must stay set on every CM5 instance.
@@ -134,7 +145,7 @@ Locations are lowercase names, e.g. `screenly` or `contract_manufacturer`.
 - [ ] Class chosen, and defined in the standard
 - [ ] Part not registered yet
 - [ ] Footprint in the `Screenly` footprint library and checked against the datasheet, or the part is an off-board item
-- [ ] Symbol: `Reference` ends in `?`, official `Datasheet`, every class key from the datasheet, no other fields
+- [ ] Symbol: `Reference` ends in `?`, official `Datasheet`, `PartNumber`, `Manufacturer` and `MfrPartNum` matching the registry, every class key from the datasheet, no other fields
 - [ ] `family` pattern checked: every match is a drop-in replacement
 - [ ] Attributes set for on-board or off-board use
 - [ ] Part number registered with `tools/partsdb.py new`
@@ -145,5 +156,3 @@ Locations are lowercase names, e.g. `screenly` or `contract_manufacturer`.
 ## Open Items
 
 - Naming convention for symbols and footprints.
-- Location and format of 3D models.
-- How the class of a symbol is recorded, since several classes share a reference prefix (e.g. `U`).
