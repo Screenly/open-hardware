@@ -14,7 +14,29 @@ Every symbol in the library is based on one specific part and carries its identi
 | `Manufacturer` | Manufacturer name                                                                |
 | `MfrPartNum`   | Manufacturer part number                                                         |
 
-The part must be registered in the company part database with the same manufacturer and manufacturer part number. The class of the symbol is the class code in its `PartNumber`.
+The part must be registered in the company part database with the same manufacturer and manufacturer part number.
+
+### Symbol names
+
+Symbol names say what the part is, so designers can find it in the symbol chooser:
+
+```
+<Kind> <main values> <package> (<manufacturer part number>)
+```
+
+- `<Kind>` is a plain word for the part, e.g. `Resistor`, `Capacitor`, `Module`.
+- `<main values>` are the few values a designer picks the part by, not every key. The full detail is in the fields.
+- `<package>` is the package size, when the part has a standard one (e.g. `0402`).
+- The manufacturer part number in brackets keeps names unique.
+
+| Class | Name pattern                                                   | Example                                  |
+| ----- | -------------------------------------------------------------- | ---------------------------------------- |
+| `RES` | `Resistor <value> <tolerance> <package> (<MPN>)`               | `Resistor 470R 5% 0402 (0402WGJ0471TCE)` |
+| `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
+
+The pattern of other classes is defined when their first part is added.
+
+The `Value` field shows the main value on the schematic in the usual notation (e.g. `470R`), while the `value` key keeps the [field value](#field-values) format (`470`). The class of the symbol is the class code in its `PartNumber`.
 
 When the symbol is placed, these fields name the part the design is based on. The resolver can still choose another approved part that satisfies the instance's class key fields.
 

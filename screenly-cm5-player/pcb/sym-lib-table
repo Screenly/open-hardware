@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Screenly")(type "KiCad")(uri "${SCREENLY_LIB}/Screenly.kicad_sym")(options "")(descr "Screenly KiCad Part Library"))
+)

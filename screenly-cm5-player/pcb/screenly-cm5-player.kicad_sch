@@ -1,0 +1,65 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e")
+	(paper "A4")
+	(title_block
+		(title "Screenly CM5 Player")
+		(date "2026-10-14")
+		(company "Screenly Inc.")
+	)
+	(lib_symbols)
+	(sheet
+		(at 115.57 53.34)
+		(size 63.5 58.42)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3fbfb189-ea05-4055-8850-fa2523ec0120")
+		(property "Sheetname" "compute_module"
+			(at 115.57 52.6284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "compute_module.kicad_sch"
+			(at 115.57 112.3446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -69,7 +69,7 @@ Skip this step for [off-board items](bom-standard.md#off-board-items), such as c
 
 ## 4. Add the Symbol
 
-In the **Symbol Editor**, add the symbol to the `Screenly` library. Open **Symbol Properties** and set the fields:
+In the **Symbol Editor**, add the symbol to the `Screenly` library, named as described in [Symbol names](part-library-standard.md#symbol-names). Open **Symbol Properties** and set the fields:
 
 | Field         | What to enter                                                               |
 | ------------- | --------------------------------------------------------------------------- |
@@ -155,4 +155,4 @@ KiCad keeps loaded footprints in memory, so a footprint changed on disk is not p
 
 ## Open Items
 
-- Naming convention for symbols and footprints.
+- Naming convention for footprints.

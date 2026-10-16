@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Screenly") (type "KiCad") (uri "${SCREENLY_LIB}/Screenly.pretty") (options "") (descr "Screenly KiCad Footprint Library"))
+)
