@@ -53,8 +53,8 @@ Hardware specifications of the Screenly CM5 Player, a digital signage player bas
 
 ## Power
 
-- **Input:** DC barrel jack with a wide input voltage range of 9–28 V. A 12 V adapter is the typical supply.
-- **Barrel jack:** the most common 5.5 mm type:
+- **Input:** DC barrel jack, 12 V nominal, accepting 9–16 V. The product ships with a 12 V adapter.
+- **Barrel jack:** 5.5 × 2.1 mm, the most common plug of 12 V and 24 V adapters:
   - outer diameter 5.5 mm, center pin 2.1 mm
   - center positive
   - current rating sized for the power budget at the minimum input voltage (9 V)

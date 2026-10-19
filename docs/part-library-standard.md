@@ -31,8 +31,15 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 
 | Class | Name pattern                                                   | Example                                  |
 | ----- | -------------------------------------------------------------- | ---------------------------------------- |
+| `CAP` | `Capacitor <value> <voltage> <dielectric or technology> <package> (<MPN>)` | `Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)`, `Capacitor 100uF 35V Electrolytic 6.3x7.7mm (EEE-FK1V101XP)` |
+| `CON` | `<Interface name> <size or positions> <mounting> (<MPN>)`     | `Battery Holder CR2032 THT (BS-02-A1AJ010)` |
 | `RES` | `Resistor <value> <tolerance> <package> (<MPN>)`               | `Resistor 470R 5% 0402 (0402WGJ0471TCE)` |
+| `DIO` | `<Type> Diode <main values> <package> (<MPN>)`                | `TVS Diode Bidirectional 18V 600W SMB (SMBJ18CA)`, `Zener Diode 12V 370mW SOD-123 (BZT52C12-7-F)` |
+| `FBD` | `Ferrite Bead <impedance> <current> <package> (<MPN>)`         | `Ferrite Bead 50R 12A 1206 (BLM31SN500SZ1L)` |
+| `FET` | `<N/P>-MOSFET <vds> <id> <rds_on> <package> (<MPN>)`          | `P-MOSFET 40V 40A 15mOhm TO-252 (AOD4185)` |
+| `IND` | `Inductor <value> <saturation current> <body size> (<MPN>)`    | `Inductor 4.7uH 15A 10x11.5mm (AAPS1050M4R7A)` |
 | `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
+| `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)` |
 
 The pattern of other classes is defined when their first part is added.
 
@@ -459,8 +466,8 @@ Reference prefix: `C`
 - `voltage` is the rated voltage.
 - `dielectric` is one or more ceramic dielectric codes (members below). It only applies to ceramic capacitors; other technologies are not checked against it.
 - `technology` is one or more capacitor technologies (members below).
-- `esr` is the maximum equivalent series resistance, written without the Ω symbol: `30m` (30 mΩ), `1.5`.
-- `ripple` is the rated ripple current, e.g. `1.2A`.
+- `esr` is the maximum equivalent series resistance at 100 kHz and 20–25 °C, written without the Ω symbol: `30m` (30 mΩ), `1.5`. Take the datasheet's maximum where it gives one, as for electrolytic and polymer capacitors. For ceramic capacitors, which usually have only a typical curve, read the manufacturer's ESR curve at 100 kHz and round up. Fill it in on every library symbol, because power circuits and filters depend on it.
+- `ripple` is the rated ripple current at 100 kHz, e.g. `1.2A`. For ceramic capacitors, it is the current that heats the part by 20 °C, read from the manufacturer's curve and rounded down. Leave it out if the manufacturer gives no value at 100 kHz.
 - `aec_q200` is `yes` when automotive qualification (AEC-Q200) is required. `yes` is its only value; leave it out otherwise.
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 
@@ -495,6 +502,15 @@ value       100nF
 tolerance   10%
 voltage     16V
 dielectric  X7R|X5R
+```
+
+```
+value       10uF
+tolerance   10%
+voltage     50V
+dielectric  X7R
+esr         10m
+ripple      2A
 ```
 
 ```
@@ -555,18 +571,31 @@ Reference prefix: `J`
 | `voltage`      | V      | No       | `min`      |
 | `durability`   | cycles | No       | `min`      |
 | `plating`      | –      | No       | `set`      |
+| `size`         | –      | Per type | `set`      |
+| `switch`       | –      | Per type | `set`      |
 | `stack_height` | mm     | No       | `exact`    |
 | `temp_min`     | °C     | No       | `max`      |
 | `temp_max`     | °C     | No       | `min`      |
 
 - `interface` is the connector type (members below).
-- `family` defines mating and drop-in compatibility. For proprietary series (board-to-board, wire-to-board, FFC/FPC), it must be narrow enough that every match mates with the counterpart. Write `family *` only when `interface`, the footprint and the other keys fully define compatibility, such as standard pin headers.
+- `family` defines mating and drop-in compatibility. For proprietary series (board-to-board, wire-to-board, FFC/FPC), it must be narrow enough that every match mates with the counterpart. Write `family *` only when `interface`, the footprint and the other keys fully define compatibility, such as standard pin headers, barrel jacks with `size` and `switch`, and battery holders with `size`.
 - `current` is the rated current per contact, e.g. `3A`.
 - `voltage` is the rated voltage.
 - `durability` is the rated number of mating cycles, written as a plain number (e.g. `5000`).
 - `plating` is one or more contact platings (members below). Use it when the plating must match the mating part.
+- `size` is the mating size of a barrel jack or the cell size of a battery holder (members below).
+- `switch` is the built-in switch contact of a barrel or audio jack (members below).
 - `stack_height` is the distance between the two boards when mated, for board-to-board connectors, e.g. `1.5mm`.
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
+
+Required keys per `interface`:
+
+| Interface        | Required keys      |
+| ---------------- | ------------------ |
+| `dc_barrel`      | `size`, `switch`   |
+| `battery_holder` | `size`             |
+| `audio_jack`     | `switch`           |
+| others           | –                  |
 
 `interface` members:
 
@@ -598,6 +627,27 @@ Reference prefix: `J`
 | `gold`   | Gold plated contacts   |
 | `tin`    | Tin plated contacts    |
 | `silver` | Silver plated contacts |
+| `nickel` | Nickel plated contacts |
+
+`size` members:
+
+| Member       | Description                                      |
+| ------------ | ------------------------------------------------ |
+| `5.5x2.1mm`  | Barrel jack, 5.5 mm outer and 2.1 mm center pin  |
+| `5.5x2.5mm`  | Barrel jack, 5.5 mm outer and 2.5 mm center pin  |
+| `3.5x1.35mm` | Barrel jack, 3.5 mm outer and 1.35 mm center pin |
+| `cr2032`     | Coin cell holder, 20 mm × 3.2 mm cell            |
+| `cr2025`     | Coin cell holder, 20 mm × 2.5 mm cell            |
+| `cr2016`     | Coin cell holder, 20 mm × 1.6 mm cell            |
+| `cr1220`     | Coin cell holder, 12.5 mm × 2.0 mm cell          |
+
+`switch` members:
+
+| Member            | Description                                         |
+| ----------------- | --------------------------------------------------- |
+| `none`            | No switch contact                                   |
+| `normally_closed` | Switch contact closed when no plug is inserted      |
+| `normally_open`   | Switch contact open when no plug is inserted        |
 
 Examples:
 
@@ -617,6 +667,21 @@ durability  10000
 interface  pin_header
 family     *
 plating    gold
+```
+
+```
+interface  dc_barrel
+family     *
+size       5.5x2.1mm
+switch     normally_closed
+voltage    48V
+current    6A
+```
+
+```
+interface  battery_holder
+family     *
+size       cr2032
 ```
 
 ### `DIO`: Diodes

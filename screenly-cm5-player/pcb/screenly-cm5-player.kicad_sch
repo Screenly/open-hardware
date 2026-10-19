@@ -10,6 +10,46 @@
 		(company "Screenly Inc.")
 	)
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 48.26 39.37) (xy 66.04 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a858dfb3-07fb-411c-8558-25210c004bb7")
+	)
+	(wire
+		(pts
+			(xy 48.26 36.83) (xy 66.04 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af43cc81-0df1-4a3a-94c4-a1343070f2a0")
+	)
+	(label "USB_PG"
+		(at 52.07 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "249cfbac-5c47-414b-a23e-305d6c2a3a57")
+	)
+	(label "PCIE_PG"
+		(at 52.07 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f32f57a-334c-4811-96f2-33fa8a675c06")
+	)
 	(sheet
 		(at 115.57 53.34)
 		(size 63.5 58.42)
@@ -52,6 +92,72 @@
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 33.02)
+		(size 22.86 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7cf501d1-b69b-4913-9b12-f0f94d96b896")
+		(property "Sheetname" "Power"
+			(at 25.4 32.3084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 25.4 42.4946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PCIE_PG" output
+			(at 48.26 36.83 0)
+			(uuid "3c2cb400-8c0b-47f5-abd3-c1528723e0e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_PG" output
+			(at 48.26 39.37 0)
+			(uuid "c987d5c6-a310-47f2-a2a2-e3bd980250f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
+					(page "3")
 				)
 			)
 		)

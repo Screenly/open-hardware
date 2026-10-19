@@ -1,0 +1,191 @@
+(footprint "BarrelJack_Tensility_54-00130_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "DC barrel jack 5.5 x 2.5 mm, through hole, right angle, with switch, Tensility 54-00130. Pads fit the Tensility 54-00129/54-00130 and DC-005 style jacks (e.g. XKB DC-005-5A). Pad positions from the Tensility 54-00130 PCB layout: pin 1 center pin (rear), pin 2 sleeve (middle), pin 3 switch (side).")
+	(property "Reference" "J?"
+		(at 0 -12.1 0)
+		(layer "F.SilkS")
+		(uuid "d2cfe660-bf46-4d90-a0ff-660fcd7e0007")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BarrelJack_Tensility_54-00130_Horizontal"
+		(at 0 5.8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "137296a2-c01f-4de8-959f-c77a567d2ae5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce08e479-2dcb-478e-89fd-d7a83cfb933d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "98cd0a9d-de85-4a61-82da-072a7f74fd92")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.6 -1.95)
+		(end -4.6 -9.263452)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b7ca35d7-56e7-42b2-9044-8a45be9b39ff")
+	)
+	(fp_line
+		(start -4.6 3.8)
+		(end -4.6 2.05)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d7c159d-f3f6-41d5-a585-3f9f98bc3541")
+	)
+	(fp_line
+		(start -4.6 3.8)
+		(end -4.007808 3.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e955b8b4-7a68-4c73-a9a3-862e882ad51a")
+	)
+	(fp_line
+		(start 4.584369 3.8)
+		(end 3.992177 3.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0aba1341-4ca0-4b44-a79a-be51c876001b")
+	)
+	(fp_line
+		(start 4.584369 3.8)
+		(end 4.584369 -9.263452)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dfd4f291-fa22-4f09-9dfb-89cf9b3a0203")
+	)
+	(fp_rect
+		(start -4.8 -9.25)
+		(end 4.9 4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "4314c452-e002-4a91-8c12-094ec406c483")
+	)
+	(fp_line
+		(start -4.5 -10.7)
+		(end 4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8dfcc4e6-d74c-4b13-9afb-199a6938d97e")
+	)
+	(fp_line
+		(start -4.5 3.7)
+		(end -4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9e27be5c-e52c-40cc-a5c9-f7d245183710")
+	)
+	(fp_line
+		(start -4.5 3.7)
+		(end 4.5 3.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "96d8a0e8-5bc3-4dbe-8ec3-13044a337f66")
+	)
+	(fp_line
+		(start 4.5 3.7)
+		(end 4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "50ca77fc-1b6c-4317-8865-fbceb9da0dbb")
+	)
+	(pad "1" thru_hole rect
+		(at 0 2.9)
+		(size 4.6 2)
+		(drill oval 3.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "303f94f9-fb56-4ed7-a265-cbf080e56f39")
+	)
+	(pad "2" thru_hole oval
+		(at 0 -3)
+		(size 4.6 1.8)
+		(drill oval 3.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ec891b8a-3746-4965-ac1e-f8f70426b575")
+	)
+	(pad "3" thru_hole oval
+		(at -4.7 0)
+		(size 1.8 4.5)
+		(drill oval 0.8 3.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9b444ec0-dd3f-4703-8441-6f637fa22569")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/54-00130.step"
+		(offset
+			(xyz 0 10.7 6.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -180)
+		)
+	)
+)

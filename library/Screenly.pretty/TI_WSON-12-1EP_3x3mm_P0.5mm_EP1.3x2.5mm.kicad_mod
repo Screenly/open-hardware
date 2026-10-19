@@ -1,0 +1,300 @@
+(footprint "TI_WSON-12-1EP_3x3mm_P0.5mm_EP1.3x2.5mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "TI DRR0012G WSON-12, 3 x 3 mm, 0.5 mm pitch, exposed pad 1.3 x 2.5 mm. Land pattern from TI package drawing 4227052/A 08/2021 (example board layout and stencil design).")
+	(tags "WSON-12 DRR0012G LMR51450 LMR51440")
+	(property "Reference" "U?"
+		(at 0 -2.6 0)
+		(layer "F.SilkS")
+		(uuid "13da12a7-7f5e-4abd-833c-ba96a53ae994")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TI_WSON-12-1EP_3x3mm_P0.5mm_EP1.3x2.5mm"
+		(at 0 2.6 0)
+		(layer "F.Fab")
+		(uuid "05fc6030-f601-46e5-be27-9895dde00303")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f17f6352-d6eb-4cd0-bca8-3f45a1512d9c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2359d3e-661f-4379-ab02-ee7f6f5495d1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.9 -1.61)
+		(end 0.9 -1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aa996f5e-a0d0-45f5-abe9-b3d6a77ce607")
+	)
+	(fp_line
+		(start -0.9 1.61)
+		(end 0.9 1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b7ea0d9b-8bb6-4161-ad94-e2d5f3aea99a")
+	)
+	(fp_circle
+		(center -2.05 -1.25)
+		(end -1.95 -1.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "bfde06f1-8b44-40dc-be9b-b375e18ed76d")
+	)
+	(fp_line
+		(start -1.95 -1.75)
+		(end 1.95 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fad90247-50c2-4910-88db-3d04ea1c5f02")
+	)
+	(fp_line
+		(start -1.95 1.75)
+		(end -1.95 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2a50b1fa-c9ff-4d9f-b8fc-4adb7c308989")
+	)
+	(fp_line
+		(start 1.95 -1.75)
+		(end 1.95 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "61d6261f-f5ec-4e4b-a18e-995b577a279c")
+	)
+	(fp_line
+		(start 1.95 1.75)
+		(end -1.95 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "17c8831b-54cb-4a3d-88ef-749b57171015")
+	)
+	(fp_line
+		(start -1.5 -1)
+		(end -1 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "798e924a-b700-408b-ac44-e78768394115")
+	)
+	(fp_line
+		(start -1.5 1.5)
+		(end -1.5 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "850e946c-5970-4285-8644-52ddfd406167")
+	)
+	(fp_line
+		(start -1 -1.5)
+		(end 1.5 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "63c506cc-7d55-4970-92d7-298a70fd9f7a")
+	)
+	(fp_line
+		(start 1.5 -1.5)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5257ece5-ed1d-4e44-9313-69216dac139b")
+	)
+	(fp_line
+		(start 1.5 1.5)
+		(end -1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2d493dfc-c065-4a95-8154-bddf4a145ee8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3bc64605-a30c-4ac0-ab32-74f4c279da87")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "" smd rect
+		(at 0 -0.65)
+		(size 1.1 1.21)
+		(layers "F.Paste")
+		(uuid "651b3c02-975c-4c84-9d4a-34d063c09d2f")
+	)
+	(pad "" smd rect
+		(at 0 0.65)
+		(size 1.1 1.21)
+		(layers "F.Paste")
+		(uuid "f6b97931-74f6-440c-97eb-fc6484d4152f")
+	)
+	(pad "1" smd roundrect
+		(at -1.39 -1.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "cc17e656-88ce-4ef3-87c9-e4c3266327c9")
+	)
+	(pad "2" smd roundrect
+		(at -1.39 -0.75)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "2cdb1983-8626-4f1d-9288-17c2ebdc2cf8")
+	)
+	(pad "3" smd roundrect
+		(at -1.39 -0.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "b0273847-993d-40bd-9277-e75aedde3b14")
+	)
+	(pad "4" smd roundrect
+		(at -1.39 0.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "7b9c9c0d-faf6-4f52-acca-64e134ad38f4")
+	)
+	(pad "5" smd roundrect
+		(at -1.39 0.75)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "4cf6d179-bf96-4c6d-8057-e785973016d3")
+	)
+	(pad "6" smd roundrect
+		(at -1.39 1.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "6c5da91b-ada1-477e-b9df-f835d626d0d6")
+	)
+	(pad "7" smd roundrect
+		(at 1.39 1.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "5c8759cf-7864-43bd-b6e8-35bc4c854e3f")
+	)
+	(pad "8" smd roundrect
+		(at 1.39 0.75)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "e15e7df0-13a0-4cfc-b7f9-39793c445a9e")
+	)
+	(pad "9" smd roundrect
+		(at 1.39 0.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "ae4a1b95-388a-4d56-b260-4b72bd438eee")
+	)
+	(pad "10" smd roundrect
+		(at 1.39 -0.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "428a5f24-7430-432b-a33e-97a3992921ac")
+	)
+	(pad "11" smd roundrect
+		(at 1.39 -0.75)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "3c1f51b3-e0f3-4050-97fd-9cda1b96ad32")
+	)
+	(pad "12" smd roundrect
+		(at 1.39 -1.25)
+		(size 0.62 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(uuid "79acbc89-deac-4c03-b802-eb9389714f0d")
+	)
+	(pad "13" smd rect
+		(at 0 0)
+		(size 1.3 2.5)
+		(layers "F.Cu" "F.Mask")
+		(uuid "c90b8d76-f113-414b-8c2e-217418d3f9e8")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/DRR0012G.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

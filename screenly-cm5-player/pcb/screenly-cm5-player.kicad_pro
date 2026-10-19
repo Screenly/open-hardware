@@ -673,6 +673,19 @@
         "CLK_P",
         "PWR_EN"
       ],
+      "SDIO": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "PWR_ON",
+        "CLK",
+        "CMD",
+        "D4",
+        "D5",
+        "D6",
+        "D7"
+      ],
       "USB": [
         "D_P",
         "D_N"
@@ -726,7 +739,7 @@
         "uuid": "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
       }
     ],
-    "used_designators": "#PWR1,#PWR305-308,R1,U1",
+    "used_designators": "#PWR1-46,#PWR305-311,C1-26,D1-2,FB1,J1-2,L1-3,Q1,R1-16,U1-4",
     "variants": []
   },
   "sheets": [
@@ -737,6 +750,10 @@
     [
       "3fbfb189-ea05-4055-8850-fa2523ec0120",
       "compute_module"
+    ],
+    [
+      "7cf501d1-b69b-4913-9b12-f0f94d96b896",
+      "Power"
     ]
   ],
   "text_variables": {},
