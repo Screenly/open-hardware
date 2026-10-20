@@ -9218,7 +9218,7 @@
 		(uuid "046bf919-4e21-47a8-8812-977e99a8d58d")
 	)
 	(junction
-		(at 162.56 16.51)
+		(at 157.48 16.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "07136526-fe86-471d-a3ff-bfec2256de60")
@@ -9734,7 +9734,7 @@
 		(uuid "fd4b9242-3c9c-4a92-99e1-5b4e6be227cb")
 	)
 	(bus_entry
-		(at 162.56 39.37)
+		(at 157.48 39.37)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -9770,7 +9770,7 @@
 		(uuid "08c95434-7cf1-48ef-856e-0005b35df94e")
 	)
 	(bus_entry
-		(at 162.56 29.21)
+		(at 157.48 29.21)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -9860,7 +9860,7 @@
 		(uuid "2f09fd0c-1674-4ea1-a4f3-e48e2d847585")
 	)
 	(bus_entry
-		(at 162.56 26.67)
+		(at 157.48 26.67)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -9986,15 +9986,6 @@
 		(uuid "6a72f718-4acd-4c05-a8d5-a45a6e23c42b")
 	)
 	(bus_entry
-		(at 162.56 31.75)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cab37e4-aa7f-4446-80a0-02e6f170a924")
-	)
-	(bus_entry
 		(at 16.51 40.64)
 		(size 2.54 2.54)
 		(stroke
@@ -10031,7 +10022,7 @@
 		(uuid "84f24b40-d587-4309-a0c6-708f6959d1eb")
 	)
 	(bus_entry
-		(at 162.56 36.83)
+		(at 157.48 36.83)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -10166,7 +10157,7 @@
 		(uuid "ad9b0973-ab1c-44ab-8f98-d289bfdab29a")
 	)
 	(bus_entry
-		(at 162.56 54.61)
+		(at 157.48 54.61)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -10182,6 +10173,15 @@
 			(type default)
 		)
 		(uuid "ae3c1b64-4451-4227-93ee-46fc4fbcff79")
+	)
+	(bus_entry
+		(at 157.48 31.75)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ef7807-90e3-47cc-b4c2-6c74e6d6ba9b")
 	)
 	(bus_entry
 		(at 163.83 87.63)
@@ -10229,7 +10229,7 @@
 		(uuid "b9971612-99d0-4de0-bbc2-4fdcd06d1e67")
 	)
 	(bus_entry
-		(at 162.56 52.07)
+		(at 157.48 52.07)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -10274,7 +10274,7 @@
 		(uuid "d80f18a9-200b-4da2-acc9-fe72c4e81a50")
 	)
 	(bus_entry
-		(at 162.56 46.99)
+		(at 157.48 46.99)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -10319,7 +10319,7 @@
 		(uuid "f5fcbe0e-d5e6-44d9-b252-ba0cf705dd1c")
 	)
 	(bus_entry
-		(at 162.56 44.45)
+		(at 157.48 44.45)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -10376,7 +10376,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 41.91) (xy 187.96 41.91)
+			(xy 160.02 41.91) (xy 187.96 41.91)
 		)
 		(stroke
 			(width 0)
@@ -10413,16 +10413,6 @@
 			(type solid)
 		)
 		(uuid "061e8ac0-d249-4baa-959a-6671a764438d")
-	)
-	(wire
-		(pts
-			(xy 165.1 34.29) (xy 187.96 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08e24082-91f0-4bb2-95ab-69e96ab62ca5")
 	)
 	(bus
 		(pts
@@ -10516,7 +10506,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 36.83) (xy 162.56 31.75)
+			(xy 157.48 29.21) (xy 157.48 36.83)
 		)
 		(stroke
 			(width 0)
@@ -10836,7 +10826,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 39.37) (xy 162.56 36.83)
+			(xy 157.48 39.37) (xy 157.48 36.83)
 		)
 		(stroke
 			(width 0)
@@ -10896,7 +10886,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 46.99) (xy 187.96 46.99)
+			(xy 160.02 46.99) (xy 187.96 46.99)
 		)
 		(stroke
 			(width 0)
@@ -11106,7 +11096,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 54.61) (xy 162.56 52.07)
+			(xy 157.48 54.61) (xy 157.48 52.07)
 		)
 		(stroke
 			(width 0)
@@ -11494,16 +11484,6 @@
 		)
 		(uuid "6d1774e3-275e-4f78-96c6-68f3629f9b8c")
 	)
-	(bus
-		(pts
-			(xy 162.56 31.75) (xy 162.56 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6eaa13af-dd8e-493e-9d8c-881c4d5ff0aa")
-	)
 	(wire
 		(pts
 			(xy 166.37 153.67) (xy 187.96 153.67)
@@ -11546,7 +11526,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 29.21) (xy 162.56 26.67)
+			(xy 157.48 29.21) (xy 157.48 26.67)
 		)
 		(stroke
 			(width 0)
@@ -11726,7 +11706,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 44.45) (xy 162.56 39.37)
+			(xy 157.48 44.45) (xy 157.48 39.37)
 		)
 		(stroke
 			(width 0)
@@ -11756,7 +11736,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 29.21) (xy 187.96 29.21)
+			(xy 160.02 29.21) (xy 187.96 29.21)
 		)
 		(stroke
 			(width 0)
@@ -11766,7 +11746,7 @@
 	)
 	(bus
 		(pts
-			(xy 269.24 16.51) (xy 162.56 16.51)
+			(xy 269.24 16.51) (xy 157.48 16.51)
 		)
 		(stroke
 			(width 0)
@@ -12016,7 +11996,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 52.07) (xy 162.56 46.99)
+			(xy 157.48 52.07) (xy 157.48 46.99)
 		)
 		(stroke
 			(width 0)
@@ -12036,7 +12016,7 @@
 	)
 	(bus
 		(pts
-			(xy 160.02 16.51) (xy 162.56 16.51)
+			(xy 154.94 16.51) (xy 157.48 16.51)
 		)
 		(stroke
 			(width 0)
@@ -12136,7 +12116,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 57.15) (xy 187.96 57.15)
+			(xy 160.02 57.15) (xy 187.96 57.15)
 		)
 		(stroke
 			(width 0)
@@ -12246,7 +12226,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 54.61) (xy 187.96 54.61)
+			(xy 160.02 54.61) (xy 187.96 54.61)
 		)
 		(stroke
 			(width 0)
@@ -12366,7 +12346,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 16.51) (xy 162.56 26.67)
+			(xy 157.48 16.51) (xy 157.48 26.67)
 		)
 		(stroke
 			(width 0)
@@ -12606,7 +12586,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 39.37) (xy 187.96 39.37)
+			(xy 160.02 39.37) (xy 187.96 39.37)
 		)
 		(stroke
 			(width 0)
@@ -12746,7 +12726,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 49.53) (xy 187.96 49.53)
+			(xy 160.02 49.53) (xy 187.96 49.53)
 		)
 		(stroke
 			(width 0)
@@ -12793,6 +12773,16 @@
 			(type solid)
 		)
 		(uuid "db67dd96-453c-42bf-b8d1-b08b73a20353")
+	)
+	(wire
+		(pts
+			(xy 160.02 34.29) (xy 187.96 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db76198a-0e19-4b9d-bec6-dd4a41517903")
 	)
 	(wire
 		(pts
@@ -12936,7 +12926,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 46.99) (xy 162.56 44.45)
+			(xy 157.48 46.99) (xy 157.48 44.45)
 		)
 		(stroke
 			(width 0)
@@ -13086,7 +13076,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 31.75) (xy 187.96 31.75)
+			(xy 160.02 31.75) (xy 187.96 31.75)
 		)
 		(stroke
 			(width 0)
@@ -13484,16 +13474,6 @@
 		)
 		(uuid "5aa011f4-0ff8-4322-973a-71eb176f3065")
 	)
-	(label "PCIE.PWR_EN"
-		(at 168.91 34.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5f80b978-6b04-451a-ad7e-59a83b016a35")
-	)
 	(label "HDMI0.D2_P"
 		(at 168.91 115.57 0)
 		(effects
@@ -13743,6 +13723,16 @@
 			(justify right bottom)
 		)
 		(uuid "ae933378-2729-49df-afc8-c3b84f7a3291")
+	)
+	(label "PCIE.PWR_EN"
+		(at 168.91 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "afa2c8e1-1063-4e47-8aaa-37638c9b53ee")
 	)
 	(label "PCIE.RX_N"
 		(at 168.91 49.53 0)
@@ -14091,8 +14081,8 @@
 		(uuid "1d4335e4-b593-4b7a-9186-2ccaf8df4d57")
 	)
 	(hierarchical_label "PCIE{PCIE}"
-		(shape input)
-		(at 160.02 16.51 180)
+		(shape output)
+		(at 154.94 16.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15102,7 +15092,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a77dd4e-eb5c-473c-9285-7a267025de97")
-		(property "Reference" "R?"
+		(property "Reference" "R15"
 			(at 67.31 172.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15276,7 +15266,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/3fbfb189-ea05-4055-8850-fa2523ec0120"
-					(reference "R?")
+					(reference "R15")
 					(unit 1)
 				)
 			)

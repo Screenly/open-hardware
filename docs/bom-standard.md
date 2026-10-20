@@ -108,7 +108,7 @@ A part with `ContainsFirmware=Updatable` may only be selected if the product fir
 
 The company part database is private and is not part of this repository. It is changed only with `tools/partsdb.py` (see [How to Add Parts into the Library](how-to-add-parts-into-the-library.md)) and records:
 
-- **Assigned part numbers.** Each Screenly part number, with the manufacturer, manufacturer part number and description of the part it was assigned to. Part numbers are never removed or reassigned.
+- **Assigned part numbers.** Each Screenly part number, with the manufacturer, manufacturer part number and description of the part it was assigned to. While the library is at an early stage, a part number that is no longer needed can be deleted, and its number can be assigned again once nothing in the repository mentions it. When the library is released, part numbers are never removed or reassigned.
 - **Company stock.** The quantity per part number and location, including stock held at the contract manufacturer.
 
 Part parameters are not stored in the database. They are the class key fields of the symbols in the [Screenly KiCad Part Library](#screenly-kicad-part-library).

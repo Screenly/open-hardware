@@ -121,6 +121,20 @@ Locations are lowercase names, e.g. `screenly` or `contract_manufacturer`.
 2. Reopen the symbol and footprint in KiCad and check that they load without errors.
 3. Open a pull request with the symbol and footprint changes. Mention the datasheet revision you used and any values that were not in the datasheet. The part database is not part of this repository, so its changes are not part of the pull request.
 
+## Deleting a Part Number
+
+This is allowed only while the library is at an early stage. Once the library is released, part numbers can't be deleted or reassigned.
+
+Delete a part number when the part was registered by mistake or is no longer used by any symbol, for example when another part was chosen instead:
+
+```
+tools/partsdb.py delete <PART NUMBER>
+```
+
+The tool refuses to delete a part that is still in stock; set its stock to `0` first. The deleted number is kept as retired. `tools/partsdb.py new` assigns a retired number again only when no file in the repository mentions it anymore, such as a schematic or PCB that still carries the old part. Update those files first, for example with **Update PCB from Schematic**.
+
+Remove the part's symbol from the `Screenly` library in the same pull request. Delete its footprint and 3D models only if no other symbol uses them.
+
 ## Applying Library Changes While KiCad Is Open
 
 KiCad keeps loaded footprints in memory, so a footprint changed on disk is not picked up by a running KiCad, even after reopening the editors. To apply the change without restarting KiCad (tested with KiCad 10.0.7):

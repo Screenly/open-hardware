@@ -2,10 +2,16 @@
 """Screenly part database: assigned part numbers and stock.
 
 The database is a directory, given by --db or the PARTSDB_DIR environment
-variable, that holds two JSON files:
+variable, that holds these JSON files:
 
-  registry.json  every assigned part number; entries are never removed
+  registry.json  every part number in use
   stock.json     quantity per part number and location
+  retired.json   deleted part numbers
+
+While EARLY_STAGE is True, part numbers can be deleted, and a retired number
+is assigned again once no file in the repository mentions it. Set EARLY_STAGE
+to False when the library is released: from then on, part numbers can't be
+deleted and retired numbers are never reassigned.
 
 Every change made by this tool is validated and written in a fixed format,
 so changes give small, stable diffs. Tracking the history of the database,
@@ -24,12 +30,20 @@ import sys
 import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = REGISTRY = STOCK = ""
+DB = REGISTRY = STOCK = RETIRED = ""
 NUMBERING_DOC = os.path.join(ROOT, "docs", "part-numbering-standard.md")
+
+# Early stage of the library: allow deleting part numbers and reusing retired ones.
+EARLY_STAGE = True
+
+# Files scanned for mentions of a retired part number before it is reused.
+SCAN_SUFFIXES = (".kicad_sch", ".kicad_pcb", ".kicad_sym", ".kicad_mod", ".md", ".json", ".csv", ".txt")
+SCAN_SKIP_DIRS = {".git", "tmp", "3d-models", "node_modules"}
 
 PART_NUMBER = re.compile(r"^SRLY-([A-Z]{3})-([0-9]{6})$")
 LOCATION = re.compile(r"^[a-z0-9_]+$")
 REGISTRY_FIELDS = {"manufacturer", "mpn", "description", "assigned"}
+RETIRED_FIELDS = REGISTRY_FIELDS | {"deleted"}
 
 
 class Error(Exception):
@@ -55,10 +69,11 @@ def write(path, data):
 
 
 def set_db(path):
-    global DB, REGISTRY, STOCK
+    global DB, REGISTRY, STOCK, RETIRED
     DB = os.path.abspath(os.path.expanduser(path)) if path else ""
     REGISTRY = os.path.join(DB, "registry.json")
     STOCK = os.path.join(DB, "stock.json")
+    RETIRED = os.path.join(DB, "retired.json")
 
 
 
@@ -72,7 +87,7 @@ def class_codes():
         return set(re.findall(r"^\| `([A-Z]{3})` \|", f.read(), re.M))
 
 
-def validate(registry, stock):
+def validate(registry, stock, retired):
     errors = []
     codes = class_codes()
     seen = {}
@@ -104,17 +119,25 @@ def validate(registry, stock):
                 errors.append(f"stock {pn}: invalid location {location!r}")
             if not isinstance(qty, int) or isinstance(qty, bool) or qty < 0:
                 errors.append(f"stock {pn} {location}: quantity must be a non-negative integer")
+    for pn, entry in retired.items():
+        if not PART_NUMBER.match(pn):
+            errors.append(f"retired {pn}: not a valid part number")
+        if pn in registry:
+            errors.append(f"retired {pn}: also in registry")
+        if set(entry) != RETIRED_FIELDS:
+            errors.append(f"retired {pn}: fields must be {sorted(RETIRED_FIELDS)}")
     return errors
 
 
 
 
-def save(registry, stock):
-    errors = validate(registry, stock)
+def save(registry, stock, retired):
+    errors = validate(registry, stock, retired)
     if errors:
         raise Error("\n".join(errors))
     write(REGISTRY, registry)
     write(STOCK, stock)
+    write(RETIRED, retired)
 
 
 def require_db_dir():
@@ -126,7 +149,7 @@ def open_db():
     require_db_dir()
     if not os.path.exists(REGISTRY):
         raise Error("no database, run: partsdb.py init")
-    return load(REGISTRY), load(STOCK)
+    return load(REGISTRY), load(STOCK), load(RETIRED) if os.path.exists(RETIRED) else {}
 
 
 # Commands
@@ -140,35 +163,80 @@ def cmd_init(args):
     os.makedirs(DB, exist_ok=True)
     write(REGISTRY, {})
     write(STOCK, {})
+    write(RETIRED, {})
     print(f"Initialized {DB}")
 
 
+def mentioned_in_repo(pn):
+    """Return the first repository file that mentions pn, or None."""
+    for top, dirs, files in os.walk(ROOT):
+        dirs[:] = [d for d in dirs if d not in SCAN_SKIP_DIRS and os.path.join(top, d) != DB]
+        for name in files:
+            if name.endswith(SCAN_SUFFIXES):
+                path = os.path.join(top, name)
+                try:
+                    with open(path, encoding="utf-8", errors="ignore") as f:
+                        if pn in f.read():
+                            return os.path.relpath(path, ROOT)
+                except OSError:
+                    pass
+    return None
+
+
+def next_number(cls, registry, retired):
+    """Next part number in a class: a reusable retired number first, else the next in sequence."""
+    if EARLY_STAGE:
+        for pn in sorted(p for p in retired if p.startswith(f"SRLY-{cls}-")):
+            where = mentioned_in_repo(pn)
+            if where:
+                print(f"note: {pn} is retired but still mentioned in {where}, not reused", file=sys.stderr)
+            else:
+                return pn
+    numbers = [int(m.group(2)) for m in map(PART_NUMBER.match, [*registry, *retired]) if m and m.group(1) == cls]
+    return f"SRLY-{cls}-{max(numbers, default=0) + 1:06d}"
+
+
 def cmd_new(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     cls = args.cls.upper()
     if cls not in class_codes():
         raise Error(f"unknown class {cls}, see {NUMBERING_DOC}")
     for pn, entry in registry.items():
         if (entry["manufacturer"].lower(), entry["mpn"].lower()) == (args.manufacturer.lower(), args.mpn.lower()):
             raise Error(f"{args.manufacturer} {args.mpn} already has {pn}")
-    numbers = [int(m.group(2)) for m in map(PART_NUMBER.match, registry) if m and m.group(1) == cls]
-    pn = f"SRLY-{cls}-{max(numbers, default=0) + 1:06d}"
+    pn = next_number(cls, registry, retired)
+    retired.pop(pn, None)
     registry[pn] = {
         "manufacturer": args.manufacturer,
         "mpn": args.mpn,
         "description": args.description,
         "assigned": datetime.date.today().isoformat(),
     }
-    save(registry, stock)
+    save(registry, stock, retired)
     print(pn)
 
 
 def cmd_describe(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     if args.pn not in registry:
         raise Error(f"{args.pn}: not in registry")
     registry[args.pn]["description"] = args.description
-    save(registry, stock)
+    save(registry, stock, retired)
+
+
+def cmd_delete(args):
+    if not EARLY_STAGE:
+        raise Error("part numbers can't be deleted once the library is released (EARLY_STAGE is False)")
+    registry, stock, retired = open_db()
+    if args.pn not in registry:
+        raise Error(f"{args.pn}: not in registry")
+    held = {loc: qty for loc, qty in stock.get(args.pn, {}).items() if qty}
+    if held:
+        raise Error(f"{args.pn}: still in stock {held}, remove the stock first")
+    stock.pop(args.pn, None)
+    retired[args.pn] = {**registry.pop(args.pn), "deleted": datetime.date.today().isoformat()}
+    save(registry, stock, retired)
+    print(f"Deleted {args.pn}, the number is retired" + (" and can be reused" if EARLY_STAGE else ""))
 
 
 def print_parts(registry, stock, pns):
@@ -179,13 +247,13 @@ def print_parts(registry, stock, pns):
 
 
 def cmd_list(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     pns = sorted(pn for pn in registry if not args.cls or pn.startswith(f"SRLY-{args.cls.upper()}-"))
     print_parts(registry, stock, pns)
 
 
 def cmd_find(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     pns = sorted(pn for pn, e in registry.items()
                  if fnmatch.fnmatchcase(e["mpn"].upper(), args.mpn.upper())
                  and (not args.manufacturer or e["manufacturer"].lower() == args.manufacturer.lower()))
@@ -193,14 +261,14 @@ def cmd_find(args):
 
 
 def cmd_show(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     if args.pn not in registry:
         raise Error(f"{args.pn}: not in registry")
     print(dump({"part": args.pn, **registry[args.pn], "stock": stock.get(args.pn, {})}), end="")
 
 
 def cmd_stock(args):
-    registry, stock = open_db()
+    registry, stock, retired = open_db()
     if args.action == "show":
         for pn in sorted(stock) if not args.pn else [args.pn]:
             for location, qty in sorted(stock.get(pn, {}).items()):
@@ -214,7 +282,7 @@ def cmd_stock(args):
     if qty < 0:
         raise Error(f"{args.pn} {args.location}: only {current} in stock")
     locations[args.location] = qty
-    save(registry, stock)
+    save(registry, stock, retired)
     print(f"{args.pn}  {args.location}  {qty}")
 
 
@@ -246,6 +314,10 @@ def main():
     s.add_argument("pn")
     s.add_argument("description")
     s.set_defaults(func=cmd_describe)
+
+    s = sub.add_parser("delete", help="delete a part number (early stage only); the number is retired")
+    s.add_argument("pn")
+    s.set_defaults(func=cmd_delete)
 
     s = sub.add_parser("list", help="list parts")
     s.add_argument("--class", dest="cls")

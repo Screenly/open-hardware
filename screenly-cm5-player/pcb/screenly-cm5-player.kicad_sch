@@ -12,7 +12,37 @@
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 48.26 39.37) (xy 66.04 39.37)
+			(xy 165.1 43.18) (xy 231.14 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "095be06f-5b3b-434c-abb6-ce8b3db75fa0")
+	)
+	(wire
+		(pts
+			(xy 165.1 40.64) (xy 231.14 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "288f3e90-0ade-419e-ac83-bf63fd502a5a")
+	)
+	(bus
+		(pts
+			(xy 165.1 36.83) (xy 231.14 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a6911f6-9995-4799-9f38-6350d9d58737")
+	)
+	(wire
+		(pts
+			(xy 48.26 36.83) (xy 121.92 36.83)
 		)
 		(stroke
 			(width 0)
@@ -22,7 +52,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 36.83) (xy 66.04 36.83)
+			(xy 48.26 48.26) (xy 121.92 48.26)
 		)
 		(stroke
 			(width 0)
@@ -30,8 +60,18 @@
 		)
 		(uuid "af43cc81-0df1-4a3a-94c4-a1343070f2a0")
 	)
+	(bus
+		(pts
+			(xy 48.26 50.8) (xy 121.92 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe1503c4-c032-4998-b711-008059ca9f42")
+	)
 	(label "USB_PG"
-		(at 52.07 39.37 0)
+		(at 52.07 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +81,7 @@
 		(uuid "249cfbac-5c47-414b-a23e-305d6c2a3a57")
 	)
 	(label "PCIE_PG"
-		(at 52.07 36.83 0)
+		(at 52.07 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -51,8 +91,74 @@
 		(uuid "9f32f57a-334c-4811-96f2-33fa8a675c06")
 	)
 	(sheet
-		(at 115.57 53.34)
-		(size 63.5 58.42)
+		(at 25.4 45.72)
+		(size 22.86 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "26cd55e4-c100-4c51-99bf-5253745f5eec")
+		(property "Sheetname" "PCIe"
+			(at 25.4 45.0084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pcie.kicad_sch"
+			(at 25.4 55.1946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PCIE{PCIE}" input
+			(at 48.26 50.8 0)
+			(uuid "ca8d2e65-2318-4585-87fe-b13b2a86e45e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PCIE_PG" output
+			(at 48.26 48.26 0)
+			(uuid "27cabbfd-fb69-4e5d-bc62-1188e86edd1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 121.92 33.02)
+		(size 43.18 58.42)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -66,8 +172,8 @@
 			(color 0 0 0 0)
 		)
 		(uuid "3fbfb189-ea05-4055-8850-fa2523ec0120")
-		(property "Sheetname" "compute_module"
-			(at 115.57 52.6284 0)
+		(property "Sheetname" "Compute Module"
+			(at 121.92 32.3084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -78,7 +184,7 @@
 			)
 		)
 		(property "Sheetfile" "compute_module.kicad_sch"
-			(at 115.57 112.3446 0)
+			(at 121.92 92.0246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86,6 +192,66 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "~{CM5_LED_PWR}" output
+			(at 165.1 43.18 0)
+			(uuid "c122d5e9-f8ed-4fb1-b11e-5f8e01380501")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ETH{ETH}" bidirectional
+			(at 165.1 36.83 0)
+			(uuid "ba58228d-cc92-454e-ba14-6ed78557529b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{CM5_LED_ACT}" output
+			(at 165.1 40.64 0)
+			(uuid "e58df6b4-1388-425c-a306-a5a380b72643")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PCIE_PG" input
+			(at 121.92 48.26 180)
+			(uuid "104ecb85-6965-4fb5-b254-4c48184310f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_PG" input
+			(at 121.92 36.83 180)
+			(uuid "614a1529-882e-4ad6-88d3-1cb8555c8895")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PCIE{PCIE}" output
+			(at 121.92 50.8 180)
+			(uuid "519399cc-1fa4-4c48-9367-c14118235d96")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -98,7 +264,7 @@
 	)
 	(sheet
 		(at 25.4 33.02)
-		(size 22.86 8.89)
+		(size 22.86 7.62)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -124,7 +290,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 25.4 42.4946 0)
+			(at 25.4 41.2246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -134,18 +300,8 @@
 				(justify left top)
 			)
 		)
-		(pin "PCIE_PG" output
-			(at 48.26 36.83 0)
-			(uuid "3c2cb400-8c0b-47f5-abd3-c1528723e0e4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "USB_PG" output
-			(at 48.26 39.37 0)
+			(at 48.26 36.83 0)
 			(uuid "c987d5c6-a310-47f2-a2a2-e3bd980250f8")
 			(effects
 				(font
@@ -158,6 +314,82 @@
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 231.14 33.02)
+		(size 24.13 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c23b474a-a5df-4d03-b71c-bc870a6cf46c")
+		(property "Sheetname" "Ethernet"
+			(at 231.14 32.3084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ethernet.kicad_sch"
+			(at 231.14 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ETH{ETH}" bidirectional
+			(at 231.14 36.83 180)
+			(uuid "84ac52a3-b3fc-43dd-abb0-3dc7c7ca09f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{LED_GREEN}" input
+			(at 231.14 40.64 180)
+			(uuid "08d20be5-0abe-4967-8770-5807f8a47f9d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{LED_YELLOW}" input
+			(at 231.14 43.18 180)
+			(uuid "f65d2b1e-43f8-4dd8-a6a4-ff542ce8e465")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
+					(page "4")
 				)
 			)
 		)
