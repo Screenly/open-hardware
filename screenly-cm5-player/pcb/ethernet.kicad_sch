@@ -285,7 +285,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)"
+		(symbol "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)"
 			(pin_names
 				(offset 0)
 			)
@@ -304,7 +304,7 @@
 					)
 				)
 			)
-			(property "Value" "TPD4EUSB30DQAR"
+			(property "Value" "TPD4E05U06DQAR"
 				(at 8.89 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -325,7 +325,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4eusb30.pdf"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -336,7 +336,7 @@
 					)
 				)
 			)
-			(property "Description" "4-channel ESD protection diode array, 5.5V standoff, 0.8pF typ, IEC 61000-4-2 level 4, 5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
+			(property "Description" "4-channel ESD protection diode array for HDMI 2.0 and other links up to 6 Gbps, 5.5V standoff, 0.5pF typ, IEC 61000-4-2 12kV contact, 2.5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -347,7 +347,7 @@
 					)
 				)
 			)
-			(property "PartNumber" "SRLY-DIO-000003"
+			(property "PartNumber" "SRLY-DIO-000004"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -369,7 +369,7 @@
 					)
 				)
 			)
-			(property "MfrPartNum" "TPD4EUSB30DQAR"
+			(property "MfrPartNum" "TPD4E05U06DQAR"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -391,7 +391,7 @@
 					)
 				)
 			)
-			(property "family" "TPD4EUSB30DQA*"
+			(property "family" "TPD4E05U06DQA*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -403,17 +403,6 @@
 				)
 			)
 			(property "vrwm" "5.5V"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ppk" "45W"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -446,7 +435,7 @@
 					)
 				)
 			)
-			(property "temp_max" "85C"
+			(property "temp_max" "125C"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -457,7 +446,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "D ESD TVS protection array ethernet USB3 high speed TPD4EUSB30DQAR TI"
+			(property "ki_keywords" "D ESD TVS protection array HDMI USB3 DisplayPort high speed TPD4E05U06DQAR TI"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -479,7 +468,7 @@
 					)
 				)
 			)
-			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)_0_0"
+			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)_0_0"
 				(rectangle
 					(start -5.715 6.477)
 					(end 5.715 -6.604)
@@ -528,7 +517,7 @@
 					)
 				)
 			)
-			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)_0_1"
+			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)_0_1"
 				(polyline
 					(pts
 						(xy -7.747 2.54) (xy -3.175 2.54)
@@ -951,7 +940,7 @@
 					)
 				)
 			)
-			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)_1_1"
+			(symbol "ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)_1_1"
 				(pin passive line
 					(at -12.7 2.54 0)
 					(length 5.08)
@@ -3000,220 +2989,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)")
-		(at 139.7 116.84 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "170e98c2-eeb5-4627-b81f-2a4bd24e5d7d")
-		(property "Reference" "D4"
-			(at 139.7 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPD4EUSB30DQAR"
-			(at 139.7 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Screenly:TI_USON-10_2.5x1.0mm_P0.5mm"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4eusb30.pdf"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4-channel ESD protection diode array, 5.5V standoff, 0.8pF typ, IEC 61000-4-2 level 4, 5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PartNumber" "SRLY-DIO-000003"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "TPD4EUSB30DQAR"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "type" "esd"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "family" "TPD4EUSB30DQA*"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "vrwm" "5.5V"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ppk" "45W"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "direction" "unidirectional"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-40C"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "85C"
-			(at 139.7 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "4ae55eec-bfab-45e8-a882-d71ee0ef7064")
-		)
-		(pin "1"
-			(uuid "6123d59e-c660-4867-8864-67a42f688f82")
-		)
-		(pin "6"
-			(uuid "d0f592b3-e56e-456c-bffe-91cf675306f8")
-		)
-		(pin "9"
-			(uuid "767b2635-d6ad-4e58-bb0e-0ce63dd38609")
-		)
-		(pin "8"
-			(uuid "9a7ea4c5-0a1d-4f0c-8ee3-6a3b0436fa38")
-		)
-		(pin "10"
-			(uuid "f09e98ce-409b-4af3-b013-c37dc95977a6")
-		)
-		(pin "5"
-			(uuid "f3613f28-5f9e-4a61-a17d-44ec581c52db")
-		)
-		(pin "4"
-			(uuid "1a3634a7-f372-4948-b808-bf88c03fc781")
-		)
-		(pin "2"
-			(uuid "1d94ea5e-6bc0-4369-9c52-d39dc7c62a0d")
-		)
-		(pin "3"
-			(uuid "3cd09e2b-01f4-4fbc-b6f4-4e518710c16b")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Screenly:RJ45 MagJack Gigabit LED THT (HB-W01G0520DQW-R)")
 		(at 203.2 83.82 0)
 		(unit 1)
@@ -3421,6 +3196,209 @@
 		)
 	)
 	(symbol
+		(lib_id "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)")
+		(at 139.7 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2fc470a1-a607-4126-9652-06715564aeea")
+		(property "Reference" "D4"
+			(at 139.7 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD4E05U06DQAR"
+			(at 139.7 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Screenly:TI_USON-10_2.5x1.0mm_P0.5mm"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4-channel ESD protection diode array for HDMI 2.0 and other links up to 6 Gbps, 5.5V standoff, 0.5pF typ, IEC 61000-4-2 12kV contact, 2.5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-DIO-000004"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "TPD4E05U06DQAR"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "type" "esd"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "family" "TPD4E05U06DQA*"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "vrwm" "5.5V"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "direction" "unidirectional"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-40C"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "125C"
+			(at 139.7 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "c31e0c7d-d8ec-431b-8489-fc4aa27e3ff6")
+		)
+		(pin "10"
+			(uuid "bb6d7a8d-3b0d-4e9a-8a44-1bd0f4a68d8d")
+		)
+		(pin "7"
+			(uuid "72affa21-8003-4a13-b466-df2141ca627b")
+		)
+		(pin "8"
+			(uuid "ce7de437-eab8-4580-9726-6c7a0613fe87")
+		)
+		(pin "9"
+			(uuid "4606909d-f193-44a1-90d5-b984266ac7a7")
+		)
+		(pin "5"
+			(uuid "9042a784-059e-42fc-b855-a324c4344674")
+		)
+		(pin "2"
+			(uuid "f03890f8-7344-47dd-9b1c-e3a09345730c")
+		)
+		(pin "3"
+			(uuid "1e5e4a1f-01f2-4e8c-bc39-f039540996f5")
+		)
+		(pin "4"
+			(uuid "c76239d9-f495-49bd-9604-23e5dca64543")
+		)
+		(pin "1"
+			(uuid "2b003e41-3dc8-4084-82cc-9cbc13d92cb1")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 203.2 99.06 0)
 		(unit 1)
@@ -3493,220 +3471,6 @@
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
 					(reference "#PWR052")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4EUSB30DQAR)")
-		(at 96.52 116.84 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "88181e58-6c3e-43c0-ad3f-c9f9de6da2b1")
-		(property "Reference" "D3"
-			(at 96.52 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPD4EUSB30DQAR"
-			(at 96.52 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Screenly:TI_USON-10_2.5x1.0mm_P0.5mm"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4eusb30.pdf"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4-channel ESD protection diode array, 5.5V standoff, 0.8pF typ, IEC 61000-4-2 level 4, 5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PartNumber" "SRLY-DIO-000003"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "TPD4EUSB30DQAR"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "type" "esd"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "family" "TPD4EUSB30DQA*"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "vrwm" "5.5V"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ppk" "45W"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "direction" "unidirectional"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-40C"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "85C"
-			(at 96.52 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "f964a175-dace-485a-a0c3-151d7acfde26")
-		)
-		(pin "1"
-			(uuid "40628564-32df-4842-8598-e04369c324d5")
-		)
-		(pin "6"
-			(uuid "bc1ddaca-c85d-4e25-b718-cd801260c018")
-		)
-		(pin "9"
-			(uuid "b7726d9d-e7ac-438f-b34b-379695acdd82")
-		)
-		(pin "8"
-			(uuid "c33bfd7a-4cec-4f0f-8703-373d3ec98162")
-		)
-		(pin "10"
-			(uuid "1c7a1a60-5ae3-496a-b57c-39f481c78485")
-		)
-		(pin "5"
-			(uuid "3e3ed51f-982d-4571-8918-739dfb410f5e")
-		)
-		(pin "4"
-			(uuid "04e3742b-037c-4bda-91c0-4b228eea0291")
-		)
-		(pin "2"
-			(uuid "061ae93d-5124-40ea-8856-9ee4edda9e82")
-		)
-		(pin "3"
-			(uuid "2e7f705e-c2b6-427f-ac07-ce814d027f35")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -4132,6 +3896,209 @@
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
 					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:ESD Diode 4ch 5.5V USON-10 (TPD4E05U06DQAR)")
+		(at 96.52 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3ca4cbc-a6ee-4326-b7f0-2bb54d76493b")
+		(property "Reference" "D3"
+			(at 96.52 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD4E05U06DQAR"
+			(at 96.52 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Screenly:TI_USON-10_2.5x1.0mm_P0.5mm"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4-channel ESD protection diode array for HDMI 2.0 and other links up to 6 Gbps, 5.5V standoff, 0.5pF typ, IEC 61000-4-2 12kV contact, 2.5A 8/20us surge, flow-through USON-10. NC pins 6, 7, 9, 10 are tied to the data nets for flow-through routing."
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-DIO-000004"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "TPD4E05U06DQAR"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "type" "esd"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "family" "TPD4E05U06DQA*"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "vrwm" "5.5V"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "direction" "unidirectional"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-40C"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "125C"
+			(at 96.52 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "2d945ea6-5b5a-45a8-a091-bc1436606591")
+		)
+		(pin "10"
+			(uuid "3f8e0c60-e21a-442c-8829-731625217735")
+		)
+		(pin "7"
+			(uuid "477b1fc2-5531-4f44-a96e-9bc596488fc9")
+		)
+		(pin "8"
+			(uuid "35eef80d-deb2-4656-847e-f800571a616e")
+		)
+		(pin "9"
+			(uuid "0e4dba7b-c55a-473f-b27e-4eb4c7c7102b")
+		)
+		(pin "5"
+			(uuid "940e8bbd-1d1a-4274-82e5-29f2bead89c9")
+		)
+		(pin "2"
+			(uuid "05b87a72-f6bd-4ebf-9a2a-6a37c5d8a891")
+		)
+		(pin "3"
+			(uuid "1417d43a-c868-4ace-b4de-3891e29d457f")
+		)
+		(pin "4"
+			(uuid "b2456ad5-7e53-4549-8096-c3f10a3636df")
+		)
+		(pin "1"
+			(uuid "f9f1e103-fd5e-47eb-8e5b-2e4eb9c00e1f")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
+					(reference "D3")
 					(unit 1)
 				)
 			)

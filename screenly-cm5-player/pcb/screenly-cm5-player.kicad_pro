@@ -739,7 +739,7 @@
         "uuid": "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
       }
     ],
-    "used_designators": "#FLG1,#PWR1-56,#PWR305-311,C1-28,D1-4,FB1,J1-4,L1-3,Q1,R1-20,U1-4",
+    "used_designators": "#FLG1,#PWR1-89,#PWR305-311,C1-38,D1-10,FB1,J1-7,L1-3,Q1,R1-29,U1-7",
     "variants": []
   },
   "sheets": [
@@ -762,6 +762,14 @@
     [
       "26cd55e4-c100-4c51-99bf-5253745f5eec",
       "PCIe"
+    ],
+    [
+      "604c228d-b6de-41cc-be32-941731d3d55d",
+      "HDMI"
+    ],
+    [
+      "e2a2df82-091a-44a6-8ea8-53690f8a3538",
+      "USB"
     ]
   ],
   "text_variables": {},

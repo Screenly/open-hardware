@@ -51,7 +51,7 @@ Regex: `^SRLY-[A-Z]{3}-[0-9]{6}$`
 | `PAC` | Product packages                            |
 | `PCB` | Printed circuit boards                      |
 | `PSP` | Programmed semi products                    |
-| `PWR` | Power ICs (linear and switching regulators) |
+| `PWR` | Power ICs (linear and switching regulators, power switches) |
 | `RES` | Resistors                                   |
 | `SCR` | Screws                                      |
 | `SNS` | Sensors                                     |

@@ -31,7 +31,7 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 
 | Class | Name pattern                                                   | Example                                  |
 | ----- | -------------------------------------------------------------- | ---------------------------------------- |
-| `CAP` | `Capacitor <value> <voltage> <dielectric or technology> <package> (<MPN>)` | `Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)`, `Capacitor 100uF 35V Electrolytic 6.3x7.7mm (EEE-FK1V101XP)` |
+| `CAP` | `Capacitor <value> <voltage> <dielectric or technology> <package> (<MPN>)` | `Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)`, `Capacitor 150uF 35V Polymer Radial 6.3x8mm (PA35V150M6X8)` |
 | `CON` | `<Interface name> <size or positions> <mounting> (<MPN>)`     | `Battery Holder CR2032 THT (BS-02-A1AJ010)` |
 | `RES` | `Resistor <value> <tolerance> <package> (<MPN>)`               | `Resistor 470R 5% 0402 (0402WGJ0471TCE)` |
 | `DIO` | `<Type> Diode <main values> <package> (<MPN>)`                | `TVS Diode Bidirectional 18V 600W SMB (SMBJ18CA)`, `Zener Diode 12V 370mW SOD-123 (BZT52C12-7-F)` |
@@ -39,7 +39,7 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 | `FET` | `<N/P>-MOSFET <vds> <id> <rds_on> <package> (<MPN>)`          | `P-MOSFET 40V 40A 15mOhm TO-252 (AOD4185)` |
 | `IND` | `Inductor <value> <saturation current> <body size> (<MPN>)`    | `Inductor 4.7uH 15A 10x11.5mm (AAPS1050M4R7A)` |
 | `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
-| `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)` |
+| `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)`, `Power Switch <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)`, `Power Switch 3-5.5V 2.1A SOT-23-6 (AP22652W6-7)` |
 
 The pattern of other classes is defined when their first part is added.
 
@@ -1332,28 +1332,32 @@ output     cmos
 
 Voltage regulator ICs: linear regulators (including LDOs) and switching regulators. Switching controllers that drive external switches are included. Multi-rail PMICs are not.
 
+Power switch ICs are also in this class: load switches, current-limited power distribution switches and eFuses. They pass the input voltage through to the output and do not regulate it.
+
 Reference prefix: `U`
 
-| Key         | Unit | Required | Comparison |
-| ----------- | ---- | -------- | ---------- |
-| `topology`  | –    | Yes      | `set`      |
-| `family`    | –    | Yes      | `pattern`  |
-| `vin_min`   | V    | Yes      | `max`      |
-| `vin_max`   | V    | Yes      | `min`      |
-| `vout`      | V    | Yes      | `exact`    |
-| `iout`      | A    | Yes      | `min`      |
-| `frequency` | Hz   | No       | `exact`    |
-| `dropout`   | V    | No       | `max`      |
-| `iq`        | A    | No       | `max`      |
-| `aec_q100`  | –    | No       | `exact`    |
-| `temp_min`  | °C   | No       | `max`      |
-| `temp_max`  | °C   | No       | `min`      |
+| Key         | Unit | Required     | Comparison |
+| ----------- | ---- | ------------ | ---------- |
+| `topology`  | –    | Yes          | `set`      |
+| `family`    | –    | Yes          | `pattern`  |
+| `vin_min`   | V    | Yes          | `max`      |
+| `vin_max`   | V    | Yes          | `min`      |
+| `vout`      | V    | Per topology | `exact`    |
+| `iout`      | A    | Yes          | `min`      |
+| `ilimit`    | A    | No           | `max`      |
+| `frequency` | Hz   | No           | `exact`    |
+| `dropout`   | V    | No           | `max`      |
+| `iq`        | A    | No           | `max`      |
+| `aec_q100`  | –    | No           | `exact`    |
+| `temp_min`  | °C   | No           | `max`      |
+| `temp_max`  | °C   | No           | `min`      |
 
-- `topology` is the regulator type (members below).
+- `topology` is the regulator or switch type (members below).
 - `family` defines drop-in compatibility: pinout, package and function. It must be narrow enough that every match works with the surrounding components.
 - `vin_min` and `vin_max` are the required input voltage range. A part matches when its input range covers the required range.
-- `vout` is the fixed output voltage (e.g. `3.3V`), or `adj` for adjustable parts set by external resistors.
-- `iout` is the rated output current, e.g. `2A`.
+- `vout` is the fixed output voltage (e.g. `3.3V`), or `adj` for adjustable parts set by external resistors. It is required for every topology except `power_switch`, whose output follows the input.
+- `iout` is the rated output current, e.g. `2A`. For a power switch, it is the rated continuous load current.
+- `ilimit` is the maximum current-limit threshold of a power switch, e.g. `0.8A`, or `adj` for parts set by an external resistor. A part matches when its maximum threshold is at or below the required one, so the protected load or the upstream supply is never exposed to more current.
 - `frequency` is the switching frequency, e.g. `2.2MHz`. It only applies to switching topologies. The inductor and capacitors are designed for it, so it must match exactly.
 - `dropout` is the maximum dropout voltage at the rated output current, e.g. `300mV`. It only applies to `linear` and `ldo`.
 - `iq` is the maximum quiescent current, e.g. `50uA`.
@@ -1362,15 +1366,17 @@ Reference prefix: `U`
 
 `topology` members:
 
-| Member        | Description                                              |
-| ------------- | -------------------------------------------------------- |
-| `linear`      | Linear regulator, standard dropout                       |
-| `ldo`         | Low-dropout linear regulator                             |
-| `buck`        | Step-down switching regulator                            |
-| `boost`       | Step-up switching regulator                              |
-| `buck_boost`  | Step-up/step-down switching regulator                    |
-| `inverting`   | Negative output switching regulator                      |
-| `charge_pump` | Switched-capacitor regulator, no inductor                |
+| Member         | Description                                                     |
+| -------------- | --------------------------------------------------------------- |
+| -------------  | --------------------------------------------------------        |
+| `linear`       | Linear regulator, standard dropout                              |
+| `ldo`          | Low-dropout linear regulator                                    |
+| `buck`         | Step-down switching regulator                                   |
+| `boost`        | Step-up switching regulator                                     |
+| `buck_boost`   | Step-up/step-down switching regulator                           |
+| `inverting`    | Negative output switching regulator                             |
+| `charge_pump`  | Switched-capacitor regulator, no inductor                       |
+| `power_switch` | Load switch, current-limited power distribution switch or eFuse |
 
 Examples:
 
@@ -1391,6 +1397,15 @@ vin_max    17V
 vout       adj
 iout       3A
 frequency  2.5MHz
+```
+
+```
+topology  power_switch
+family    AP22652W6*
+vin_min   3V
+vin_max   5.5V
+iout      2.1A
+ilimit    adj
 ```
 
 ### `RES`: Resistors

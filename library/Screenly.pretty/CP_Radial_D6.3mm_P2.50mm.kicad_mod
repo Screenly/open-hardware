@@ -1,0 +1,166 @@
+(footprint "CP_Radial_D6.3mm_P2.50mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "CP, radial THT, D6.3mm (6.8 mm max incl. sleeve), lead spacing 2.50mm, lead diameter 0.5-0.6mm (TOPAZ PH, JIERR PA series), drill 0.9mm")
+	(tags "CP radial D6.3mm P2.50mm polarized capacitor")
+	(property "Reference" "C?"
+		(at 1.25 -4.4 0)
+		(layer "F.SilkS")
+		(uuid "815a9d00-66f2-4a04-9240-edcbee4f23db")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CP_Radial_D6.3mm_P2.50mm"
+		(at 1.25 4.4 0)
+		(layer "F.Fab")
+		(uuid "b83f6b00-56ab-48f4-b7a1-f50874e873b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d1cb09c6-d7fd-45fe-b3ee-75954fee644e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d622a0c-9178-4d42-8beb-00cdca90c2ab")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.3 -2.1)
+		(end -1.5 -2.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd57e31a-47c0-4577-9b5b-2420913bade3")
+	)
+	(fp_line
+		(start -1.9 -2.5)
+		(end -1.9 -1.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91b59599-f624-4a09-8708-2ea4703034df")
+	)
+	(fp_circle
+		(center 1.25 0)
+		(end 4.52 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2efc39af-acb0-4b5c-8cf6-3f73bd1a7add")
+	)
+	(fp_circle
+		(center 1.25 0)
+		(end 4.75 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e90b4e82-c3cb-49cc-ae91-c6e9da1e4877")
+	)
+	(fp_line
+		(start -1.45 -1.2)
+		(end -0.65 -1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a8baa845-5f55-418e-8ee9-fc1c7e92832e")
+	)
+	(fp_line
+		(start -1.05 -1.6)
+		(end -1.05 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db35ba6f-b56b-4dd6-88f0-340b6f7c6bb4")
+	)
+	(fp_circle
+		(center 1.25 0)
+		(end 4.4 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a3f8497b-9228-43c9-bcfe-9f3036882e6c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.25 0 0)
+		(layer "F.Fab")
+		(uuid "f86d90d3-5102-4517-8cf8-eab145558568")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1f9af8b6-2ffa-495b-a570-c62e3db88ae4")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 0)
+		(size 1.7 1.7)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5118af57-3365-41f1-a240-d78496b6b614")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/Aluminum_electrolytic_capacitor_radial_D6.3_H11_PinD0.5_Pitch2.5_nominal_black.step"
+		(offset
+			(xyz 1.25 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
