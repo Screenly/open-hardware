@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "debc38da-6456-4840-8ce3-36b2630fc02f")
+	(uuid "c437d28b-c1f0-4226-8be3-b23f045bb4a1")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)"
@@ -889,257 +889,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Screenly:Resistor 100K 1% 0402 (0402WGF1003TCE)"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R?"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "100K"
-				(at -2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Screenly:R_0402"
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "100 kOhm 1% 62.5mW 0402 thick film chip resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "PartNumber" "SRLY-RES-000004"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "UNI-ROYAL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MfrPartNum" "0402WGF1003TCE"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "tolerance" "1%"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "power" "62.5mW"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "voltage" "50V"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "tempco" "100ppm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "technology" "thick_film"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "temp_min" "-55C"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "temp_max" "155C"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R resistor 100K 1% 0402 0402WGF1003TCE UNI-ROYAL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Resistor 100K 1% 0402 (0402WGF1003TCE)_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Resistor 100K 1% 0402 (0402WGF1003TCE)_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Screenly:Resistor 10K 1% 0402 (RC0402FR-0710KL)"
 			(pin_numbers
 				(hide yes)
@@ -1603,6 +1352,257 @@
 				)
 			)
 			(symbol "Resistor 120R 5% 0402 (0402WGJ0121TCE)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Screenly:Resistor 31.6K 1% 0402 (0402WGF3162TCE)"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R?"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "31.6K"
+				(at -2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Screenly:R_0402"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C11463.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "31.6 kOhm 1% 62.5mW 0402 thick film chip resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "PartNumber" "SRLY-RES-000010"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MfrPartNum" "0402WGF3162TCE"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "tolerance" "1%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "power" "62.5mW"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "voltage" "50V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "tempco" "100ppm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "technology" "thick_film"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "temp_min" "-55C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "temp_max" "155C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R resistor 31.6K 1% 0402 0402WGF3162TCE UNI-ROYAL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Resistor 31.6K 1% 0402 (0402WGF3162TCE)_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Resistor 31.6K 1% 0402 (0402WGF3162TCE)_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -2340,316 +2340,318 @@
 		)
 	)
 	(junction
-		(at 73.66 62.23)
+		(at 142.24 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "60172d9d-f865-4b7a-a804-4b7ab8f6734e")
+		(uuid "39dca27f-5db1-420f-92e1-bd013933113c")
 	)
 	(junction
-		(at 86.36 34.29)
+		(at 195.58 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7fa327df-8cb7-49da-9184-884dc2438e66")
+		(uuid "61c87cb9-041c-4d90-a751-7a2be4414c74")
 	)
 	(junction
-		(at 97.79 34.29)
+		(at 118.11 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "db2e6afd-e481-48c7-8aa5-5b07d7243540")
+		(uuid "62c0414a-a6c6-45dd-9614-08d17d4dd47c")
 	)
 	(junction
-		(at 46.99 34.29)
+		(at 91.44 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f523cfe9-e637-458f-9739-c88dd3b58a4e")
+		(uuid "7cc1a619-b6d3-49e5-9b44-a9719a17834f")
+	)
+	(junction
+		(at 130.81 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb0e9835-3a2b-4d0a-8e6b-2a56b3289e8a")
 	)
 	(bus_entry
-		(at 121.92 41.91)
+		(at 166.37 54.61)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "abbcd32e-a092-484a-a125-67f6591d4e50")
+		(uuid "3ba1736c-ebb5-407a-bc70-4106241db965")
 	)
 	(bus_entry
-		(at 121.92 44.45)
+		(at 166.37 52.07)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7e79e3b-9c82-4eb6-8b99-b72b668f0e63")
+		(uuid "acd288d9-a3a0-468b-b9d9-65e70525ba48")
 	)
 	(wire
 		(pts
-			(xy 124.46 41.91) (xy 140.97 41.91)
+			(xy 142.24 44.45) (xy 185.42 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "101b81e7-614f-4930-83e9-16cf02dfc78d")
+		(uuid "061074eb-e3bd-45fe-a647-cb1ba9858248")
 	)
 	(wire
 		(pts
-			(xy 81.28 39.37) (xy 81.28 53.34)
+			(xy 125.73 71.12) (xy 125.73 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1bd94498-82af-4835-97b3-3845ccf60f87")
+		(uuid "16a8ffa6-ce5c-460f-a213-7069b5e310e9")
 	)
 	(wire
 		(pts
-			(xy 86.36 34.29) (xy 76.2 34.29)
+			(xy 195.58 59.69) (xy 195.58 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2e50ec0f-3802-402d-a667-112aec137e0f")
+		(uuid "1b1d0545-ad41-4e8c-a493-fb257efda830")
 	)
 	(wire
 		(pts
-			(xy 124.46 39.37) (xy 140.97 39.37)
+			(xy 118.11 71.12) (xy 118.11 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5171fdfa-aeb2-4b25-b057-fb0a220b72b5")
+		(uuid "42f9bb19-a09f-4ee8-9f40-55c310c4d174")
 	)
 	(wire
 		(pts
-			(xy 81.28 60.96) (xy 81.28 62.23)
+			(xy 91.44 44.45) (xy 91.44 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "53267217-a6e7-4e0d-9c0b-6bc8815f474c")
+		(uuid "4a86a7ff-f8d0-4a6a-bf8d-9d5da6f37356")
 	)
 	(wire
 		(pts
-			(xy 55.88 34.29) (xy 46.99 34.29)
+			(xy 100.33 49.53) (xy 96.52 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5f5a178b-bf9f-4d04-8fb8-da03ab0b0e29")
+		(uuid "59d19b9e-fdb1-4e58-92a2-cdd89539d4e6")
 	)
 	(wire
 		(pts
-			(xy 97.79 34.29) (xy 140.97 34.29)
+			(xy 198.12 60.96) (xy 195.58 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "67e0cdcb-72fe-4f0f-b5c6-17f16815dbf4")
-	)
-	(wire
-		(pts
-			(xy 81.28 62.23) (xy 73.66 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72dc4f26-7df5-45af-9022-b528c72fa8a9")
-	)
-	(wire
-		(pts
-			(xy 55.88 39.37) (xy 52.07 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bef7b8d-0e3e-42d4-8e97-d28dc43de8e7")
-	)
-	(wire
-		(pts
-			(xy 97.79 34.29) (xy 86.36 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82010c79-fd14-42e9-89b8-c04f3dc9d9d7")
-	)
-	(wire
-		(pts
-			(xy 73.66 52.07) (xy 73.66 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d7285aa-5c40-414c-82a1-ce0cbf3c1acc")
+		(uuid "5a1719d8-851f-4781-a94e-0327b263f208")
 	)
 	(bus
 		(pts
-			(xy 121.92 39.37) (xy 121.92 44.45)
+			(xy 165.1 49.53) (xy 166.37 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9005b9ad-f2a7-45af-b192-f50c8a04090e")
+		(uuid "787d0f6b-0a84-4cb1-9f3b-973b60340d03")
 	)
 	(wire
 		(pts
-			(xy 76.2 39.37) (xy 81.28 39.37)
+			(xy 168.91 49.53) (xy 185.42 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c7cdc784-2fde-4c3b-8f11-baa539811d96")
+		(uuid "7ad79c67-6805-4dcf-a081-49362a198465")
+	)
+	(wire
+		(pts
+			(xy 118.11 72.39) (xy 110.49 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c2c2e20-2a96-4530-b00e-306477e30654")
+	)
+	(wire
+		(pts
+			(xy 195.58 60.96) (xy 195.58 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8278a321-3ee5-4125-8190-969b206131af")
+	)
+	(wire
+		(pts
+			(xy 198.12 59.69) (xy 198.12 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84010fdd-3ee5-4914-9a14-271260c80a64")
+	)
+	(wire
+		(pts
+			(xy 168.91 52.07) (xy 185.42 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8483009b-39d7-4900-9e3d-19838d4f5819")
+	)
+	(wire
+		(pts
+			(xy 118.11 62.23) (xy 118.11 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "861bb488-1c50-4cd6-8890-6a991752c60a")
+	)
+	(wire
+		(pts
+			(xy 125.73 72.39) (xy 118.11 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be557018-fe18-459f-ac74-54e5cdfba51e")
+	)
+	(wire
+		(pts
+			(xy 142.24 44.45) (xy 130.81 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdcb2bd7-f319-43c3-9396-3c5bb5266f2c")
+	)
+	(wire
+		(pts
+			(xy 130.81 44.45) (xy 120.65 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d09addd6-4286-4b2f-ab86-10719b3ef0c1")
+	)
+	(wire
+		(pts
+			(xy 125.73 49.53) (xy 125.73 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4df9917-2ab6-42ab-9b4c-2934bbb48d46")
+	)
+	(wire
+		(pts
+			(xy 120.65 49.53) (xy 125.73 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e50d905a-7d1b-4d0a-8a6e-28f027aff678")
 	)
 	(bus
 		(pts
-			(xy 120.65 39.37) (xy 121.92 39.37)
+			(xy 166.37 49.53) (xy 166.37 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d210493c-1c68-4bfd-a8d0-21068bb3738c")
+		(uuid "f42f4c81-db2d-455d-a19d-d8f8ff202280")
 	)
 	(wire
 		(pts
-			(xy 46.99 34.29) (xy 46.99 31.75)
+			(xy 100.33 44.45) (xy 91.44 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dca94cb2-d69c-4834-b598-03dfdadc075c")
+		(uuid "fa406174-badc-4609-883b-b88f708ccbbf")
 	)
 	(wire
 		(pts
-			(xy 77.47 41.91) (xy 76.2 41.91)
+			(xy 121.92 52.07) (xy 120.65 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e5ad4f68-5889-4e2d-8645-04267d756745")
-	)
-	(wire
-		(pts
-			(xy 73.66 60.96) (xy 73.66 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f3da54e2-f003-4892-ab23-27b7683f989b")
-	)
-	(wire
-		(pts
-			(xy 73.66 62.23) (xy 66.04 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4e2d7f9-363f-4c34-aed8-361eedc1f40b")
-	)
-	(label "USB2.D_N"
-		(at 127 39.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "01569a21-7523-4102-986f-98fa7ac0177a")
+		(uuid "fc7ade50-b081-44dc-b674-0a109dbd890f")
 	)
 	(label "USB2.D_P"
-		(at 127 41.91 0)
+		(at 171.45 52.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "91279fd6-440e-49ff-862e-e11d0c3b0cbb")
+		(uuid "57019b0d-7a60-4749-a572-299c58e82af5")
 	)
-	(hierarchical_label "~{USB3_1_PWR_FAULT}"
-		(shape output)
-		(at 26.67 153.67 0)
+	(label "USB2.D_N"
+		(at 171.45 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "06daf92d-0e39-4c83-8985-9fb372a5a31f")
-	)
-	(hierarchical_label "USB2{USB}"
-		(shape bidirectional)
-		(at 120.65 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1248a59a-aa8d-44b2-8d7a-75d20f17cbef")
+		(uuid "78f8e849-c30f-4724-9ef7-224512e9df6a")
 	)
 	(hierarchical_label "~{USBA_PWR_FAULT}"
 		(shape output)
-		(at 66.04 62.23 180)
+		(at 110.49 72.39 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "1a957f27-1b9f-4d0b-9fa2-d543e65066f2")
+		(uuid "0c210e69-937c-4166-af1c-7af146a7eba4")
 	)
-	(hierarchical_label "USB3_0{USB3}"
+	(hierarchical_label "USB2{USB}"
 		(shape bidirectional)
-		(at 45.72 140.97 180)
+		(at 165.1 49.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "2a5a0c77-4035-4280-9b0d-b12e402465e0")
-	)
-	(hierarchical_label "~{USB3_0_PWR_FAULT}"
-		(shape output)
-		(at 26.67 151.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5e04e53e-6b96-42c2-8f94-2d4b63f20db1")
-	)
-	(hierarchical_label "USB3_1{USB3}"
-		(shape bidirectional)
-		(at 45.72 144.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ebad8844-f13a-4d82-808f-f85464567db9")
+		(uuid "33de76e7-d1af-4d32-ae66-f78e504de2a3")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 46.99 0)
+		(at 121.92 59.69 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2658,437 +2660,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "05f29e03-a3fa-4842-8fb8-edd08e1be5c1")
-		(property "Reference" "#PWR086"
-			(at 66.04 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 66.04 52.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 66.04 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e5a43c73-9620-4ee7-8930-1adc56246ef7")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR086")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 52.07 39.37 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0d0ebbde-de8d-42f6-91f0-a04cad766656")
-		(property "Reference" "#PWR087"
-			(at 52.07 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 52.07 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "43d219bf-ec81-4a0e-a9a6-0d613406e5ed")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR087")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Screenly:Resistor 100K 1% 0402 (0402WGF1003TCE)")
-		(at 77.47 45.72 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "223418ab-a9d7-4c7c-bef6-79af55fcebb6")
-		(property "Reference" "R28"
-			(at 79.756 48.768 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 77.47 48.26 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Screenly:R_0402"
-			(at 79.248 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "100 kOhm 1% 62.5mW 0402 thick film chip resistor"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PartNumber" "SRLY-RES-000004"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "0402WGF1003TCE"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tolerance" "1%"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "power" "62.5mW"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "voltage" "50V"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tempco" "100ppm"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "technology" "thick_film"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-55C"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "155C"
-			(at 77.47 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cb5313ed-d595-4430-a6fb-b50d65772fe9")
-		)
-		(pin "1"
-			(uuid "693defd8-37a6-4800-b7ea-a62b05b776e6")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "R28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 73.66 52.07 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "341db970-3bc8-40b8-a504-e53467adaacf")
-		(property "Reference" "#PWR085"
-			(at 73.66 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 73.914 48.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 73.66 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "57fe2902-9b27-43f4-9e92-598e241b4d49")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR085")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 77.47 49.53 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3a906a2c-7498-4878-9fdf-8680e4d68318")
+		(uuid "1cf0e9b9-2090-4118-a569-37662ea364e2")
 		(property "Reference" "#PWR084"
-			(at 77.47 55.88 0)
+			(at 121.92 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3099,7 +2673,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 77.47 53.34 0)
+			(at 121.92 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3109,7 +2683,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 49.53 0)
+			(at 121.92 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3120,7 +2694,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 49.53 0)
+			(at 121.92 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3131,7 +2705,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 77.47 49.53 0)
+			(at 121.92 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3142,11 +2716,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6236451-47ba-4b49-bde5-5f18c566f401")
+			(uuid "c2bc80e9-e7e6-44a2-8b72-932555afa03d")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
 					(reference "#PWR084")
 					(unit 1)
 				)
@@ -3154,87 +2728,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 86.36 41.91 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "48784395-5d97-45b6-a21e-a6c845eb09ea")
-		(property "Reference" "#PWR083"
-			(at 86.36 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bcc20bf4-f38c-4686-b828-4571789ca4d6")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR083")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Screenly:Capacitor 10uF 50V X7R 1210 (CL32B106KBJNNNE)")
-		(at 86.36 38.1 0)
+		(at 130.81 48.26 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3243,9 +2738,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4fd3c2dd-646f-4571-9b86-143cd181b2c1")
+		(uuid "2f95e079-c04d-4e37-b721-3393efed71fd")
 		(property "Reference" "C37"
-			(at 84.074 35.56 0)
+			(at 128.524 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3256,7 +2751,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 83.82 38.1 0)
+			(at 128.27 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3267,7 +2762,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:C_1210"
-			(at 85.3948 41.91 0)
+			(at 129.8448 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3278,7 +2773,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL32B106KBJNNN.do"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3289,7 +2784,7 @@
 			)
 		)
 		(property "Description" "10uF 10% 50V X7R 1210 ceramic capacitor"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3300,7 +2795,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-CAP-000002"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3311,7 +2806,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3322,7 +2817,7 @@
 			)
 		)
 		(property "MfrPartNum" "CL32B106KBJNNNE"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3333,7 +2828,7 @@
 			)
 		)
 		(property "tolerance" "10%"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3344,7 +2839,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3355,7 +2850,7 @@
 			)
 		)
 		(property "dielectric" "X7R"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3366,7 +2861,7 @@
 			)
 		)
 		(property "technology" "ceramic"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3377,7 +2872,7 @@
 			)
 		)
 		(property "esr" "4.5m"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3388,7 +2883,7 @@
 			)
 		)
 		(property "ripple" "3.9A"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3399,7 +2894,7 @@
 			)
 		)
 		(property "temp_min" "-55C"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3410,7 +2905,7 @@
 			)
 		)
 		(property "temp_max" "125C"
-			(at 86.36 38.1 0)
+			(at 130.81 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3421,14 +2916,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "af9532a4-e1ef-4cc4-8e6b-168e7699ef45")
+			(uuid "5bb8fafa-9306-4f20-8003-086e8646b26a")
 		)
 		(pin "2"
-			(uuid "17127a36-15d9-4fd0-98e6-a802024d01af")
+			(uuid "d8b2ec5a-ca26-4023-a4ab-39484518e61e")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
 					(reference "C37")
 					(unit 1)
 				)
@@ -3436,8 +2931,221 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Resistor 10K 1% 0402 (RC0402FR-0710KL)")
-		(at 73.66 57.15 0)
+		(lib_id "Screenly:Power Switch 3-5.5V 2.1A SOT-23-6 (AP22652W6-7)")
+		(at 110.49 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "413dd2c7-04d9-4043-8704-551787d957c0")
+		(property "Reference" "U7"
+			(at 110.49 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP22652W6-7"
+			(at 110.49 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Screenly:SOT-23-6"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP22652_53.pdf"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Current-limited power distribution switch, 3-5.5V, 2.1A, 65mOhm, current limit 125mA-2.67A set by RLIM from ILIM to GND, constant current on overcurrent, reverse current blocking, active-low enable, open-drain FAULT with 6ms deglitch, SOT-23-6"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-PWR-000002"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "AP22652W6-7"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "topology" "power_switch"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "family" "AP22652W6*"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "vin_min" "3V"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "vin_max" "5.5V"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "iout" "2.1A"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ilimit" "adj"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-40C"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "85C"
+			(at 110.49 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "8ff85c8c-0a20-4a5d-85bf-6cd2be87c5f7")
+		)
+		(pin "4"
+			(uuid "20903975-3729-499b-88ca-ddb12a770ce9")
+		)
+		(pin "5"
+			(uuid "7c16f6cb-7459-453c-8c9e-6a90aab15607")
+		)
+		(pin "2"
+			(uuid "4f010a64-2bf0-4969-b30f-402e6006683c")
+		)
+		(pin "6"
+			(uuid "cd13a47b-30ee-49e3-b7b3-6112704fc50e")
+		)
+		(pin "1"
+			(uuid "a3edc03c-7e61-446b-aef0-e3b2f4c8ec76")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 130.81 52.07 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3447,31 +3155,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "500092d4-0190-410c-82d2-9a503112ded0")
-		(property "Reference" "R29"
-			(at 71.12 55.8799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 71.12 58.4199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Screenly:R_0402"
-			(at 75.438 57.15 90)
+		(uuid "418781bc-e955-40ca-8d53-51b6cdd5c5bc")
+		(property "Reference" "#PWR083"
+			(at 130.81 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3481,8 +3167,18 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C60490.pdf"
-			(at 73.66 57.15 0)
+		(property "Value" "GND"
+			(at 130.81 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.81 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3492,8 +3188,8 @@
 				)
 			)
 		)
-		(property "Description" "10 kOhm 1% 62.5mW 0402 thick film chip resistor"
-			(at 73.66 57.15 0)
+		(property "Datasheet" ""
+			(at 130.81 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3503,107 +3199,8 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-RES-000005"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "RC0402FR-0710KL"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tolerance" "1%"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "power" "62.5mW"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "voltage" "50V"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tempco" "100ppm"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "technology" "thick_film"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-55C"
-			(at 73.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "155C"
-			(at 73.66 57.15 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 130.81 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3614,23 +3211,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "14ca25a1-cc12-450b-a1f0-64811a0e5e28")
-		)
-		(pin "2"
-			(uuid "622a552a-56fa-4bdf-844a-89a2f16d5e09")
+			(uuid "37013766-88cd-436f-8e1b-8a7db5dde32d")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "R29")
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR083")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)")
-		(at 97.79 38.1 0)
+		(lib_id "power:GND")
+		(at 96.52 49.53 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3639,31 +3233,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "6689c4d2-d858-4e29-b18e-ce818664dcbb")
-		(property "Reference" "C36"
-			(at 94.996 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 94.996 37.592 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Screenly:C_0402"
-			(at 96.8248 41.91 0)
+		(fields_autoplaced yes)
+		(uuid "5550fe48-7e6e-460c-a621-43dcd479353b")
+		(property "Reference" "#PWR087"
+			(at 96.52 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3673,8 +3246,18 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05B104KB54PN.do"
-			(at 97.79 38.1 0)
+		(property "Value" "GND"
+			(at 96.52 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3684,8 +3267,8 @@
 				)
 			)
 		)
-		(property "Description" "100nF 10% 50V X7R 0402 ceramic capacitor, AEC-Q200"
-			(at 97.79 38.1 0)
+		(property "Datasheet" ""
+			(at 96.52 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3695,118 +3278,8 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-CAP-000001"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "CL05B104KB54PNC"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tolerance" "10%"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "voltage" "50V"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "dielectric" "X7R"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "technology" "ceramic"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "esr" "330m"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "aec_q200" "yes"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-55C"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "125C"
-			(at 97.79 38.1 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3817,15 +3290,169 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb9839b1-c2db-4d17-8966-3824cb218844")
-		)
-		(pin "2"
-			(uuid "61fd9f1b-3fc7-4744-a81b-6df1aac0400f")
+			(uuid "30446074-e956-4f50-83b8-4170a3da08d2")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "C36")
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 118.11 62.23 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6ce38470-9576-447a-8714-6da127965672")
+		(property "Reference" "#PWR085"
+			(at 118.11 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 118.364 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 118.11 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e49c3cb-19d7-4a5c-ab8d-d35c8dc6d44e")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 195.58 62.23 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73762915-1ee4-4aea-b300-65ca6926d64d")
+		(property "Reference" "#PWR099"
+			(at 195.58 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 195.58 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 195.58 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb947160-3c20-4494-b915-a3245080a1d5")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -3833,7 +3460,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:USB-A Receptacle USB 2.0 SMD (10.0 QHHTZB6.3)")
-		(at 151.13 39.37 0)
+		(at 195.58 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3842,9 +3469,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "87dcaf28-01bf-4e1e-b5bd-8b15e35e979b")
+		(uuid "8b12e1d1-98a1-4088-8cab-c4894249c982")
 		(property "Reference" "J7"
-			(at 160.02 39.3699 0)
+			(at 204.47 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3855,7 +3482,7 @@
 			)
 		)
 		(property "Value" "10.0 QHHTZB6.3"
-			(at 160.02 40.6399 0)
+			(at 204.47 50.7999 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3867,7 +3494,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:USB_A_SHOUHAN_QHHTZB6.3_Horizontal"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3878,7 +3505,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C668591.pdf"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3889,7 +3516,7 @@
 			)
 		)
 		(property "Description" "USB 2.0 Type-A receptacle, 4 positions, right angle, 10mm short body, SMD contacts with through-hole front shell legs, 30V 1.5A, 5000 cycles, -25 to 85C"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3900,7 +3527,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-CON-000008"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3911,7 +3538,7 @@
 			)
 		)
 		(property "Manufacturer" "SHOU HAN"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3922,7 +3549,7 @@
 			)
 		)
 		(property "MfrPartNum" "10.0 QHHTZB6.3"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3933,7 +3560,7 @@
 			)
 		)
 		(property "interface" "usb_a"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3944,7 +3571,7 @@
 			)
 		)
 		(property "family" "*"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3955,7 +3582,7 @@
 			)
 		)
 		(property "current" "1.5A"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3966,7 +3593,7 @@
 			)
 		)
 		(property "voltage" "30V"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3977,7 +3604,7 @@
 			)
 		)
 		(property "durability" "5000"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3988,7 +3615,7 @@
 			)
 		)
 		(property "temp_min" "-25C"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3999,7 +3626,7 @@
 			)
 		)
 		(property "temp_max" "85C"
-			(at 151.13 39.37 0)
+			(at 195.58 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4010,23 +3637,23 @@
 			)
 		)
 		(pin "2"
-			(uuid "8d165bf5-36b6-4af6-806a-7c14200cbfb1")
+			(uuid "473f71e2-30ed-46d6-b5f1-96529634ed47")
 		)
 		(pin "SH"
-			(uuid "6d69cab3-6209-4e4c-8f79-fac3136c7f29")
+			(uuid "50972637-81ab-4b6d-b136-c3c9c90cad6b")
 		)
 		(pin "4"
-			(uuid "4be0fdbe-32ad-4a59-9cff-70d487f67034")
+			(uuid "c9fda8a3-d485-48a3-999a-20d8bb6b821f")
 		)
 		(pin "1"
-			(uuid "3dfc7cc4-fad1-4150-a843-2e6abcf7e04d")
+			(uuid "69cfca71-0c63-4ecb-b794-f2c3335ef4b7")
 		)
 		(pin "3"
-			(uuid "9f701a1f-3711-4ff6-a9b2-9fddc8d9da87")
+			(uuid "73efa17e-3f31-4737-a3e2-b7b4945e106e")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
 					(reference "J7")
 					(unit 1)
 				)
@@ -4034,9 +3661,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 46.99 31.75 0)
-		(mirror y)
+		(lib_id "Screenly:Resistor 31.6K 1% 0402 (0402WGF3162TCE)")
+		(at 121.92 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4045,88 +3671,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "89d6dc17-93ea-4e56-8b83-310bbb1c15c2")
-		(property "Reference" "#PWR088"
-			(at 46.99 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 46.99 26.67 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.99 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 46.99 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e3c192c-4de6-4195-8710-3ee99c398987")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR088")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)")
-		(at 46.99 38.1 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "98faafd1-e2a9-4cb1-a3d0-5da229418b79")
-		(property "Reference" "C38"
-			(at 43.18 36.8299 0)
+		(uuid "8c8b8ca6-8abf-41ff-918b-f03dacf6bf2f")
+		(property "Reference" "R28"
+			(at 124.46 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4136,369 +3683,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 43.18 39.3699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Screenly:C_0402"
-			(at 46.0248 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05B104KB54PN.do"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "100nF 10% 50V X7R 0402 ceramic capacitor, AEC-Q200"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PartNumber" "SRLY-CAP-000001"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MfrPartNum" "CL05B104KB54PNC"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "tolerance" "10%"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "voltage" "50V"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "dielectric" "X7R"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "technology" "ceramic"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "esr" "330m"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "aec_q200" "yes"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_min" "-55C"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "temp_max" "125C"
-			(at 46.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a55539f-6bfc-4462-9fda-53dfacd9225a")
-		)
-		(pin "2"
-			(uuid "b2906030-f20b-4ce9-9a2e-3dc161b76dce")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "C38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 46.99 41.91 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4144e27-a832-44b8-8926-5f37ffd1c7a1")
-		(property "Reference" "#PWR089"
-			(at 46.99 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 46.99 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.99 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 46.99 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fece61d1-bc0d-4077-93e2-206f78ecec1d")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR089")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 97.79 41.91 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d75af040-7f4e-4fc4-865e-354d6751abbc")
-		(property "Reference" "#PWR082"
-			(at 97.79 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 97.79 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.79 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.79 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 97.79 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8e3571e6-2081-4480-b72a-e01b8a9255f7")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
-		(at 81.28 57.15 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e9b3a996-e5cf-4b63-a2d6-36dc7ca6c147")
-		(property "Reference" "R26"
-			(at 80.01 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "120"
-			(at 79.502 58.42 0)
+		(property "Value" "31.6K"
+			(at 124.46 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4509,7 +3695,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:R_0402"
-			(at 83.058 57.15 90)
+			(at 120.142 55.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4519,8 +3705,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
-			(at 81.28 57.15 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C11463.pdf"
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4530,8 +3716,8 @@
 				)
 			)
 		)
-		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
-			(at 81.28 57.15 0)
+		(property "Description" "31.6 kOhm 1% 62.5mW 0402 thick film chip resistor"
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4541,8 +3727,8 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-RES-000009"
-			(at 81.28 57.15 0)
+		(property "PartNumber" "SRLY-RES-000010"
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4553,7 +3739,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4563,8 +3749,8 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "0402WGJ0121TCE"
-			(at 81.28 57.15 0)
+		(property "MfrPartNum" "0402WGF3162TCE"
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4574,8 +3760,8 @@
 				)
 			)
 		)
-		(property "tolerance" "5%"
-			(at 81.28 57.15 0)
+		(property "tolerance" "1%"
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4586,7 +3772,7 @@
 			)
 		)
 		(property "power" "62.5mW"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4597,7 +3783,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4608,7 +3794,7 @@
 			)
 		)
 		(property "tempco" "100ppm"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4619,7 +3805,7 @@
 			)
 		)
 		(property "technology" "thick_film"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4630,7 +3816,7 @@
 			)
 		)
 		(property "temp_min" "-55C"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4641,7 +3827,7 @@
 			)
 		)
 		(property "temp_max" "155C"
-			(at 81.28 57.15 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4652,23 +3838,24 @@
 			)
 		)
 		(pin "1"
-			(uuid "2c9a37af-a1fa-461a-acc1-756f8524756f")
+			(uuid "ec6dba68-0e85-4b53-9346-187406351416")
 		)
 		(pin "2"
-			(uuid "69974bae-d619-4eca-bed2-c8bd0a0e391f")
+			(uuid "34776259-042d-4ddf-9a29-d7014b7abd59")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "R26")
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "R28")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Power Switch 3-5.5V 2.1A SOT-23-6 (AP22652W6-7)")
-		(at 66.04 36.83 0)
+		(lib_id "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)")
+		(at 91.44 48.26 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4677,29 +3864,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f27e40ea-d7fb-4cdc-8e24-cce9855d3dc5")
-		(property "Reference" "U7"
-			(at 66.04 26.67 0)
+		(uuid "9966b24f-2ac1-4b99-a23f-b2da2f9a91fd")
+		(property "Reference" "C38"
+			(at 87.63 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "AP22652W6-7"
-			(at 66.04 29.21 0)
+		(property "Value" "100nF"
+			(at 87.63 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Screenly:SOT-23-6"
-			(at 66.04 36.83 0)
+		(property "Footprint" "Screenly:C_0402"
+			(at 90.4748 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4709,8 +3898,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP22652_53.pdf"
-			(at 66.04 36.83 0)
+		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05B104KB54PN.do"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4720,8 +3909,8 @@
 				)
 			)
 		)
-		(property "Description" "Current-limited power distribution switch, 3-5.5V, 2.1A, 65mOhm, current limit 125mA-2.67A set by RLIM from ILIM to GND, constant current on overcurrent, reverse current blocking, active-low enable, open-drain FAULT with 6ms deglitch, SOT-23-6"
-			(at 66.04 36.83 0)
+		(property "Description" "100nF 10% 50V X7R 0402 ceramic capacitor, AEC-Q200"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4731,8 +3920,8 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-PWR-000002"
-			(at 66.04 36.83 0)
+		(property "PartNumber" "SRLY-CAP-000001"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4742,8 +3931,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Diodes Incorporated"
-			(at 66.04 36.83 0)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4753,8 +3942,8 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "AP22652W6-7"
-			(at 66.04 36.83 0)
+		(property "MfrPartNum" "CL05B104KB54PNC"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4764,8 +3953,8 @@
 				)
 			)
 		)
-		(property "topology" "power_switch"
-			(at 66.04 36.83 0)
+		(property "tolerance" "10%"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4775,8 +3964,8 @@
 				)
 			)
 		)
-		(property "family" "AP22652W6*"
-			(at 66.04 36.83 0)
+		(property "voltage" "50V"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4786,8 +3975,8 @@
 				)
 			)
 		)
-		(property "vin_min" "3V"
-			(at 66.04 36.83 0)
+		(property "dielectric" "X7R"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4797,8 +3986,8 @@
 				)
 			)
 		)
-		(property "vin_max" "5.5V"
-			(at 66.04 36.83 0)
+		(property "technology" "ceramic"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4808,8 +3997,8 @@
 				)
 			)
 		)
-		(property "iout" "2.1A"
-			(at 66.04 36.83 0)
+		(property "esr" "330m"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4819,8 +4008,8 @@
 				)
 			)
 		)
-		(property "ilimit" "adj"
-			(at 66.04 36.83 0)
+		(property "aec_q200" "yes"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4830,8 +4019,8 @@
 				)
 			)
 		)
-		(property "temp_min" "-40C"
-			(at 66.04 36.83 0)
+		(property "temp_min" "-55C"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4841,8 +4030,8 @@
 				)
 			)
 		)
-		(property "temp_max" "85C"
-			(at 66.04 36.83 0)
+		(property "temp_max" "125C"
+			(at 91.44 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4851,29 +4040,920 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "3"
-			(uuid "405f6ba8-ecbe-4242-a44f-2795b9b4a30c")
-		)
-		(pin "4"
-			(uuid "3a089a77-8102-477c-ab85-ad6ba7b2677f")
-		)
-		(pin "5"
-			(uuid "13fe7d2b-725e-4b3c-9ea7-07121f6db172")
-		)
-		(pin "2"
-			(uuid "8f8ef8c2-61c5-45d4-973f-579b4e6138fa")
-		)
-		(pin "6"
-			(uuid "dc97047d-a6bc-4384-8672-7d8cc3796323")
 		)
 		(pin "1"
-			(uuid "0dae7273-246c-4790-b966-b68b28c4168e")
+			(uuid "57ed08c2-903e-4474-a909-bb35c66f2975")
+		)
+		(pin "2"
+			(uuid "6f1bacee-c6fa-4910-817a-a38cc6804ff3")
 		)
 		(instances
 			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/e2a2df82-091a-44a6-8ea8-53690f8a3538"
-					(reference "U7")
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 110.49 57.15 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b311d614-9c82-45fa-a542-3cf86b7779b9")
+		(property "Reference" "#PWR086"
+			(at 110.49 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 110.49 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 110.49 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c1e53a0c-659e-4783-9b8b-7c9ed76f1c6b")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)")
+		(at 142.24 48.26 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bcb1fca0-b954-416c-b6b8-ff455428e839")
+		(property "Reference" "C36"
+			(at 139.446 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 139.446 47.752 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Screenly:C_0402"
+			(at 141.2748 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05B104KB54PN.do"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100nF 10% 50V X7R 0402 ceramic capacitor, AEC-Q200"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-CAP-000001"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "CL05B104KB54PNC"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "tolerance" "10%"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "voltage" "50V"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "dielectric" "X7R"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "technology" "ceramic"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "esr" "330m"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "aec_q200" "yes"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-55C"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "125C"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f90992a8-5168-46a7-9094-030f850769f0")
+		)
+		(pin "2"
+			(uuid "cb7dd0f3-f635-4224-985a-54f5c54bd53b")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 91.44 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bda42413-81b7-4ace-9b32-bdc1c8d301ca")
+		(property "Reference" "#PWR038"
+			(at 91.44 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V_USB"
+			(at 91.44 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 91.44 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2313e088-224a-43cc-92ef-8ac28f32ae2a")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 52.07 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c45ab2ae-4eed-4f5a-b461-6a525ba6f39a")
+		(property "Reference" "#PWR089"
+			(at 91.44 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d9743c4-7fe7-41ab-a683-7f2c3a60612d")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:Resistor 10K 1% 0402 (RC0402FR-0710KL)")
+		(at 118.11 67.31 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de19b545-5fb8-44ca-af2d-6c729ce70898")
+		(property "Reference" "R29"
+			(at 115.57 66.0399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 115.57 68.5799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Screenly:R_0402"
+			(at 119.888 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C60490.pdf"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10 kOhm 1% 62.5mW 0402 thick film chip resistor"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-RES-000005"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "RC0402FR-0710KL"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "tolerance" "1%"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "power" "62.5mW"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "voltage" "50V"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "tempco" "100ppm"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "technology" "thick_film"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-55C"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "155C"
+			(at 118.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "58ef330d-5c8e-4426-91c5-53baa88d09aa")
+		)
+		(pin "2"
+			(uuid "8d4d9cd9-8e77-4333-832d-b29d3c914f07")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
+		(at 125.73 67.31 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e88e0bfb-83cc-49d1-abc0-9a54d723ab2e")
+		(property "Reference" "R26"
+			(at 124.46 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "120"
+			(at 123.952 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Screenly:R_0402"
+			(at 127.508 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-RES-000009"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "0402WGJ0121TCE"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "tolerance" "5%"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "power" "62.5mW"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "voltage" "50V"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "tempco" "100ppm"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "technology" "thick_film"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_min" "-55C"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "temp_max" "155C"
+			(at 125.73 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "75c25b35-b9e6-414d-b878-0814ba38f58b")
+		)
+		(pin "2"
+			(uuid "cfb46272-e744-4af6-856c-e7ae778cdb96")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 52.07 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f919c41a-62e9-45aa-af51-c20a6e056109")
+		(property "Reference" "#PWR082"
+			(at 142.24 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 142.24 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eed8694e-a223-4ade-aaf6-8e9389555a8d")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a503af32-25a5-4480-aa48-168ffda443cb"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)

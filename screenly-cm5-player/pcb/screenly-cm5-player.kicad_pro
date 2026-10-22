@@ -739,7 +739,7 @@
         "uuid": "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
       }
     ],
-    "used_designators": "#FLG1,#PWR1-89,#PWR305-311,C1-38,D1-10,FB1,J1-7,L1-3,Q1,R1-29,U1-7",
+    "used_designators": "#FLG1,#PWR1-129,#PWR305-311,C1-50,D1-16,FB1,J1-9,L1-3,Q1,R1-45,U1-11",
     "variants": []
   },
   "sheets": [
@@ -769,7 +769,15 @@
     ],
     [
       "e2a2df82-091a-44a6-8ea8-53690f8a3538",
-      "USB"
+      "USB3_0"
+    ],
+    [
+      "5baf4b10-6157-44f0-81b4-ab33820b70f3",
+      "USB3_1"
+    ],
+    [
+      "a503af32-25a5-4480-aa48-168ffda443cb",
+      "USB2"
     ]
   ],
   "text_variables": {},

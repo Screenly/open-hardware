@@ -38,6 +38,7 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 | `FBD` | `Ferrite Bead <impedance> <current> <package> (<MPN>)`         | `Ferrite Bead 50R 12A 1206 (BLM31SN500SZ1L)` |
 | `FET` | `<N/P>-MOSFET <vds> <id> <rds_on> <package> (<MPN>)`          | `P-MOSFET 40V 40A 15mOhm TO-252 (AOD4185)` |
 | `IND` | `Inductor <value> <saturation current> <body size> (<MPN>)`    | `Inductor 4.7uH 15A 10x11.5mm (AAPS1050M4R7A)` |
+| `ITC` | `<Function> <main values> <package> (<MPN>)`                  | `USB SS Mux IC Type-C Port Controller 10Gbps WQFN-30 (HD3SS3220IRNHR)` |
 | `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
 | `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)`, `Power Switch <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)`, `Power Switch 3-5.5V 2.1A SOT-23-6 (AP22652W6-7)` |
 
@@ -1084,6 +1085,50 @@ value      10nH
 tolerance  2%
 irms       300mA
 q          30
+```
+
+### `ITC`: Integrated Circuits
+
+Integrated circuits that no more specific class covers: interface ICs (USB and Type-C port controllers, signal multiplexers, redrivers, level shifters, transceivers), logic ICs and security ICs. Microcontrollers are in `MCU`, power ICs in `PWR`, sensors in `SNS` and memories in `STO`.
+
+Reference prefix: `U`
+
+| Key        | Unit | Required | Comparison |
+| ---------- | ---- | -------- | ---------- |
+| `function` | –    | Yes      | `set`      |
+| `family`   | –    | Yes      | `pattern`  |
+| `vdd`      | V    | Yes      | `range`    |
+| `aec_q100` | –    | No       | `exact`    |
+| `temp_min` | °C   | No       | `max`      |
+| `temp_max` | °C   | No       | `min`      |
+
+- `function` is the main function of the IC (members below).
+- `family` defines drop-in compatibility: pinout, package and function. ICs are rarely interchangeable across manufacturers, so the pattern must be narrow and `family *` is never used.
+- `vdd` is the supply voltage of the design, e.g. `3.3V`. ICs with several supplies list each rail, separated by commas (e.g. `3.3V,5V`). A part matches when each rated supply range includes its rail.
+- `aec_q100` is `yes` when automotive qualification (AEC-Q100) is required. `yes` is its only value; leave it out otherwise.
+- `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
+- ICs that contain firmware follow the [firmware-bearing parts](bom-standard.md#firmware-bearing-parts) rule.
+
+`function` members:
+
+| Member             | Description                                                       |
+| ------------------ | ----------------------------------------------------------------- |
+| `usb_c_controller` | USB Type-C port controller (CC logic), with or without a data mux |
+| `signal_mux`       | Analog or high-speed signal multiplexer or switch                 |
+| `redriver`         | Signal redriver or retimer                                        |
+| `level_shifter`    | Logic level translator                                            |
+| `transceiver`      | Interface transceiver or PHY (e.g. CAN, RS-485, Ethernet)         |
+| `logic`            | Logic gates, buffers and flip-flops                               |
+| `security`         | Security IC (e.g. TPM, secure element)                            |
+
+Example:
+
+```
+function  usb_c_controller
+family    HD3SS3220*RNH*
+vdd       3.3V,5V
+temp_min  -40C
+temp_max  85C
 ```
 
 ### `LED`: Light Emitting Diodes
