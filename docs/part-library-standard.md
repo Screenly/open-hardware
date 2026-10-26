@@ -40,7 +40,7 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 | `IND` | `Inductor <value> <saturation current> <body size> (<MPN>)`    | `Inductor 4.7uH 15A 10x11.5mm (AAPS1050M4R7A)` |
 | `ITC` | `<Function> <main values> <package> (<MPN>)`                  | `USB SS Mux IC Type-C Port Controller 10Gbps WQFN-30 (HD3SS3220IRNHR)` |
 | `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
-| `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)`, `Power Switch <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)`, `Power Switch 3-5.5V 2.1A SOT-23-6 (AP22652W6-7)` |
+| `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)`, `Power Switch <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)`, `Power Switch 3-5.5V 2.1A SOT-23-6 (AP22653W6-7)` |
 
 The pattern of other classes is defined when their first part is added.
 
@@ -1446,7 +1446,7 @@ frequency  2.5MHz
 
 ```
 topology  power_switch
-family    AP22652W6*
+family    AP22653W6*
 vin_min   3V
 vin_max   5.5V
 iout      2.1A

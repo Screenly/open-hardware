@@ -1,0 +1,327 @@
+(footprint "USB_A_USB3_AdamTech_USB-A3-S-RA_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Adam Tech USB-A3-S-RA USB 3.0 (USB 3.2 Gen 1) Type-A receptacle, 9 positions, right angle, through hole, shielded. Footprint per Adam Tech recommended PCB layout (drawing rev C). Origin on the shell-leg line; connector edge 11.78 mm ahead of it. Shell-leg pads enlarged to drill + 0.9 mm.")
+	(tags "USB A type-A USB3 USB 3.0 SuperSpeed receptacle through hole horizontal Adam Tech USB-A3-S-RA")
+	(property "Reference" "J?"
+		(at 0 6.2 0)
+		(layer "F.SilkS")
+		(uuid "844f26d7-21e4-453d-9166-21fca63ba258")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "USB_A_USB3_AdamTech_USB-A3-S-RA_Horizontal"
+		(at 0 -12.98 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a3f8b77-782c-464d-a6e4-69d8c978e4a9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "046f081a-f115-45ef-9b15-df39841ded50")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b096c982-362d-4d0e-a946-429226199b7e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7.42 -10.78)
+		(end -7.42 -1.85)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1335bf1-1305-4ffb-a459-5a01d84840a9")
+	)
+	(fp_line
+		(start -7.42 1.85)
+		(end -7.42 4.79)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7d9c6db2-dbe7-4a85-aba6-166dd9397948")
+	)
+	(fp_line
+		(start -7.42 4.79)
+		(end 7.42 4.79)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "79395c40-a7e5-4686-b67c-3e0b7df904b3")
+	)
+	(fp_line
+		(start 2.9 1)
+		(end 4.1 1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "67f61b32-8390-4860-8f80-540820fb7dc9")
+	)
+	(fp_line
+		(start 7.42 -10.78)
+		(end 7.42 -1.85)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "555ce9bd-c6e5-4762-8bb0-acfd7bd0210d")
+	)
+	(fp_line
+		(start 7.42 1.85)
+		(end 7.42 4.79)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a47c531-0a56-48e8-ad01-2ad6f5f83ff1")
+	)
+	(fp_line
+		(start -8.42 -11.78)
+		(end 8.42 -11.78)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Cmts.User")
+		(uuid "ff9d9a71-79bc-4db6-b6ad-0b7617b1e97a")
+	)
+	(fp_line
+		(start -8.42 -12.03)
+		(end 8.42 -12.03)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a4810b91-752d-42ec-9fd2-029c58d4e603")
+	)
+	(fp_line
+		(start -8.42 5.04)
+		(end -8.42 -12.03)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "35a25fad-3fee-47ca-944c-9d24a60a0d67")
+	)
+	(fp_line
+		(start 8.42 -12.03)
+		(end 8.42 5.04)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e4ab054b-fd3b-4170-a358-b089e3cce2bb")
+	)
+	(fp_line
+		(start 8.42 5.04)
+		(end -8.42 5.04)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1d7ce600-9bca-4c6e-9845-8bd4ee66892b")
+	)
+	(fp_line
+		(start -7.3 -11.78)
+		(end 7.3 -11.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a9d23391-153e-4327-967f-a6c45531cd09")
+	)
+	(fp_line
+		(start -7.3 4.67)
+		(end -7.3 -11.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d67cf0e1-50a6-4db3-9953-250bb0e76b06")
+	)
+	(fp_line
+		(start 7.3 -11.78)
+		(end 7.3 4.67)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0fcda60a-df57-4dcc-9a7a-cc2879b28e20")
+	)
+	(fp_line
+		(start 7.3 4.67)
+		(end -7.3 4.67)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9511c7a4-3f40-4d5c-828c-04365327d908")
+	)
+	(fp_text user "Connector edge"
+		(at 0 -11.18 0)
+		(layer "Cmts.User")
+		(uuid "04c9aaab-9972-48c1-88d8-dc5d1ade808e")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -5 0)
+		(layer "F.Fab")
+		(uuid "bd0011dd-1cc8-4c07-840f-fb8c4f33427e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 3.5 2)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a3bae4ed-d903-4908-984f-af74695792dd")
+	)
+	(pad "2" thru_hole circle
+		(at 1 2)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ea847c4a-c35e-4422-a4f0-46d28ce6cd5c")
+	)
+	(pad "3" thru_hole circle
+		(at -1 2)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5c8d8aea-e349-4578-ad6f-866462368a4e")
+	)
+	(pad "4" thru_hole circle
+		(at -3.5 2)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "867ada80-372d-428f-8537-6291bc2e168c")
+	)
+	(pad "5" thru_hole circle
+		(at -4 3.5)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "36d36ae6-933e-4280-b9a7-860b8939539a")
+	)
+	(pad "6" thru_hole circle
+		(at -2 3.5)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f9364735-5d58-4c63-a4c9-6f25432e671c")
+	)
+	(pad "7" thru_hole circle
+		(at 0 3.5)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e554549f-c21a-4bb6-898d-287a75ad74fe")
+	)
+	(pad "8" thru_hole circle
+		(at 2 3.5)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f9c8dda4-2727-454c-9f80-7983e6464f59")
+	)
+	(pad "9" thru_hole circle
+		(at 4 3.5)
+		(size 1.2 1.2)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4af62bfb-6e46-48c8-a0a6-41d9c10a8777")
+	)
+	(pad "SH" thru_hole circle
+		(at -6.57 0)
+		(size 3.2 3.2)
+		(drill 2.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6ea1537a-aee7-41c8-92db-b3f5f546615c")
+	)
+	(pad "SH" thru_hole circle
+		(at 6.57 0)
+		(size 3.2 3.2)
+		(drill 2.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0277440f-6ba6-4f24-a4e5-87cc8a99c338")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/USB-A3-S-RA.step"
+		(offset
+			(xyz 0 1.31 4.15)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 -0 -0)
+		)
+	)
+)
