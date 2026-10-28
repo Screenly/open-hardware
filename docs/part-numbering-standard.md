@@ -56,7 +56,7 @@ Regex: `^SRLY-[A-Z]{3}-[0-9]{6}$`
 | `SCR` | Screws                                      |
 | `SNS` | Sensors                                     |
 | `SPK` | Speakers                                    |
-| `STO` | Storage devices (e.g. SD card, NVMe disk)   |
+| `STO` | Storage devices (e.g. SD card, NVMe disk, EEPROM) |
 | `SWC` | Switches                                    |
 | `THR` | Thermal elements                            |
 | `XTL` | Crystals                                    |

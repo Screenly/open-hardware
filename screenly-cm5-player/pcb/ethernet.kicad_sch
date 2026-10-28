@@ -1031,8 +1031,8 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 12.7 -2.54 180)
+				(pin no_connect line
+					(at 2.54 -2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name ""
@@ -1050,8 +1050,8 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 12.7 2.54 180)
+				(pin no_connect line
+					(at 2.54 0 180)
 					(length 5.08)
 					(hide yes)
 					(name ""
@@ -2797,7 +2797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "014e7679-7bb0-414e-8854-43ea14a39b19")
-		(property "Reference" "C27"
+		(property "Reference" "C18"
 			(at 186.69 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2982,7 +2982,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "C27")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -3000,7 +3000,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cdbf5a6-ae3a-4243-b30e-b693f5930ae3")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 203.2 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3189,7 +3189,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -3410,7 +3410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59a4462a-bdfb-4ac2-aac3-fdf1386affb3")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR046"
 			(at 203.2 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -3470,7 +3470,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR052")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -3488,7 +3488,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6ac8b86-bb37-4c19-9c62-0a4b4e409561")
-		(property "Reference" "R18"
+		(property "Reference" "R19"
 			(at 224.79 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3662,7 +3662,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "R18")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -3679,7 +3679,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3169ec9-9cb9-4082-8853-e4ba4bb0e09d")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR048"
 			(at 222.25 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3739,7 +3739,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR047")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -3757,7 +3757,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4802a2c-f5bd-4427-a20d-7c7aa03d2525")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR044"
 			(at 139.7 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -3817,7 +3817,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR049")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -3835,7 +3835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf4dd5d5-5f5e-4eef-84c6-f82c76620b0f")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR047"
 			(at 218.44 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -3895,7 +3895,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR051")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -4116,7 +4116,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ebcae343-1383-4b35-9b49-8d99502b032e")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR043"
 			(at 96.52 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -4176,7 +4176,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR048")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -4194,7 +4194,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f74364d1-0ce2-431e-8e40-1e5ed8f6cbaa")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR045"
 			(at 182.88 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -4254,7 +4254,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "#PWR050")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -4272,7 +4272,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fac3a8db-7c52-4dd9-a8a0-4d514d25488d")
-		(property "Reference" "R17"
+		(property "Reference" "R20"
 			(at 233.68 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4446,7 +4446,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/c23b474a-a5df-4d03-b71c-bc870a6cf46c"
-					(reference "R17")
+					(reference "R20")
 					(unit 1)
 				)
 			)

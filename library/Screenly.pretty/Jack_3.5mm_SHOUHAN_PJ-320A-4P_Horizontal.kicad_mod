@@ -1,0 +1,335 @@
+(footprint "Jack_3.5mm_SHOUHAN_PJ-320A-4P_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SHOU HAN PJ-320A-4P DIP 3.5 mm TRRS audio jack (PJ-320A style), right angle, through hole, no switch, 6.1 mm wide. Footprint per SHOU HAN PCB layout (identical to BXCONN PJ-320AP4C). Origin at the body front edge on the jack axis; plug enters from -Y. Pads A..D as in the SHOU HAN drawing; locating pegs NPTH.")
+	(tags "audio jack 3.5mm TRRS 4 pole headphone line out right angle PJ-320A SHOU HAN")
+	(property "Reference" "J?"
+		(at 0 13.4 0)
+		(layer "F.SilkS")
+		(uuid "57bd6819-7f52-4c3b-b644-2bf710723208")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Jack_3.5mm_SHOUHAN_PJ-320A-4P_Horizontal"
+		(at 0 14.6 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b4ff8d1-9862-4d88-9502-0e988e832080")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "254c6ef3-3720-4e24-b51a-9d628dae5a4f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "066e054a-236a-499b-8a22-8255b1f51d41")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.16 -0.11)
+		(end -3.16 10.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d187f22-5314-4965-aa6a-1458edbde46f")
+	)
+	(fp_line
+		(start -3.16 -0.11)
+		(end 3.16 -0.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d7948a3a-5781-44d0-a612-222cab103601")
+	)
+	(fp_line
+		(start -1.45 12.21)
+		(end 3.16 12.21)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff413408-e980-48e4-9de1-73eb57e793c1")
+	)
+	(fp_line
+		(start 3.16 -0.11)
+		(end 3.16 2.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d46f09f-e8b9-40c6-b687-a0762c107c6e")
+	)
+	(fp_line
+		(start 3.16 4.3)
+		(end 3.16 5.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77c7b519-046b-441a-a502-dce6f461e171")
+	)
+	(fp_line
+		(start 3.16 7.3)
+		(end 3.16 9.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b35c7404-f207-40a3-918e-58d9c49e4dc3")
+	)
+	(fp_line
+		(start 3.16 11.3)
+		(end 3.16 12.21)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "421af94a-60c8-4f39-bb89-5bad0ff94ba2")
+	)
+	(fp_line
+		(start -3.4 -2)
+		(end 3.4 -2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Cmts.User")
+		(uuid "d74df09d-7899-4534-accd-aa0588806793")
+	)
+	(fp_line
+		(start -3.4 -2.25)
+		(end 3.4 -2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5189e751-1401-4549-839d-3f0a7a3aded3")
+	)
+	(fp_line
+		(start -3.4 12.6)
+		(end -3.4 -2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1350711a-7fd5-48d3-99f8-20aa1175dbe2")
+	)
+	(fp_line
+		(start 3.4 -2.25)
+		(end 3.4 12.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0e1cb399-b2b6-4213-bb57-6e5c2e035e5e")
+	)
+	(fp_line
+		(start 3.4 12.6)
+		(end -3.4 12.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "69f17cfd-c441-490a-83f8-47fb23b2f628")
+	)
+	(fp_line
+		(start -3.05 0)
+		(end 3.05 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d80e12d7-9517-4c00-8296-27d5faf4c090")
+	)
+	(fp_line
+		(start -3.05 12.1)
+		(end -3.05 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "24d55cfe-eec1-4802-a5ca-b60e835a39b4")
+	)
+	(fp_line
+		(start -2.5 -2)
+		(end 2.5 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "45a66ee1-cfa7-4664-9690-ebb703ba91ad")
+	)
+	(fp_line
+		(start -2.5 0)
+		(end -2.5 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "17d038c1-40d8-4162-ba7b-d42322a91f32")
+	)
+	(fp_line
+		(start 2.5 -2)
+		(end 2.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "aae8bf08-cc29-4b04-bffa-80e7789afcbe")
+	)
+	(fp_line
+		(start 2.5 0)
+		(end -2.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51eb9826-efe4-4361-8d14-0795dbfb8f47")
+	)
+	(fp_line
+		(start 3.05 0)
+		(end 3.05 12.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7b20e8c6-36cc-4530-b349-0ae6d6119789")
+	)
+	(fp_line
+		(start 3.05 12.1)
+		(end -3.05 12.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6aa7550e-2907-418e-9d4e-ccb64384d36a")
+	)
+	(fp_text user "Plug entry"
+		(at 0 -2.6 0)
+		(layer "Cmts.User")
+		(uuid "e299b88a-9562-45ea-988e-72c1a2d5dab7")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 5 0)
+		(layer "F.Fab")
+		(uuid "9c7e4b22-23f1-49b9-b894-d2264de194dd")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 0 1.6)
+		(size 1.5 1.5)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "3fe1bd6f-7463-4316-a51f-f0001ae2ecb8")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 8.6)
+		(size 1.5 1.5)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(uuid "8c98d63d-bb11-45bf-8ba8-e79cad7b14cb")
+	)
+	(pad "A" thru_hole oval
+		(at -2.3 11.3)
+		(size 1.2 1.8)
+		(drill oval 0.6 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5bb904bf-90e9-4dd7-a2e9-482058ca82f1")
+	)
+	(pad "B" thru_hole oval
+		(at 2.3 3.2)
+		(size 1.2 1.8)
+		(drill oval 0.6 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "dec7dc0a-b939-4876-a253-4318ff8b8b08")
+	)
+	(pad "C" thru_hole oval
+		(at 2.3 6.2)
+		(size 1.2 1.8)
+		(drill oval 0.6 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "92ca5d7b-fe52-476b-81ff-65e982326537")
+	)
+	(pad "D" thru_hole oval
+		(at 2.3 10.2)
+		(size 1.2 1.8)
+		(drill oval 0.6 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7fa33c93-43df-4bef-a0bf-fc6a61aa7a53")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/PJ320A.step"
+		(offset
+			(xyz 7.25 2.5 -13.7)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 90)
+		)
+	)
+)

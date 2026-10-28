@@ -569,7 +569,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U?"
-				(at -10.16 8.89 0)
+				(at -10.16 13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -579,7 +579,7 @@
 				)
 			)
 			(property "Value" "LMR51450SDRRR"
-				(at 2.54 8.89 0)
+				(at 2.54 13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -777,7 +777,7 @@
 			)
 			(symbol "Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)_0_1"
 				(rectangle
-					(start -10.16 7.62)
+					(start -10.16 12.7)
 					(end 10.16 -10.16)
 					(stroke
 						(width 0.254)
@@ -790,7 +790,7 @@
 			)
 			(symbol "Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)_1_1"
 				(pin power_out line
-					(at 12.7 2.54 180)
+					(at 12.7 7.62 180)
 					(length 2.54)
 					(name "SW"
 						(effects
@@ -807,10 +807,9 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 12.7 2.54 180)
+				(pin passive line
+					(at 12.7 5.08 180)
 					(length 2.54)
-					(hide yes)
 					(name "SW"
 						(effects
 							(font
@@ -826,10 +825,9 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 12.7 2.54 180)
 					(length 2.54)
-					(hide yes)
 					(name "SW"
 						(effects
 							(font
@@ -846,7 +844,7 @@
 					)
 				)
 				(pin passive line
-					(at 12.7 5.08 180)
+					(at 12.7 10.16 180)
 					(length 2.54)
 					(name "BOOT"
 						(effects
@@ -972,9 +970,8 @@
 					)
 				)
 				(pin power_in line
-					(at -12.7 5.08 0)
+					(at -12.7 7.62 0)
 					(length 2.54)
-					(hide yes)
 					(name "VIN"
 						(effects
 							(font
@@ -991,9 +988,8 @@
 					)
 				)
 				(pin power_in line
-					(at -12.7 5.08 0)
+					(at -12.7 10.16 0)
 					(length 2.54)
-					(hide yes)
 					(name "VIN"
 						(effects
 							(font
@@ -2956,7 +2952,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at 25.4 2.54 180)
 					(length 2.54)
 					(name "NC"
@@ -2992,7 +2988,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at 25.4 5.08 180)
 					(length 2.54)
 					(name "NC"
@@ -4638,7 +4634,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C25543.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5086,6 +5082,131 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Screenly:Test Point Pad 2.0mm"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files no)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP?"
+				(at 1.524 3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 1.524 1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "TP test point probe pad"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TestPoint*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Test Point Pad 2.0mm_0_1"
+				(circle
+					(center 0 3.048)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Test Point Pad 2.0mm_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.286)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5763,6 +5884,18 @@
 		(uuid "0f1eea13-8983-499a-a7f1-320a39abb009")
 	)
 	(junction
+		(at 152.4 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12d23cbe-2372-46c7-8222-7c305d39d6d9")
+	)
+	(junction
+		(at 130.81 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f600e8f-ed65-4327-a4d0-50240a888362")
+	)
+	(junction
 		(at 130.81 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5821,6 +5954,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8155a6f1-19f9-4daf-b13d-3da6dda54017")
+	)
+	(junction
+		(at 102.87 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8931a76e-9b5f-4114-8001-4efaf3952a2a")
 	)
 	(junction
 		(at 123.19 173.99)
@@ -5925,6 +6064,12 @@
 		(uuid "ede5c18e-c6f2-4a08-b413-2dddea079636")
 	)
 	(junction
+		(at 102.87 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4626e93-aa1b-4841-bfb9-615872a6fcae")
+	)
+	(junction
 		(at 125.73 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5935,6 +6080,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f633e10e-9c1c-4961-b84e-aaecc1cd3890")
+	)
+	(junction
+		(at 130.81 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f66b10ac-60e1-4043-8748-3dc8a6c0e17e")
 	)
 	(junction
 		(at 81.28 33.02)
@@ -6108,6 +6259,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 27.94) (xy 102.87 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "010b373d-632f-4125-b297-ece74677222b")
+	)
+	(wire
+		(pts
 			(xy 137.16 86.36) (xy 134.62 86.36)
 		)
 		(stroke
@@ -6168,7 +6329,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 35.56) (xy 139.7 35.56)
+			(xy 129.54 35.56) (xy 130.81 35.56)
 		)
 		(stroke
 			(width 0)
@@ -6275,16 +6436,6 @@
 			(type default)
 		)
 		(uuid "1cc4de53-e6c3-4099-9916-60c0b8e4abb7")
-	)
-	(wire
-		(pts
-			(xy 139.7 35.56) (xy 139.7 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d4ab229-c7f7-4500-91b9-7968fdfa1a00")
 	)
 	(wire
 		(pts
@@ -6488,6 +6639,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 30.48) (xy 130.81 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c5f395b-6b74-4645-9d24-c1244d48a7f1")
+	)
+	(wire
+		(pts
 			(xy 113.03 173.99) (xy 115.57 173.99)
 		)
 		(stroke
@@ -6495,6 +6656,16 @@
 			(type default)
 		)
 		(uuid "6e4a6fdb-b0fb-4de0-b686-cb5d31b81837")
+	)
+	(wire
+		(pts
+			(xy 130.81 30.48) (xy 130.81 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "722951e3-0a7a-4f7f-b59d-bf830b603380")
 	)
 	(wire
 		(pts
@@ -6528,6 +6699,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 27.94) (xy 139.7 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76e53c0b-b744-4491-8e72-792da9dcbb6e")
+	)
+	(wire
+		(pts
 			(xy 157.48 35.56) (xy 157.48 36.83)
 		)
 		(stroke
@@ -6558,6 +6739,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 33.02) (xy 104.14 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8417ae47-d0d1-45bb-af0d-6f837e08a37e")
+	)
+	(wire
+		(pts
 			(xy 73.66 33.02) (xy 81.28 33.02)
 		)
 		(stroke
@@ -6575,6 +6766,16 @@
 			(type default)
 		)
 		(uuid "87a75a3f-a580-415a-9cca-e346fed153ea")
+	)
+	(wire
+		(pts
+			(xy 102.87 30.48) (xy 104.14 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8aee2ef2-64d1-4e4d-a2ff-c3682477fdf1")
 	)
 	(wire
 		(pts
@@ -6668,7 +6869,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 33.02) (xy 130.81 33.02)
+			(xy 129.54 27.94) (xy 130.81 27.94)
 		)
 		(stroke
 			(width 0)
@@ -6718,13 +6919,23 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 33.02) (xy 138.43 33.02)
+			(xy 139.7 27.94) (xy 138.43 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a774423e-6e1d-4674-b87e-dd76f0c6f9f3")
+	)
+	(wire
+		(pts
+			(xy 102.87 27.94) (xy 102.87 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8550e45-6df6-4518-9dd5-62350676b455")
 	)
 	(wire
 		(pts
@@ -6735,6 +6946,26 @@
 			(type default)
 		)
 		(uuid "ad576f6c-aee9-41d4-9e73-3e32e6eb2a11")
+	)
+	(wire
+		(pts
+			(xy 130.81 33.02) (xy 130.81 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae6ddb63-88ac-4bc4-ae74-25ab6a5eee33")
+	)
+	(wire
+		(pts
+			(xy 130.81 35.56) (xy 139.7 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b616954c-56dd-4fb3-83ff-f8713a5fd9b4")
 	)
 	(wire
 		(pts
@@ -6918,6 +7149,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 62.23) (xy 140.97 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de381f73-75b7-4750-98a6-eabbe80d51b0")
+	)
+	(wire
+		(pts
 			(xy 167.64 45.72) (xy 170.18 45.72)
 		)
 		(stroke
@@ -6958,7 +7199,17 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 62.23) (xy 140.97 62.23)
+			(xy 102.87 30.48) (xy 102.87 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e406e31d-5fb8-48ce-871d-400fcb06f8e4")
+	)
+	(wire
+		(pts
+			(xy 154.94 62.23) (xy 152.4 62.23)
 		)
 		(stroke
 			(width 0)
@@ -7018,6 +7269,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 33.02) (xy 130.81 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8dcf836-66b0-4a49-a487-17849d33619d")
+	)
+	(wire
+		(pts
 			(xy 86.36 57.15) (xy 90.17 57.15)
 		)
 		(stroke
@@ -7038,7 +7299,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 33.02) (xy 104.14 33.02)
+			(xy 81.28 33.02) (xy 102.87 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7158,7 +7419,7 @@
 	)
 	(hierarchical_label "PCIE_PG"
 		(shape output)
-		(at 144.78 62.23 0)
+		(at 154.94 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7188,10 +7449,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "02c0d433-08ff-4a2d-98a6-ea640d3c5463")
 		(property "Reference" "U4"
-			(at 116.84 25.4 0)
+			(at 116.586 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7201,7 +7461,7 @@
 			)
 		)
 		(property "Value" "LMR51450SDRRR"
-			(at 116.84 27.94 0)
+			(at 116.586 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7435,7 +7695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08ac24fa-00f7-4f52-b501-c5016bf87d5f")
-		(property "Reference" "J4"
+		(property "Reference" "J5"
 			(at 141.8433 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7796,7 +8056,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "J4")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -7813,7 +8073,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "091f3202-cc5e-41fd-b248-cfc24acf7af9")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR059"
 			(at 140.97 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7873,7 +8133,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR039")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -7891,7 +8151,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f2ec3e6-35ac-42be-b368-d9d36156d23f")
-		(property "Reference" "R19"
+		(property "Reference" "R22"
 			(at 92.71 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8065,85 +8325,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 191.77 35.56 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1b8549b6-ec42-4b32-b94f-555a1036354c")
-		(property "Reference" "#FLG01"
-			(at 191.77 33.655 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 191.77 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 191.77 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 191.77 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a9d30541-8481-4f24-98aa-d7c5188c9339")
-		)
-		(instances
-			(project "screenly-cm5-player"
-				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#FLG01")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -8161,7 +8343,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20223c42-89af-4dc7-b45c-80b21cc16d7e")
-		(property "Reference" "R20"
+		(property "Reference" "R21"
 			(at 82.55 50.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8333,7 +8515,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R20")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -8351,7 +8533,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "202d76b8-dea4-4a00-a181-1cb205420dd5")
-		(property "Reference" "R15"
+		(property "Reference" "R23"
 			(at 143.51 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8525,7 +8707,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R15")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -8542,7 +8724,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "240b3efe-d786-4324-9093-389606026d12")
-		(property "Reference" "C18"
+		(property "Reference" "C20"
 			(at 74.93 39.116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8726,7 +8908,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C18")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -8743,7 +8925,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2dd5a68f-fc67-4d2c-82f1-738c1d3884bc")
-		(property "Reference" "#PWR0311"
+		(property "Reference" "#PWR060"
 			(at 140.97 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -8803,7 +8985,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR0311")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -8821,7 +9003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3187c8c2-2cba-4460-8230-c05f09aaaeaf")
-		(property "Reference" "R16"
+		(property "Reference" "R26"
 			(at 172.72 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8854,7 +9036,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C25543.pdf"
 			(at 170.18 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -8995,7 +9177,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R16")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -9012,7 +9194,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32964307-363f-4bdb-ab0a-92c62b4d726e")
-		(property "Reference" "C23"
+		(property "Reference" "C26"
 			(at 184.404 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9186,7 +9368,86 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C23")
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:Test Point Pad 2.0mm")
+		(at 191.77 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "350a9479-0a51-497c-b3dc-e8320d6c44c4")
+		(property "Reference" "TP14"
+			(at 193.294 29.718 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 189.23 31.2421 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
+			(at 191.77 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
+			(at 191.77 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc66fb2a-89c2-4fbd-b2a7-385c8dd9493b")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -9203,7 +9464,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "374fac1c-5b31-4abc-a023-cb76fe440f45")
-		(property "Reference" "C22"
+		(property "Reference" "C25"
 			(at 163.068 39.624 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9364,7 +9625,86 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C22")
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Screenly:Test Point Pad 2.0mm")
+		(at 152.4 62.23 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "45c83832-2914-4d48-be0f-3470a118c73a")
+		(property "Reference" "TP13"
+			(at 150.876 68.072 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 66.5479 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
+			(at 152.4 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
+			(at 152.4 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3f1277b-2c34-4414-bfb7-b33e20d95b76")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -9380,10 +9720,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4a2ad49b-08d9-4ac9-ab87-d22ab2963270")
-		(property "Reference" "C26"
-			(at 144.78 66.0399 0)
+		(property "Reference" "C24"
+			(at 143.764 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9394,7 +9733,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 144.78 68.5799 0)
+			(at 143.764 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9567,7 +9906,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C26")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -9585,7 +9924,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "695af215-381f-4271-9d6b-38e12089dacd")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR057"
 			(at 119.38 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9645,7 +9984,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR056")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -9662,7 +10001,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "767c0cff-9e49-494f-a477-67c6902993e3")
-		(property "Reference" "C24"
+		(property "Reference" "C27"
 			(at 194.818 37.846 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9836,7 +10175,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C24")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -9854,7 +10193,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7abbd5a4-f047-4d8e-b4f7-7c1a7526bb61")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR051"
 			(at 73.66 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -9914,7 +10253,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR036")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -9932,7 +10271,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f0d2791-b865-4552-ac2a-af35d2a4e9bf")
-		(property "Reference" "C28"
+		(property "Reference" "C22"
 			(at 104.14 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10117,7 +10456,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C28")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -10135,7 +10474,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "829550de-44fc-4ed8-93bd-43d0539c742c")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR052"
 			(at 81.28 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -10195,7 +10534,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR037")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -10425,7 +10764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96fd8f57-6aac-4312-a4c4-8fff2808d4d9")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR064"
 			(at 203.2 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -10485,7 +10824,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR044")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -10503,7 +10842,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97041228-6f9e-4d09-a734-110b4259926a")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR063"
 			(at 191.77 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10563,7 +10902,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR045")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -10581,7 +10920,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f6fa76f-d5f9-4ff8-ad90-b569ddb20ea3")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR055"
 			(at 114.3 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10641,7 +10980,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR040")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -10658,7 +10997,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a6207c2c-6f31-4fa3-996d-b36fa6e43f06")
-		(property "Reference" "R12"
+		(property "Reference" "R24"
 			(at 150.114 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10832,7 +11171,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R12")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -10928,7 +11267,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7669456-3932-4366-aeb5-d6b64aad97d0")
-		(property "Reference" "C17"
+		(property "Reference" "C19"
 			(at 67.31 39.116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11112,7 +11451,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C17")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -11130,7 +11469,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac291087-6d54-480a-80dc-59840c05f988")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR056"
 			(at 119.38 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11190,7 +11529,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR041")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -11208,7 +11547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae4ac80b-44fd-4629-b197-be5bed7f9839")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR050"
 			(at 66.04 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -11268,7 +11607,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR035")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -11287,7 +11626,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b46c576e-f34d-4428-b091-d3c03d43e19c")
-		(property "Reference" "C19"
+		(property "Reference" "C21"
 			(at 85.09 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11472,7 +11811,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C19")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -11490,7 +11829,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc1e62f9-5aea-4151-8a9d-4c362fe718a5")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR053"
 			(at 90.17 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -11550,7 +11889,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR055")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -11567,7 +11906,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7c119dd-9b8d-4c35-a858-b284fbe53829")
-		(property "Reference" "C25"
+		(property "Reference" "C28"
 			(at 206.248 37.846 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11741,7 +12080,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C25")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -11759,7 +12098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd6bb23c-5d39-4ccf-88f2-99c34348e606")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR049"
 			(at 66.04 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -11819,7 +12158,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR034")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -11837,7 +12176,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ddc547f8-cc40-4809-9735-94a72ce803d3")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR065"
 			(at 203.2 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11897,7 +12236,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR046")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -11915,7 +12254,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec33de00-160e-409e-b147-13e3810b6e8b")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR058"
 			(at 123.19 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -11975,7 +12314,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR053")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -11993,7 +12332,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed64f082-54a1-4800-ab49-50eeb446fd4d")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR061"
 			(at 157.48 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -12053,7 +12392,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR042")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -12071,7 +12410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f031957e-fbb0-4593-921c-2cf10e42724d")
-		(property "Reference" "R13"
+		(property "Reference" "R25"
 			(at 160.02 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12245,7 +12584,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "R13")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -12263,7 +12602,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f30b3361-7c1f-4dec-8590-20480dbc24e2")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR062"
 			(at 181.61 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -12323,7 +12662,84 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "#PWR043")
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 181.61 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f5b6d6d8-1036-4a0c-8a7a-a0aa9f5a8384")
+		(property "Reference" "#FLG06"
+			(at 181.61 33.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 181.61 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 181.61 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed1ea349-b599-4adc-95d7-8a08df7c9949")
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -12331,7 +12747,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)")
-		(at 134.62 33.02 90)
+		(at 134.62 27.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12341,8 +12757,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd43302e-e40c-4b92-8118-6fd24f36be5c")
-		(property "Reference" "C21"
-			(at 134.62 25.4 90)
+		(property "Reference" "C23"
+			(at 134.62 20.32 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12352,7 +12768,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 134.62 27.94 90)
+			(at 134.62 22.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12362,7 +12778,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:C_0402"
-			(at 138.43 32.0548 0)
+			(at 138.43 26.9748 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12373,7 +12789,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05B104KB54PN.do"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12384,7 +12800,7 @@
 			)
 		)
 		(property "Description" "100nF 10% 50V X7R 0402 ceramic capacitor, AEC-Q200"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12395,7 +12811,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-CAP-000001"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12406,7 +12822,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12417,7 +12833,7 @@
 			)
 		)
 		(property "MfrPartNum" "CL05B104KB54PNC"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12428,7 +12844,7 @@
 			)
 		)
 		(property "tolerance" "10%"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12439,7 +12855,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12450,7 +12866,7 @@
 			)
 		)
 		(property "dielectric" "X7R"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12461,7 +12877,7 @@
 			)
 		)
 		(property "technology" "ceramic"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12472,7 +12888,7 @@
 			)
 		)
 		(property "esr" "330m"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12483,7 +12899,7 @@
 			)
 		)
 		(property "aec_q200" "yes"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12494,7 +12910,7 @@
 			)
 		)
 		(property "temp_min" "-55C"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12505,7 +12921,7 @@
 			)
 		)
 		(property "temp_max" "125C"
-			(at 134.62 33.02 0)
+			(at 134.62 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12524,7 +12940,7 @@
 		(instances
 			(project "screenly-cm5-player"
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
-					(reference "C21")
+					(reference "C23")
 					(unit 1)
 				)
 			)

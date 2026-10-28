@@ -477,7 +477,7 @@
       "similar_labels": "warning",
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "single_global_label": "warning",
       "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
@@ -661,6 +661,11 @@
         "CEC",
         "SDA"
       ],
+      "I2S": [
+        "SCLK",
+        "WS",
+        "SDO0"
+      ],
       "PCIE": [
         "nRST",
         "nCLKREQ",
@@ -680,11 +685,13 @@
         "D3",
         "PWR_ON",
         "CLK",
-        "CMD",
-        "D4",
-        "D5",
-        "D6",
-        "D7"
+        "CMD"
+      ],
+      "SPI": [
+        "~{CS}",
+        "MOSI",
+        "MISO",
+        "CLK"
       ],
       "USB": [
         "D_P",
@@ -739,7 +746,7 @@
         "uuid": "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
       }
     ],
-    "used_designators": "#FLG1,#PWR1-131,#PWR305-311,C1-52,D1-16,FB1,J1-10,L1-3,Q1-2,R1-47,U1-11",
+    "used_designators": "#FLG1-14,#PWR1-174,#PWR305-321,C1-68,D1-18,FB1,J1-13,L1-3,Q1-2,R1-67,SW1-2,TP1-33,U1-13",
     "variants": []
   },
   "sheets": [
@@ -772,8 +779,28 @@
       "USB3"
     ],
     [
+      "3b10216f-4ed1-4f26-8ffb-bcf5f0061d36",
+      "User Interface"
+    ],
+    [
       "a503af32-25a5-4480-aa48-168ffda443cb",
       "USB2"
+    ],
+    [
+      "dc15377c-a816-4d80-a485-a83ac02563a7",
+      "TPM"
+    ],
+    [
+      "a68e040d-2af5-465e-ad8d-29d6e690a86c",
+      "SDCard"
+    ],
+    [
+      "4c3ea95e-e06b-4f7e-8ce2-c895d1a29a49",
+      "EEPROM"
+    ],
+    [
+      "bb828621-9868-45ae-937e-628024c0e5b0",
+      "Analog Audio"
     ]
   ],
   "text_variables": {},

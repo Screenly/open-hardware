@@ -16,6 +16,8 @@ Every symbol in the library is based on one specific part and carries its identi
 
 The part must be registered in the company part database with the same manufacturer and manufacturer part number.
 
+Symbols that are not parts, such as test points, fiducials and logos, are the only exception. They have no `PartNumber`, `Manufacturer`, `MfrPartNum` or class keys, are excluded from the BOM and position files (see [KiCad fields](bom-standard.md#kicad-fields)), and their names have no manufacturer part number, e.g. `Test Point Pad 2.0mm`. Those that are on the board still use a Screenly footprint.
+
 ### Symbol names
 
 Symbol names say what the part is, so designers can find it in the symbol chooser:
@@ -38,9 +40,12 @@ Symbol names say what the part is, so designers can find it in the symbol choose
 | `FBD` | `Ferrite Bead <impedance> <current> <package> (<MPN>)`         | `Ferrite Bead 50R 12A 1206 (BLM31SN500SZ1L)` |
 | `FET` | `<N/P>-MOSFET <vds> <id> <rds_on> <package> (<MPN>)`          | `P-MOSFET 40V 40A 15mOhm TO-252 (AOD4185)` |
 | `IND` | `Inductor <value> <saturation current> <body size> (<MPN>)`    | `Inductor 4.7uH 15A 10x11.5mm (AAPS1050M4R7A)` |
-| `ITC` | `<Function> <main values> <package> (<MPN>)`                  | `USB SS Mux IC Type-C Port Controller 10Gbps WQFN-30 (HD3SS3220IRNHR)` |
+| `ITC` | `<Function> <main values> <package> (<MPN>)`                  | `USB SS Mux IC Type-C Port Controller 10Gbps WQFN-30 (HD3SS3220IRNHR)`, `Audio DAC Stereo 112dB I2S TSSOP-20 (PCM5102APWR)` |
+| `LED` | `LED <color> <dominant wavelength or color temperature> <package> <mounting if not top view> (<MPN>)` | `LED Red 631nm 0603 Side View (LTST-S270KRKT)` |
 | `MOD` | `Module <model> <main options> (<MPN>)`                        | `Module CM5 4GB 64GB WiFi (CM5104064)`   |
 | `PWR` | `<Topology> Converter <input range> <output current> <package> (<MPN>)`, `Power Switch <input range> <output current> <package> (<MPN>)` | `Buck Converter 4-36V 5A WSON-12 (LMR51450SDRRR)`, `Power Switch 3-5.5V 2.1A SOT-23-6 (AP22653W6-7)` |
+| `STO` | `EEPROM <capacity> <bus> <package> (<MPN>)`                    | `EEPROM 8KB I2C SOIC-8 (M24C64-RMN6TP)` |
+| `SWC` | `<Type> Switch <size> <force> <actuator height> <mounting> (<MPN>)` | `Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)` |
 
 The pattern of other classes is defined when their first part is added.
 
@@ -1089,7 +1094,7 @@ q          30
 
 ### `ITC`: Integrated Circuits
 
-Integrated circuits that no more specific class covers: interface ICs (USB and Type-C port controllers, signal multiplexers, redrivers, level shifters, transceivers), logic ICs and security ICs. Microcontrollers are in `MCU`, power ICs in `PWR`, sensors in `SNS` and memories in `STO`.
+Integrated circuits that no more specific class covers: interface ICs (USB and Type-C port controllers, signal multiplexers, redrivers, level shifters, transceivers), audio ICs, logic ICs and security ICs. Microcontrollers are in `MCU`, power ICs in `PWR`, sensors in `SNS` and memories in `STO`.
 
 Reference prefix: `U`
 
@@ -1120,6 +1125,7 @@ Reference prefix: `U`
 | `transceiver`      | Interface transceiver or PHY (e.g. CAN, RS-485, Ethernet)         |
 | `logic`            | Logic gates, buffers and flip-flops                               |
 | `security`         | Security IC (e.g. TPM, secure element)                            |
+| `audio`            | Audio converter or amplifier (e.g. I2S DAC, codec, class-D amp)   |
 
 Example:
 
@@ -1618,7 +1624,7 @@ power      2W
 
 ### `STO`: Storage Devices
 
-Data storage devices: memory cards, eMMC, NVMe SSDs and USB drives.
+Data storage devices: memory cards, eMMC, NVMe SSDs, USB drives and serial EEPROMs.
 
 Reference prefix: `U`
 
@@ -1627,38 +1633,44 @@ Reference prefix: `U`
 | `type`     | –    | Yes      | `set`      |
 | `family`   | –    | Yes      | `pattern`  |
 | `capacity` | B    | Yes      | `min`      |
-| `grade`    | –    | Yes      | `set`      |
+| `grade`    | –    | Per type | `set`      |
 | `speed`    | –    | No       | `all`      |
 | `form`     | –    | Per type | `set`      |
+| `bus`      | –    | Per type | `set`      |
+| `vdd`      | V    | No       | `range`    |
 | `temp_min` | °C   | No       | `max`      |
 | `temp_max` | °C   | No       | `min`      |
 
 - `type` is the storage type (members below). It decides which keys are required.
-- `family` defines drop-in compatibility. Write `family *` only for removable cards and drives where `type` and the other keys fully define compatibility. Soldered eMMC must have a narrow pattern.
-- `capacity` is the storage capacity, written with `GB` or `TB` (e.g. `32GB`).
+- `family` defines drop-in compatibility. Write `family *` only for removable cards and drives where `type` and the other keys fully define compatibility. Soldered eMMC and EEPROMs must have a narrow pattern that fixes the pinout and, for EEPROMs, the addressing scheme (8-bit or 16-bit memory address).
+- `capacity` is the storage capacity, written with `KB`, `GB` or `TB` (e.g. `8KB`, `32GB`). EEPROM capacity is in bytes, not bits: a 64-Kbit EEPROM is `8KB`.
 - `grade` is one or more allowed endurance grades (members below). Devices in always-on products should be `industrial` or `high_endurance`.
 - `speed` is one or more speed classes the card must meet, separated by `|` (members below). It only applies to `microsd` and `sd`.
 - `form` is the M.2 form factor (members below). It only applies to `nvme`.
+- `bus` is the host interface of an EEPROM (members below). It only applies to `eeprom`.
+- `vdd` is the supply voltage of the design, e.g. `3.3V`. A part matches when its rated supply range includes it.
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
-- Removable storage, such as memory cards and NVMe SSDs, is an [off-board item](bom-standard.md#off-board-items) with no footprint. The socket is a separate `CON` symbol. Only soldered eMMC has a footprint.
-- Storage devices contain controller firmware, so they are tracked with `ContainsFirmware` in the HBOM. A device with a Screenly image written before assembly is a `PSP` part, see the [Assembly Part Library Standard](assembly-part-library-standard.md).
+- Removable storage, such as memory cards and NVMe SSDs, is an [off-board item](bom-standard.md#off-board-items) with no footprint. The socket is a separate `CON` symbol. Only soldered devices, eMMC and EEPROMs, have a footprint.
+- Storage devices except EEPROMs contain controller firmware, so they are tracked with `ContainsFirmware` in the HBOM. A device with a Screenly image written before assembly is a `PSP` part, see the [Assembly Part Library Standard](assembly-part-library-standard.md).
 
 Required keys per `type`:
 
-| Type   | Required keys |
-| ------ | ------------- |
-| `nvme` | `form`        |
-| others | –             |
+| Type     | Required keys   |
+| -------- | --------------- |
+| `nvme`   | `grade`, `form` |
+| `eeprom` | `bus`           |
+| others   | `grade`         |
 
 `type` members:
 
-| Member      | Description     |
-| ----------- | --------------- |
-| `microsd`   | microSD card    |
-| `sd`        | SD card         |
-| `emmc`      | Soldered eMMC   |
-| `nvme`      | NVMe SSD        |
-| `usb_drive` | USB flash drive |
+| Member      | Description      |
+| ----------- | ---------------- |
+| `microsd`   | microSD card     |
+| `sd`        | SD card          |
+| `emmc`      | Soldered eMMC    |
+| `nvme`      | NVMe SSD         |
+| `usb_drive` | USB flash drive  |
+| `eeprom`    | Serial EEPROM IC |
 
 `grade` members:
 
@@ -1667,6 +1679,13 @@ Required keys per `type`:
 | `consumer`       | Consumer grade                                              |
 | `high_endurance` | High endurance, for continuous writing                      |
 | `industrial`     | Industrial grade, wide temperature range and high endurance |
+
+`bus` members:
+
+| Member | Description         |
+| ------ | ------------------- |
+| `i2c`  | I2C (two-wire) bus  |
+| `spi`  | SPI bus             |
 
 `speed` members:
 
@@ -1703,6 +1722,14 @@ family    *
 capacity  256GB
 grade     consumer|industrial
 form      m2_2230
+```
+
+```
+type      eeprom
+family    M24C64-*MN*
+capacity  8KB
+bus       i2c
+vdd       3.3V
 ```
 
 ### `SWC`: Switches
