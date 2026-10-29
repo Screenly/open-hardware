@@ -1759,7 +1759,7 @@ Reference prefix: `SW`
 - `current` is the rated switching current, e.g. `50mA`.
 - `voltage` is the rated switching voltage, e.g. `12V`.
 - `force` is the nominal operating force, e.g. `1.6N`. It must match exactly to keep the same feel.
-- `height` is the actuator height above the board, e.g. `5mm`. It must match exactly, because the enclosure is designed for it.
+- `height` is the actuator height above the board, e.g. `5mm`. For right-angle switches, it is the manufacturer's actuator length instead (e.g. C&K dimension L, from the front pin row to the actuator tip); the actuator's protrusion beyond the switch body is shorter than this. It must match exactly, because the enclosure is designed for it.
 - `durability` is the rated number of operations, written as a plain number (e.g. `100000`).
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 

@@ -1946,7 +1946,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Screenly:Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)"
+		(symbol "Screenly:Tactile Switch 6x6mm 1.6N 5.85mm Right Angle THT (PTS645VM58-2 LFS)"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1970,7 +1970,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "PTS645VM31-2"
+			(property "Value" "PTS645VM58-2"
 				(at 1.27 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1981,7 +1981,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS"
+			(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2003,7 +2003,7 @@
 					)
 				)
 			)
-			(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator 3.15 mm above the board, 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
+			(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator length L 5.85 mm from the front pin row (about 3.3 mm beyond the switch body), 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2014,7 +2014,7 @@
 					)
 				)
 			)
-			(property "PartNumber" "SRLY-SWC-000001"
+			(property "PartNumber" "SRLY-SWC-000002"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2036,7 +2036,7 @@
 					)
 				)
 			)
-			(property "MfrPartNum" "PTS645VM31-2 LFS"
+			(property "MfrPartNum" "PTS645VM58-2 LFS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2058,7 +2058,7 @@
 					)
 				)
 			)
-			(property "family" "PTS645V?31-2*"
+			(property "family" "PTS645V?58-2*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2124,7 +2124,7 @@
 					)
 				)
 			)
-			(property "height" "3.15mm"
+			(property "height" "5.85mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2168,7 +2168,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "SW switch tactile push button momentary right angle 6x6 PTS645 C&K reset power"
+			(property "ki_keywords" "SW switch tactile push button momentary right angle 6x6 PTS645 PTS645VM58 C&K reset power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2190,7 +2190,7 @@
 					)
 				)
 			)
-			(symbol "Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)_0_1"
+			(symbol "Tactile Switch 6x6mm 1.6N 5.85mm Right Angle THT (PTS645VM58-2 LFS)_0_1"
 				(polyline
 					(pts
 						(xy -2.54 1.27) (xy 2.54 1.27)
@@ -2250,7 +2250,7 @@
 					)
 				)
 			)
-			(symbol "Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)_1_1"
+			(symbol "Tactile Switch 6x6mm 1.6N 5.85mm Right Angle THT (PTS645VM58-2 LFS)_1_1"
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -3478,7 +3478,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)")
+		(lib_id "Screenly:Tactile Switch 6x6mm 1.6N 5.85mm Right Angle THT (PTS645VM58-2 LFS)")
 		(at 100.33 83.82 0)
 		(unit 1)
 		(body_style 1)
@@ -3510,7 +3510,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS"
+		(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3532,7 +3532,7 @@
 				)
 			)
 		)
-		(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator 3.15 mm above the board, 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
+		(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator length L 5.85 mm from the front pin row (about 3.3 mm beyond the switch body), 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3543,7 +3543,7 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-SWC-000001"
+		(property "PartNumber" "SRLY-SWC-000002"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3565,7 +3565,7 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "PTS645VM31-2 LFS"
+		(property "MfrPartNum" "PTS645VM58-2 LFS"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3587,7 +3587,7 @@
 				)
 			)
 		)
-		(property "family" "PTS645V?31-2*"
+		(property "family" "PTS645V?58-2*"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3653,7 +3653,7 @@
 				)
 			)
 		)
-		(property "height" "3.15mm"
+		(property "height" "5.85mm"
 			(at 100.33 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -5522,7 +5522,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Tactile Switch 6x6mm 1.6N 3.15mm Right Angle THT (PTS645VM31-2 LFS)")
+		(lib_id "Screenly:Tactile Switch 6x6mm 1.6N 5.85mm Right Angle THT (PTS645VM58-2 LFS)")
 		(at 100.33 44.45 0)
 		(unit 1)
 		(body_style 1)
@@ -5554,7 +5554,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS"
+		(property "Footprint" "Screenly:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5576,7 +5576,7 @@
 				)
 			)
 		)
-		(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator 3.15 mm above the board, 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
+		(property "Description" "Tactile switch, SPST-NO, momentary, 6 x 6 mm, right angle (actuator parallel to the board), through hole, actuator length L 5.85 mm from the front pin row (about 3.3 mm beyond the switch body), 160gf (1.6N) operating force, 50mA 12V DC, 100,000 operations, -40C to 85C. Pins 1 and 2 switch contacts, SH metal bracket legs (tie to GND for ESD)"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5587,7 +5587,7 @@
 				)
 			)
 		)
-		(property "PartNumber" "SRLY-SWC-000001"
+		(property "PartNumber" "SRLY-SWC-000002"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5609,7 +5609,7 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "PTS645VM31-2 LFS"
+		(property "MfrPartNum" "PTS645VM58-2 LFS"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5631,7 +5631,7 @@
 				)
 			)
 		)
-		(property "family" "PTS645V?31-2*"
+		(property "family" "PTS645V?58-2*"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5697,7 +5697,7 @@
 				)
 			)
 		)
-		(property "height" "3.15mm"
+		(property "height" "5.85mm"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
