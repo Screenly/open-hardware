@@ -1319,7 +1319,7 @@ Reference prefix: `U`
 - `wireless` is `yes` or `no`, for modules sold with and without a radio.
 - `temp_min` and `temp_max` are the required operating temperature range, written with `C` (e.g. `-20C`, `70C`). A part matches when its range covers the required range.
 - Modules usually contain firmware, so the [firmware-bearing parts](bom-standard.md#firmware-bearing-parts) rule applies.
-- A module that plugs into board connectors, such as the CM5, has a footprint that holds the pads of those connectors at the exact module spacing. The connectors themselves are separate `CON` symbols, placed as [off-board items](bom-standard.md#off-board-items) so they appear in the BOM.
+- A module that plugs into board connectors, such as the CM5, has a footprint that holds the pads of those connectors at the exact module spacing, with no courtyard over the connectors. The connectors themselves are separate `CON` symbols with footprints that have no copper, placed on top of the module footprint (see [Modules fitted after board assembly](bom-standard.md#modules-fitted-after-board-assembly)).
 
 Example:
 

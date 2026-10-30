@@ -49,7 +49,7 @@ The Screenly KiCad Part Library is the KiCad symbol library used by all Screenly
 | `MfrPartNum`       | Library             | Manufacturer part number of that part                                  |
 | Class key fields   | Library or instance | Requirements the part must satisfy (see [Class key fields](#class-key-fields)) |
 | DNP                | Instance            | Footprint placed but not assembled                                     |
-| Exclude from BOM   | Instance or library | Not a physical part (e.g. logos)                                       |
+| Exclude from BOM   | Instance or library | Not a physical part (e.g. logos), or a [module fitted after board assembly](#modules-fitted-after-board-assembly) |
 | Exclude from board | Instance            | BOM item without a footprint (see [Off-board items](#off-board-items)) |
 
 `Datasheet` and `Description` are informational. The resolver does not use them, and the exports take these values from the resolved part.
@@ -60,18 +60,29 @@ Every item that is bought for a build has its own symbol, with its own class key
 
 ### Off-board items
 
-Some items are part of the build but have no footprint of their own, such as a module plugged into board connectors or a battery on wire leads. They are drawn as separate symbols with KiCad's *Exclude from board* attribute: the symbol appears in the BOM, but not on the PCB.
+Some items are part of the build but have no footprint of their own, such as a battery on wire leads or a coin cell in a holder. They are drawn as separate symbols with KiCad's *Exclude from board* attribute: the symbol appears in the BOM, but not on the PCB.
 
-- The item it attaches to is a separate symbol with a footprint. Usually the off-board item is plugged into a connector on the board. In the reverse case, a module footprint can hold the pads of the connectors it plugs into, and the connectors are the off-board items.
+- The item it attaches to is a separate symbol with a footprint, usually a connector on the board that the off-board item plugs into.
 - An off-board item has no footprint, so it is matched by its class key fields alone. Its `family` and keys must fully define the fit with the board side.
 
 Examples:
 
 | Item                          | Symbols                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------------- |
-| Raspberry Pi CM5              | `U1`: CM5 (`MOD`, on board), with one footprint that holds both board-to-board connectors at the exact module spacing. `J1`, `J2`: the two connectors (`CON`, off-board). |
 | Battery on wire leads         | `J3`: wire-to-board connector (`CON`, on board). `BT1`: battery (`BAT`, off-board).       |
 | Coin cell in a holder         | `J4`: battery holder (`CON`, on board). `BT2`: coin cell (`BAT`, off-board).              |
+
+### Modules fitted after board assembly
+
+A module that plugs into board connectors and is fitted after the board is assembled, such as the Raspberry Pi CM5, is not part of the board assembly:
+
+- The module symbol (`MOD`) has a footprint that holds the pads of all its connectors at the exact module spacing, so it carries the nets. Its instance is set to *Exclude from BOM*.
+- Each board connector is a separate `CON` symbol on the board, with a footprint that has no copper: only the courtyard, fabrication outline and 3D model. It is placed at the connector centre of the module footprint, with the same rotation, so the connectors appear in the BOM and the position files.
+- The module footprint has no courtyard of its own over the connectors, so the connector footprints can sit on top of it.
+
+| Item                          | Symbols                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------- |
+| Raspberry Pi CM5              | `U1`: CM5 (`MOD`, excluded from BOM), with one footprint that holds the pads of both board-to-board connectors. `J1`, `J2`: the two connectors (`CON`, on board, footprints without copper). |
 
 ### Assembly variants
 

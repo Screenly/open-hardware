@@ -60,7 +60,7 @@ If the part already has a part number, don't register it again. If the library a
 
 ## 3. Add the Footprint
 
-Skip this step for [off-board items](bom-standard.md#off-board-items), such as cable-connected displays, batteries on wire leads, or connectors listed only for the BOM.
+Skip this step for [off-board items](bom-standard.md#off-board-items), such as cable-connected displays, or batteries on wire leads.
 
 1. In the **Footprint Editor**, check whether a suitable footprint already exists in the `Screenly` library.
 2. If not, create one there. To reuse a footprint from KiCad's built-in or a third-party library, copy it into the `Screenly` library first. Designs never reference other footprint libraries directly.
@@ -148,7 +148,7 @@ KiCad keeps loaded footprints in memory, so a footprint changed on disk is not p
 | ---- | ------ |
 | 1. Class | `MOD` (Modules) |
 | 2. New part | `tools/partsdb.py find --mpn 'CM5*'` finds nothing |
-| 3. Footprint | One module footprint that holds both board-to-board connectors at the exact module spacing. The two connectors are added to designs as off-board `CON` symbols, so they appear in the BOM. |
+| 3. Footprint | One module footprint that holds the pads of both board-to-board connectors at the exact module spacing, with no courtyard over the connectors. The two connectors are separate `CON` symbols with footprints that have no copper, placed on top of it (see [Modules fitted after board assembly](bom-standard.md#modules-fitted-after-board-assembly)). |
 | 4. Symbol | `Reference` `U?`, `Value` `CM5104064`, `PartNumber` `SRLY-MOD-000001`, `Manufacturer` `Raspberry Pi`, `MfrPartNum` `CM5104064`, `Datasheet` CM5 datasheet, `family` `CM5*`, `ram` `4GB`, `storage` `64GB`, `wireless` `yes`, `temp_min` `-20C`, `temp_max` `85C` (datasheet section 4.4) |
 | 5. Register | `tools/partsdb.py new MOD --manufacturer 'Raspberry Pi' --mpn CM5104064 --description 'Raspberry Pi Compute Module 5, wireless, 4GB RAM, 64GB eMMC'` prints `SRLY-MOD-000001` |
 

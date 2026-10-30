@@ -1305,8 +1305,8 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 2.54 -2.54 180)
+				(pin passive line
+					(at 12.7 -2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name ""
@@ -1324,8 +1324,8 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 2.54 0 180)
+				(pin passive line
+					(at 12.7 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name ""

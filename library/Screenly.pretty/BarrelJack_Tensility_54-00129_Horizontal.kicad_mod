@@ -176,6 +176,136 @@
 		(remove_unused_layers no)
 		(uuid "28fbe1a6-10f2-4c15-abd6-fd1c80e2acc7")
 	)
+	(fp_line
+		(start -2.75 -11.7)
+		(end 2.75 -11.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "0ffd3534-3cf7-4d50-a027-f36867d3638b")
+	)
+	(fp_line
+		(start 2.75 -11.7)
+		(end 2.75 -1.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "0dab00ef-eb01-46de-8fe9-848517dfa107")
+	)
+	(fp_line
+		(start 2.75 -1.7)
+		(end -2.75 -1.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "19eecb7b-3751-46db-88d9-54992ec51ef5")
+	)
+	(fp_line
+		(start -2.75 -1.7)
+		(end -2.75 -11.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "9c84e645-73d5-4c7b-85ad-8f65a3411d3d")
+	)
+	(fp_line
+		(start -4.1 -35.2)
+		(end 4.1 -35.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "552dd7d4-4a7a-4864-9bc0-3e399e3c434c")
+	)
+	(fp_line
+		(start 4.1 -35.2)
+		(end 4.1 -11.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7bb1df08-a721-46f8-9e69-62da4e9f528e")
+	)
+	(fp_line
+		(start 4.1 -11.7)
+		(end -4.1 -11.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "37f966a3-cead-4800-a5d2-2999d0c7802a")
+	)
+	(fp_line
+		(start -4.1 -11.7)
+		(end -4.1 -35.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "5d4ac619-b9e2-4c35-9c53-f11d8e8dbded")
+	)
+	(fp_line
+		(start -2 -45.2)
+		(end 2 -45.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "1f1a6f70-a977-4125-b610-bde796da53de")
+	)
+	(fp_line
+		(start 2 -45.2)
+		(end 2 -35.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "9996229c-613d-4024-afed-726812964be9")
+	)
+	(fp_line
+		(start 2 -35.2)
+		(end -2 -35.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "189d569f-5be1-4a96-958f-e8765c99a349")
+	)
+	(fp_line
+		(start -2 -35.2)
+		(end -2 -45.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "a33b8106-79c8-4710-a98d-4b3e67a9d145")
+	)
+	(fp_line
+		(start 0 -46.2)
+		(end 0 -1.2)
+		(stroke
+			(width 0.05)
+			(type dash_dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "fe38abc2-cdaa-4ba7-ac56-8219a9bb9015")
+	)
 	(embedded_fonts no)
 	(model "${SCREENLY_LIB}/3d-models/54-00129.step"
 		(offset

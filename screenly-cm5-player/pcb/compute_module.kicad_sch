@@ -4167,6 +4167,443 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Screenly:Board to Board Receptacle 100P 0.4mm 3.0mm Stack SMD (DF40HC(3.0)-100DS-0.4V)"
+			(exclude_from_sim yes)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J?"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DF40HC(3.0)-100DS-0.4V"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Screenly:Hirose_DF40HC-3.0-100DS-0.4V_2x50_P0.4mm_Vertical_NoCopper"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.hirose.com/en/product/p/CL0684-4151-0-51"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Hirose DF40HC(3.0) board-to-board receptacle, 100 positions, 0.4mm pitch, 3.0mm stacking height, SMD, gold plated contacts. Carrier-board connector for the Raspberry Pi CM5 (two per module). No pins and no copper: the pads and nets are in the RaspberryPi-CM5 footprint; place this footprint at the CM5 connector centre with the same rotation"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "PartNumber" "SRLY-CON-000016"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Hirose Electric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MfrPartNum" "DF40HC(3.0)-100DS-0.4V(51)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "interface" "board_to_board"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "family" "DF40HC(3.0)-100DS-0.4V*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "plating" "gold"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "stack_height" "3.0mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "J connector board to board mezzanine Hirose DF40 DF40HC 100 pin 0.4mm 3.0mm stacking receptacle Raspberry Pi CM5 Compute Module"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Hirose_DF40HC-3.0-100DS*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Board to Board Receptacle 100P 0.4mm 3.0mm Stack SMD (DF40HC(3.0)-100DS-0.4V)_0_1"
+				(rectangle
+					(start -2.54 7.62)
+					(end 2.54 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 6.35) (xy -0.508 6.35)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 5.08) (xy -0.508 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 3.81) (xy -0.508 3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 1.27) (xy -0.508 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -3.81) (xy -0.508 -3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -5.08) (xy -0.508 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -6.35) (xy -0.508 -6.35)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 6.35) (xy 1.524 6.35)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 5.08) (xy 1.524 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 3.81) (xy 1.524 3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 2.54) (xy 1.524 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 1.524 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.27) (xy 1.524 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -2.54) (xy 1.524 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -3.81) (xy 1.524 -3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -5.08) (xy 1.524 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -6.35) (xy 1.524 -6.35)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Screenly:JST SH Header 3P 1.0mm Vertical SMD (BM03B-SRSS-TB)"
 			(pin_names
 				(offset 1.016)
@@ -10137,6 +10574,16 @@
 		)
 		(uuid "c1978fe8-db6b-48ae-8874-127e5640932b")
 	)
+	(text "J14 and J15 are the actual connectors\nfor the CM5 module to be populated\nat the assembly. But they are only for\nmechanical reference."
+		(exclude_from_sim no)
+		(at 125.73 169.672 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+		)
+		(uuid "e5fc0680-5771-42fa-a728-6a17320db0d8")
+	)
 	(junction
 		(at 251.46 44.45)
 		(diameter 1.016)
@@ -10354,7 +10801,7 @@
 		(uuid "892b8a6c-1c9a-4c88-bc05-27fafe31e091")
 	)
 	(junction
-		(at 81.28 181.61)
+		(at 69.85 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8a2ea35b-3071-4113-896f-fd63b24810bd")
@@ -10378,7 +10825,7 @@
 		(uuid "a512f321-9cdf-470d-8bcc-6f1f7da957b4")
 	)
 	(junction
-		(at 93.98 185.42)
+		(at 82.55 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a5258d9f-384a-4712-9d37-fcb89a48fe4e")
@@ -10414,7 +10861,7 @@
 		(uuid "cbd541dd-7d64-461b-90af-b1189e7fb472")
 	)
 	(junction
-		(at 87.63 176.53)
+		(at 76.2 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cc05ac93-b655-4227-8c20-fb82e0fbc7a3")
@@ -11755,7 +12202,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 181.61) (xy 90.17 181.61)
+			(xy 69.85 181.61) (xy 78.74 181.61)
 		)
 		(stroke
 			(width 0)
@@ -12135,7 +12582,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 185.42) (xy 93.98 185.42)
+			(xy 77.47 185.42) (xy 82.55 185.42)
 		)
 		(stroke
 			(width 0)
@@ -12255,7 +12702,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 185.42) (xy 97.79 185.42)
+			(xy 82.55 185.42) (xy 86.36 185.42)
 		)
 		(stroke
 			(width 0)
@@ -13145,7 +13592,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 176.53) (xy 90.17 176.53)
+			(xy 76.2 176.53) (xy 78.74 176.53)
 		)
 		(stroke
 			(width 0)
@@ -13205,7 +13652,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 176.53) (xy 87.63 176.53)
+			(xy 64.77 176.53) (xy 76.2 176.53)
 		)
 		(stroke
 			(width 0)
@@ -13555,7 +14002,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 179.07) (xy 88.9 185.42)
+			(xy 77.47 179.07) (xy 77.47 185.42)
 		)
 		(stroke
 			(width 0)
@@ -13775,7 +14222,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 181.61) (xy 81.28 181.61)
+			(xy 64.77 181.61) (xy 69.85 181.61)
 		)
 		(stroke
 			(width 0)
@@ -13805,7 +14252,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 181.61) (xy 68.58 181.61)
+			(xy 45.72 181.61) (xy 57.15 181.61)
 		)
 		(stroke
 			(width 0)
@@ -13865,7 +14312,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 179.07) (xy 88.9 179.07)
+			(xy 78.74 179.07) (xy 77.47 179.07)
 		)
 		(stroke
 			(width 0)
@@ -13935,7 +14382,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 176.53) (xy 68.58 176.53)
+			(xy 45.72 176.53) (xy 57.15 176.53)
 		)
 		(stroke
 			(width 0)
@@ -14454,7 +14901,7 @@
 		(uuid "5aa011f4-0ff8-4322-973a-71eb176f3065")
 	)
 	(label "DBG_RX"
-		(at 57.15 176.53 0)
+		(at 45.72 176.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14494,7 +14941,7 @@
 		(uuid "6bf16092-b715-4f2d-b55e-e5702f77738c")
 	)
 	(label "DBG_TX"
-		(at 57.15 181.61 0)
+		(at 45.72 181.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14684,7 +15131,7 @@
 		(uuid "b7d46bd6-3598-474a-9a67-a054e6aadaad")
 	)
 	(label "DBG_RX_F"
-		(at 76.2 176.53 0)
+		(at 64.77 176.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14874,7 +15321,7 @@
 		(uuid "d8c64ece-9f88-4a1d-9924-6bf66ada7728")
 	)
 	(label "DBG_TX_F"
-		(at 76.2 181.61 0)
+		(at 64.77 181.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15298,7 +15745,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Test Point Pad 2.0mm")
-		(at 87.63 176.53 0)
+		(at 76.2 176.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -15308,7 +15755,7 @@
 		(dnp no)
 		(uuid "0e175d00-9160-46ce-b77f-e2cb8c3199b1")
 		(property "Reference" "TP4"
-			(at 89.154 170.688 0)
+			(at 77.724 170.688 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15319,7 +15766,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 85.09 172.2121 0)
+			(at 73.66 172.2121 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15331,7 +15778,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
-			(at 87.63 176.53 0)
+			(at 76.2 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15342,7 +15789,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 176.53 0)
+			(at 76.2 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15353,7 +15800,7 @@
 			)
 		)
 		(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
-			(at 87.63 176.53 0)
+			(at 76.2 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15610,7 +16057,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
-		(at 72.39 181.61 90)
+		(at 60.96 181.61 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15620,7 +16067,7 @@
 		(dnp no)
 		(uuid "2f610f8f-fe50-4e72-8587-203beab71efa")
 		(property "Reference" "R4"
-			(at 72.39 184.15 90)
+			(at 60.96 184.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15630,7 +16077,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 72.39 181.61 90)
+			(at 60.96 181.61 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15640,7 +16087,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:R_0402"
-			(at 72.39 183.388 90)
+			(at 60.96 183.388 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15651,7 +16098,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15662,7 +16109,7 @@
 			)
 		)
 		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15673,7 +16120,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-RES-000009"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15684,7 +16131,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15695,7 +16142,7 @@
 			)
 		)
 		(property "MfrPartNum" "0402WGJ0121TCE"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15706,7 +16153,7 @@
 			)
 		)
 		(property "tolerance" "5%"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15717,7 +16164,7 @@
 			)
 		)
 		(property "power" "62.5mW"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15728,7 +16175,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15739,7 +16186,7 @@
 			)
 		)
 		(property "tempco" "100ppm"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15750,7 +16197,7 @@
 			)
 		)
 		(property "technology" "thick_film"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15761,7 +16208,7 @@
 			)
 		)
 		(property "temp_min" "-55C"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15772,7 +16219,7 @@
 			)
 		)
 		(property "temp_max" "155C"
-			(at 72.39 181.61 0)
+			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15875,6 +16322,158 @@
 		)
 	)
 	(symbol
+		(lib_id "Screenly:Board to Board Receptacle 100P 0.4mm 3.0mm Stack SMD (DF40HC(3.0)-100DS-0.4V)")
+		(at 119.38 190.5 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4cbe7c1c-04df-4ebb-aac0-b833fa50bff2")
+		(property "Reference" "J15"
+			(at 114.3 185.928 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DF40HC(3.0)-100DS-0.4V"
+			(at 136.652 195.58 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Screenly:Hirose_DF40HC-3.0-100DS-0.4V_2x50_P0.4mm_Vertical_NoCopper"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.hirose.com/en/product/p/CL0684-4151-0-51"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Hirose DF40HC(3.0) board-to-board receptacle, 100 positions, 0.4mm pitch, 3.0mm stacking height, SMD, gold plated contacts. Carrier-board connector for the Raspberry Pi CM5 (two per module). No pins and no copper: the pads and nets are in the RaspberryPi-CM5 footprint; place this footprint at the CM5 connector centre with the same rotation"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-CON-000016"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hirose Electric"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "DF40HC(3.0)-100DS-0.4V(51)"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "interface" "board_to_board"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "family" "DF40HC(3.0)-100DS-0.4V*"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "plating" "gold"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "stack_height" "3.0mm"
+			(at 119.38 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/3fbfb189-ea05-4055-8850-fa2523ec0120"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 24.13 124.46 0)
 		(unit 1)
@@ -15953,7 +16552,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Test Point Pad 2.0mm")
-		(at 81.28 181.61 180)
+		(at 69.85 181.61 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -15963,7 +16562,7 @@
 		(dnp no)
 		(uuid "583131be-b2b0-454c-8c36-963a79ddebc2")
 		(property "Reference" "TP3"
-			(at 79.756 187.452 0)
+			(at 68.326 187.452 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15974,7 +16573,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 83.82 185.9279 0)
+			(at 72.39 185.9279 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15986,7 +16585,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
-			(at 81.28 181.61 0)
+			(at 69.85 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15997,7 +16596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 181.61 0)
+			(at 69.85 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16008,7 +16607,7 @@
 			)
 		)
 		(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
-			(at 81.28 181.61 0)
+			(at 69.85 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16114,9 +16713,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c760b89-6cef-404a-9b81-d8b15544bcef")
@@ -16962,7 +17561,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 26.67 175.26 0)
+		(at 20.32 175.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16973,7 +17572,7 @@
 		(fields_autoplaced yes)
 		(uuid "74024211-8537-411c-a2c4-54cb5dcc086f")
 		(property "Reference" "#PWR04"
-			(at 26.67 179.07 0)
+			(at 20.32 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16984,7 +17583,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 26.67 170.18 0)
+			(at 20.32 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16994,7 +17593,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.67 175.26 0)
+			(at 20.32 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17005,7 +17604,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 175.26 0)
+			(at 20.32 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17016,7 +17615,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 26.67 175.26 0)
+			(at 20.32 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17040,7 +17639,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Test Point Pad 2.0mm")
-		(at 97.79 185.42 270)
+		(at 86.36 185.42 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -17050,7 +17649,7 @@
 		(dnp no)
 		(uuid "742c2df6-dff6-4352-a8d0-af8b84bfa0c7")
 		(property "Reference" "TP5"
-			(at 103.632 186.944 0)
+			(at 92.202 186.944 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17061,7 +17660,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 102.1079 182.88 0)
+			(at 90.6779 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17073,7 +17672,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:TestPoint_Pad_D2.0mm"
-			(at 97.79 185.42 0)
+			(at 86.36 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17084,7 +17683,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 97.79 185.42 0)
+			(at 86.36 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17095,7 +17694,7 @@
 			)
 		)
 		(property "Description" "Test point, round SMD pad 2.0mm (no solder paste). Not a part: excluded from BOM and position files"
-			(at 97.79 185.42 0)
+			(at 86.36 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17119,7 +17718,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
-		(at 72.39 176.53 90)
+		(at 60.96 176.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17129,7 +17728,7 @@
 		(dnp no)
 		(uuid "7772a28e-f3b7-4a6f-88bc-1d32a51e4271")
 		(property "Reference" "R3"
-			(at 72.39 174.244 90)
+			(at 60.96 174.244 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17139,7 +17738,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 72.39 176.53 90)
+			(at 60.96 176.53 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17149,7 +17748,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:R_0402"
-			(at 72.39 178.308 90)
+			(at 60.96 178.308 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17160,7 +17759,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17171,7 +17770,7 @@
 			)
 		)
 		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17182,7 +17781,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-RES-000009"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17193,7 +17792,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17204,7 +17803,7 @@
 			)
 		)
 		(property "MfrPartNum" "0402WGJ0121TCE"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17215,7 +17814,7 @@
 			)
 		)
 		(property "tolerance" "5%"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17226,7 +17825,7 @@
 			)
 		)
 		(property "power" "62.5mW"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17237,7 +17836,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17248,7 +17847,7 @@
 			)
 		)
 		(property "tempco" "100ppm"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17259,7 +17858,7 @@
 			)
 		)
 		(property "technology" "thick_film"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17270,7 +17869,7 @@
 			)
 		)
 		(property "temp_min" "-55C"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17281,7 +17880,7 @@
 			)
 		)
 		(property "temp_max" "155C"
-			(at 72.39 176.53 0)
+			(at 60.96 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17384,6 +17983,158 @@
 		)
 	)
 	(symbol
+		(lib_id "Screenly:Board to Board Receptacle 100P 0.4mm 3.0mm Stack SMD (DF40HC(3.0)-100DS-0.4V)")
+		(at 119.38 177.8 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "989e6617-ff0f-495d-b679-95320ea8d43d")
+		(property "Reference" "J14"
+			(at 114.554 173.482 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DF40HC(3.0)-100DS-0.4V"
+			(at 136.652 182.626 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Screenly:Hirose_DF40HC-3.0-100DS-0.4V_2x50_P0.4mm_Vertical_NoCopper"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.hirose.com/en/product/p/CL0684-4151-0-51"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Hirose DF40HC(3.0) board-to-board receptacle, 100 positions, 0.4mm pitch, 3.0mm stacking height, SMD, gold plated contacts. Carrier-board connector for the Raspberry Pi CM5 (two per module). No pins and no copper: the pads and nets are in the RaspberryPi-CM5 footprint; place this footprint at the CM5 connector centre with the same rotation"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PartNumber" "SRLY-CON-000016"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hirose Electric"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfrPartNum" "DF40HC(3.0)-100DS-0.4V(51)"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "interface" "board_to_board"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "family" "DF40HC(3.0)-100DS-0.4V*"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "plating" "gold"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "stack_height" "3.0mm"
+			(at 119.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "screenly-cm5-player"
+				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/3fbfb189-ea05-4055-8850-fa2523ec0120"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Screenly:Test Point Pad 2.0mm")
 		(at 38.1 139.7 0)
 		(unit 1)
@@ -17464,7 +18215,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 93.98 185.42 0)
+		(at 82.55 185.42 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17474,7 +18225,7 @@
 		(dnp no)
 		(uuid "a88164e4-b638-4759-b87d-7cc3b82b3e91")
 		(property "Reference" "#PWR08"
-			(at 93.98 191.77 0)
+			(at 82.55 191.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17485,7 +18236,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 94.107 189.8142 0)
+			(at 82.677 189.8142 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17495,7 +18246,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 185.42 0)
+			(at 82.55 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17506,7 +18257,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 185.42 0)
+			(at 82.55 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17517,7 +18268,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 185.42 0)
+			(at 82.55 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17961,7 +18712,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Mechanical Outline Raspberry Pi Antenna Kit")
-		(at 142.24 181.61 0)
+		(at 152.4 181.61 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -17972,7 +18723,7 @@
 		(fields_autoplaced yes)
 		(uuid "d18f1657-f2d2-437c-a4e2-2e256a579933")
 		(property "Reference" "MK1"
-			(at 144.78 179.5779 0)
+			(at 154.94 179.5779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17983,7 +18734,7 @@
 			)
 		)
 		(property "Value" "Antenna Kit Outline"
-			(at 144.78 182.1179 0)
+			(at 154.94 182.1179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17994,7 +18745,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:RaspberryPi_Antenna_Kit_Outline_SideView"
-			(at 142.24 181.61 0)
+			(at 152.4 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18005,7 +18756,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.raspberrypi.com/cm4/cm4-antenna-kit-product-brief.pdf"
-			(at 142.24 181.61 0)
+			(at 152.4 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18016,7 +18767,7 @@
 			)
 		)
 		(property "Description" "Mechanical outline of the Raspberry Pi Antenna Kit (folded antenna on the SMA bulkhead), side view on Dwgs.User, for board-edge and enclosure placement. Not a part: excluded from BOM and position files. The antenna kit itself is a separate off-board ANT item"
-			(at 142.24 181.61 0)
+			(at 152.4 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18215,7 +18966,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:Battery Holder CR2032 SMD Retainer (MY-2032-08)")
-		(at 26.67 180.34 0)
+		(at 20.32 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18226,7 +18977,7 @@
 		(fields_autoplaced yes)
 		(uuid "ddc97ce4-2b76-4ebf-abc8-c47ee22cbde4")
 		(property "Reference" "J1"
-			(at 30.48 177.0379 0)
+			(at 24.13 177.0379 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18237,7 +18988,7 @@
 			)
 		)
 		(property "Value" "CR2032 Retainer"
-			(at 30.48 179.5779 0)
+			(at 24.13 179.5779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18248,7 +18999,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:BatteryHolder_MYOUNG_MY-2032-08_CR2032"
-			(at 26.67 178.816 90)
+			(at 20.32 178.816 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18259,7 +19010,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/108ca91259ae9a13bfc5adab7c60e561.pdf?productCode=C964831"
-			(at 26.67 178.816 90)
+			(at 20.32 178.816 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18270,7 +19021,7 @@
 			)
 		)
 		(property "Description" "CR2032 coin cell retainer clip, SMD, 4.4 mm high, 0.25mm phosphor bronze nickel plated (LCSC C964831). The clip is the + contact (pin 1, two tabs); the - contact (pin 2) is a D17.8 PCB pad under the cell: ENIG (gold or nickel) finish, no vias, no paste. Footprint also fits Keystone 3034"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18281,7 +19032,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-CON-000014"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18292,7 +19043,7 @@
 			)
 		)
 		(property "Manufacturer" "MYOUNG"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18303,7 +19054,7 @@
 			)
 		)
 		(property "MfrPartNum" "MY-2032-08"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18314,7 +19065,7 @@
 			)
 		)
 		(property "interface" "battery_holder"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18325,7 +19076,7 @@
 			)
 		)
 		(property "family" "*"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18336,7 +19087,7 @@
 			)
 		)
 		(property "size" "cr2032"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18347,7 +19098,7 @@
 			)
 		)
 		(property "plating" "nickel"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18358,7 +19109,7 @@
 			)
 		)
 		(property "temp_min" "-25C"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18369,7 +19120,7 @@
 			)
 		)
 		(property "temp_max" "85C"
-			(at 26.67 180.34 0)
+			(at 20.32 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18585,7 +19336,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 26.67 182.88 0)
+		(at 20.32 182.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18595,7 +19346,7 @@
 		(dnp no)
 		(uuid "e57e6186-e27e-480a-8a28-94d751fc3a93")
 		(property "Reference" "#PWR05"
-			(at 26.67 189.23 0)
+			(at 20.32 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18606,7 +19357,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 26.797 187.2742 0)
+			(at 20.447 187.2742 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18616,7 +19367,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.67 182.88 0)
+			(at 20.32 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18627,7 +19378,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 182.88 0)
+			(at 20.32 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18638,7 +19389,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 26.67 182.88 0)
+			(at 20.32 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18666,9 +19417,9 @@
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eecc937b-f84f-4f2a-a16f-d4d24678e60a")
@@ -19437,7 +20188,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:JST SH Header 3P 1.0mm Vertical SMD (BM03B-SRSS-TB)")
-		(at 93.98 179.07 0)
+		(at 82.55 179.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19448,7 +20199,7 @@
 		(fields_autoplaced yes)
 		(uuid "f0e3065a-e98a-4fef-9105-f1e5042e743f")
 		(property "Reference" "J2"
-			(at 96.52 177.7999 0)
+			(at 85.09 177.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19459,7 +20210,7 @@
 			)
 		)
 		(property "Value" "BM03B-SRSS-TB"
-			(at 96.52 180.3399 0)
+			(at 85.09 180.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19470,7 +20221,7 @@
 			)
 		)
 		(property "Footprint" "Screenly:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19481,7 +20232,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.jst.com/wp-content/uploads/2025/06/eSR_SZ.pdf"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19492,7 +20243,7 @@
 			)
 		)
 		(property "Description" "JST SH header, 3 positions, 1.00mm pitch, top entry, SMD with 2 fitting nails (MP), 1A 50V, -25 to 85C. As the Raspberry Pi 3-pin debug connector (UART): pin 1 RX (into the target), 2 GND, 3 TX (from the target); 100-120R series resistors at the target, mark UART"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19503,7 +20254,7 @@
 			)
 		)
 		(property "PartNumber" "SRLY-CON-000015"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19514,7 +20265,7 @@
 			)
 		)
 		(property "Manufacturer" "JST"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19525,7 +20276,7 @@
 			)
 		)
 		(property "MfrPartNum" "BM03B-SRSS-TB(LF)(SN)"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19536,7 +20287,7 @@
 			)
 		)
 		(property "interface" "wire_to_board"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19547,7 +20298,7 @@
 			)
 		)
 		(property "family" "BM03B-SRSS-TB*"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19558,7 +20309,7 @@
 			)
 		)
 		(property "current" "1A"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19569,7 +20320,7 @@
 			)
 		)
 		(property "voltage" "50V"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19580,7 +20331,7 @@
 			)
 		)
 		(property "plating" "tin"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19591,7 +20342,7 @@
 			)
 		)
 		(property "temp_min" "-25C"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19602,7 +20353,7 @@
 			)
 		)
 		(property "temp_max" "85C"
-			(at 93.98 179.07 0)
+			(at 82.55 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

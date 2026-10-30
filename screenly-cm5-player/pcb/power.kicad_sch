@@ -15043,7 +15043,7 @@
 	)
 	(symbol
 		(lib_id "Screenly:TVS Diode Bidirectional 18V 600W SMB (SMBJ18CA)")
-		(at 50.8 55.88 90)
+		(at 50.8 55.88 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15061,7 +15061,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "SMBJ18CA"
@@ -15072,7 +15072,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Screenly:D_SMB"
