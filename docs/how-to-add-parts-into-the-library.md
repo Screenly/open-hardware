@@ -105,6 +105,14 @@ The tool checks that the part is not registered yet, assigns the next free part 
 
 If the symbol's `family` pattern allows several parts and more than one of them will be bought, register each of them.
 
+Then record the part's HBOM attributes (see [Part attributes](bom-standard.md#part-attributes)):
+
+```
+tools/partsdb.py attributes <PART NUMBER> --lifecycle <Active|NRND|LTB|Obsolete|Preview|Unknown> --firmware <None|Fixed|Updatable|Unknown> [--country '<Country>'] [--ltb-date <YYYY-MM-DD>]
+```
+
+Take the lifecycle from the manufacturer or a distributor's product status. Set `--firmware Updatable` for any part with field-updatable firmware, such as a TPM or a module with a bootloader. Give `--country` only when the part is made in one known country.
+
 ## 6. Record Stock
 
 Only if the part is already in stock:
@@ -153,6 +161,7 @@ KiCad keeps loaded footprints in memory, so a footprint changed on disk is not p
 - [ ] `family` pattern checked: every match is a drop-in replacement
 - [ ] Attributes set for on-board or off-board use
 - [ ] Part number registered with `tools/partsdb.py new`
+- [ ] HBOM attributes recorded with `tools/partsdb.py attributes`
 - [ ] `tools/partsdb.py validate` prints `OK`
 - [ ] Symbol and footprint load in KiCad
 - [ ] Pull request opened, with the datasheet revision

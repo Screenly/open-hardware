@@ -4,7 +4,8 @@
 The database is a directory, given by --db or the PARTSDB_DIR environment
 variable, that holds these JSON files:
 
-  registry.json  every part number in use
+  registry.json  every part number in use, with the part attributes the
+                 HBOM needs (country of origin, lifecycle, firmware)
   stock.json     quantity per part number and location
   retired.json   deleted part numbers
 
@@ -45,6 +46,11 @@ PART_NUMBER = re.compile(r"^SRLY-([A-Z]{3})-([0-9]{6})$")
 LOCATION = re.compile(r"^[a-z0-9_]+$")
 REGISTRY_FIELDS = {"manufacturer", "mpn", "description", "assigned"}
 RETIRED_FIELDS = REGISTRY_FIELDS | {"deleted"}
+# Part attributes for the HBOM (docs/bom-standard.md, Part attributes). Optional:
+# a missing lifecycle or contains_firmware means Unknown.
+ATTRIBUTE_FIELDS = {"country_of_origin", "lifecycle", "ltb_date", "contains_firmware", "attributes_checked"}
+LIFECYCLES = ("Active", "NRND", "LTB", "Obsolete", "Preview", "Unknown")
+FIRMWARE = ("None", "Fixed", "Updatable", "Unknown")
 
 
 class Error(Exception):
@@ -99,9 +105,10 @@ def validate(registry, stock, retired):
             continue
         if m.group(1) not in codes:
             errors.append(f"{pn}: unknown class {m.group(1)}")
-        if set(entry) != REGISTRY_FIELDS:
-            errors.append(f"{pn}: fields must be {sorted(REGISTRY_FIELDS)}")
+        if not REGISTRY_FIELDS <= set(entry) or set(entry) - REGISTRY_FIELDS - ATTRIBUTE_FIELDS:
+            errors.append(f"{pn}: fields must be {sorted(REGISTRY_FIELDS)}, optionally {sorted(ATTRIBUTE_FIELDS)}")
             continue
+        errors += [f"{pn}: {e}" for e in attribute_errors(entry)]
         if not entry["manufacturer"] or not entry["mpn"]:
             errors.append(f"{pn}: manufacturer and mpn are required")
         key = (entry["manufacturer"].lower(), entry["mpn"].lower())
@@ -130,6 +137,25 @@ def validate(registry, stock, retired):
     return errors
 
 
+
+
+def attribute_errors(entry):
+    errors = []
+    if entry.get("lifecycle", "Unknown") not in LIFECYCLES:
+        errors.append(f"lifecycle must be one of {', '.join(LIFECYCLES)}")
+    if entry.get("contains_firmware", "Unknown") not in FIRMWARE:
+        errors.append(f"contains_firmware must be one of {', '.join(FIRMWARE)}")
+    if "ltb_date" in entry and entry.get("lifecycle") != "LTB":
+        errors.append("ltb_date is only allowed with lifecycle LTB")
+    for key in ("ltb_date", "attributes_checked"):
+        if key in entry:
+            try:
+                datetime.date.fromisoformat(entry[key])
+            except ValueError:
+                errors.append(f"{key} must be an ISO 8601 date")
+    if "country_of_origin" in entry and not entry["country_of_origin"].strip():
+        errors.append("country_of_origin must not be empty; leave it out if unknown")
+    return errors
 
 
 def save(registry, stock, retired):
@@ -225,6 +251,25 @@ def cmd_describe(args):
     save(registry, stock, retired)
 
 
+def cmd_attributes(args):
+    registry, stock, retired = open_db()
+    if args.pn not in registry:
+        raise Error(f"{args.pn}: not in registry")
+    entry = registry[args.pn]
+    for key, val in (("country_of_origin", args.country), ("lifecycle", args.lifecycle),
+                     ("ltb_date", args.ltb_date), ("contains_firmware", args.firmware)):
+        if val is None:
+            continue
+        if val == "":
+            entry.pop(key, None)
+        else:
+            entry[key] = val
+    if entry.get("lifecycle") != "LTB":
+        entry.pop("ltb_date", None)
+    entry["attributes_checked"] = datetime.date.today().isoformat()
+    save(registry, stock, retired)
+
+
 def cmd_delete(args):
     if not EARLY_STAGE:
         raise Error("part numbers can't be deleted once the library is released (EARLY_STAGE is False)")
@@ -262,10 +307,13 @@ def cmd_find(args):
 
 
 def cmd_show(args):
+    """One part: a JSON object. Several parts: a JSON list of objects, in the order given."""
     registry, stock, retired = open_db()
-    if args.pn not in registry:
-        raise Error(f"{args.pn}: not in registry")
-    print(dump({"part": args.pn, **registry[args.pn], "stock": stock.get(args.pn, {})}), end="")
+    missing = [pn for pn in args.pn if pn not in registry]
+    if missing:
+        raise Error(f"not in registry: {', '.join(missing)}")
+    parts = [{"part": pn, **registry[pn], "stock": stock.get(pn, {})} for pn in args.pn]
+    print(dump(parts[0] if len(parts) == 1 else parts), end="")
 
 
 def cmd_stock(args):
@@ -316,6 +364,14 @@ def main():
     s.add_argument("description")
     s.set_defaults(func=cmd_describe)
 
+    s = sub.add_parser("attributes", help="set the HBOM attributes of a part; an empty value removes one")
+    s.add_argument("pn")
+    s.add_argument("--country", help="country of origin, free text")
+    s.add_argument("--lifecycle", help=", ".join(LIFECYCLES))
+    s.add_argument("--ltb-date", help="last time buy date, ISO 8601; only with --lifecycle LTB")
+    s.add_argument("--firmware", help=", ".join(FIRMWARE))
+    s.set_defaults(func=cmd_attributes)
+
     s = sub.add_parser("delete", help="delete a part number (early stage only); the number is retired")
     s.add_argument("pn")
     s.set_defaults(func=cmd_delete)
@@ -329,8 +385,8 @@ def main():
     s.add_argument("--manufacturer")
     s.set_defaults(func=cmd_find)
 
-    s = sub.add_parser("show", help="show one part")
-    s.add_argument("pn")
+    s = sub.add_parser("show", help="show parts as JSON: an object for one part, a list for several")
+    s.add_argument("pn", nargs="+")
     s.set_defaults(func=cmd_show)
 
     s = sub.add_parser("stock", help="show or change stock")

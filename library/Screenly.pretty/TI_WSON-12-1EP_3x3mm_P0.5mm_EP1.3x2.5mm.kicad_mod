@@ -19,6 +19,7 @@
 	(property "Value" "TI_WSON-12-1EP_3x3mm_P0.5mm_EP1.3x2.5mm"
 		(at 0 2.6 0)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "f49d3848-0530-45f8-9dbb-fd48d9873855")
 		(effects
 			(font

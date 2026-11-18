@@ -20,6 +20,13 @@ KiCad design ──► Resolver ◄── Company part database, company stock
 
 This keeps designs valid as parts go out of stock or obsolete. The design never freezes a list of alternates; it is resolved against the parts available at order time.
 
+### Implementation phases
+
+Stage 2 needs company stock to choose from. Until that stock is built up, every part would be missing and the resolver would replace the parts already chosen for the design. So the stages are introduced in two phases:
+
+1. **Now: design-stage manufacturing files.** `create-manufacturing-files.sh PROJECT_DIR VARIANT` produces the manufacturing files of one assembly variant directly from the design: the BOM from KiCad's BOM export of the variant, and the [HBOM](#hbom) from that BOM plus the [part attributes](#part-attributes) in the company part database. The parts are the ones chosen in the design (the `PartNumber` of each symbol); stock is not checked.
+2. **Later, once company stock exists: Stage 2.** The [resolver](#resolver) and [Order Helper](#order-helper) are implemented as described below. They check stock for the build quantity, pick other approved parts from the part database when stock is short, and propose new parts from distributors when no approved part is available. From then on, the manufacturing BOM and HBOM of a build come from the resolved BOM.
+
 ## Principles
 
 - **The KiCad design is the source of truth for requirements.** The Screenly KiCad Part Library is the source of truth for part data, and the company part database for part numbers and stock.
@@ -121,12 +128,13 @@ The company part database is private and is not part of this repository. It is c
 
 - **Assigned part numbers.** Each Screenly part number, with the manufacturer, manufacturer part number and description of the part it was assigned to. Part numbers are never removed or reassigned.
 - **Company stock.** The quantity per part number and location, including stock held at the contract manufacturer.
+- **Part attributes.** The [part attributes](#part-attributes) the HBOM needs, per part number.
 
 Part parameters are not stored in the database. They are the class key fields of the symbols in the [Screenly KiCad Part Library](#screenly-kicad-part-library).
 
 ### Part attributes
 
-The HBOM needs these attributes for every part that ships:
+The HBOM needs these attributes for every part that ships. They are kept in the company part database, in each part's registry entry, and indexed by the Screenly part number. They are not KiCad symbol fields, because they describe a purchased part, not a design requirement. Set them with `tools/partsdb.py attributes`:
 
 | Attribute          | Values                                                    |
 | ------------------ | --------------------------------------------------------- |
@@ -134,6 +142,8 @@ The HBOM needs these attributes for every part that ships:
 | `LifeCycle`        | `Active`, `NRND`, `LTB`, `Obsolete`, `Preview`, `Unknown` |
 | `LTBDate`          | ISO 8601 date, only with `LifeCycle=LTB`                  |
 | `ContainsFirmware` | `None`, `Fixed`, `Updatable`, `Unknown`                   |
+
+In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date` and `contains_firmware`, plus `attributes_checked`, the date they were last set. A part without `country_of_origin` has an unknown country of origin. Record a country only when the part is made in one known country; otherwise, the country comes from the shipment and is set per build.
 
 `ContainsFirmware` values:
 
@@ -249,6 +259,8 @@ Reference: CISA, *Hardware Bill of Materials (HBOM) Framework for Supply Chain R
 
 Format: CycloneDX 1.6, JSON, built with [`cyclonedx-python-lib`](https://github.com/CycloneDX/cyclonedx-python-lib). DNP instances are excluded.
 
+Until [Stage 2](#implementation-phases) is in place, the HBOM is a design HBOM of an assembly variant, made by `create-manufacturing-files.sh` from the design BOM. Its metadata component is the assembly (`ESP_PN_<variant>`), with the variant, the bare PCB (`PCB_PN`) and the design commit as properties. The bare PCB is listed as a component with quantity 1.
+
 Each line becomes one component of type `device`:
 
 | Source                | CycloneDX                                  |
@@ -291,7 +303,8 @@ The job fails, and publishes nothing, if any check fails.
 ## Open Items
 
 - How parts from the [Assembly Part Library](assembly-part-library-standard.md), which are not in KiCad designs, are added to the resolved BOM, manufacturing BOM and HBOM.
-- Where the [part attributes](#part-attributes) and the parameters and footprints of each registered part are kept, so the resolver and HBOM can use them.
+- Where the parameters and footprints of each registered part are kept, so the resolver can use them. (The [part attributes](#part-attributes) are in the part database.)
+- Implementing Stage 2 (resolver and Order Helper) once company stock exists, see [Implementation phases](#implementation-phases).
 - Running the design checks locally, ideally as part of KiCad's ERC.
 - Moving the part database to PostgreSQL with a proper backend.
 - Which distributors the Order Helper queries. Digi-Key and Mouser have official APIs; LCSC does not offer one generally.

@@ -6,6 +6,9 @@
 	(paper "A4")
 	(title_block
 		(title "Screenly CM5 Player")
+		(date "2026-11-18")
+		(rev "R0")
+		(company "Screenly")
 	)
 	(lib_symbols
 		(symbol "Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)_1"

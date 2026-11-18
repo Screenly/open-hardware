@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "94c853b2-b2bd-42e8-b76b-a010ec7d463b")
 	(paper "A4")
+	(title_block
+		(title "Screenly CM5 Player")
+		(date "2026-11-18")
+		(rev "R0")
+		(company "Screenly")
+	)
 	(lib_symbols
 		(symbol "Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)_1"
 			(pin_numbers
@@ -7689,6 +7695,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "U4")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -8068,6 +8078,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "J7")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -8337,6 +8351,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R22")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -8527,6 +8545,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R21")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -8719,6 +8741,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R23")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -8920,6 +8946,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C21")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -9189,6 +9219,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R26")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -9380,6 +9414,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C27")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -9637,6 +9675,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C26")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -9918,6 +9960,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C25")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -10187,6 +10233,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C28")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -10468,6 +10518,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C23")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -10758,6 +10812,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "L3")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -11183,6 +11241,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R24")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -11463,6 +11525,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C20")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -11823,6 +11889,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C22")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -12092,6 +12162,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C29")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -12596,6 +12670,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "R25")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -12952,6 +13030,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/26cd55e4-c100-4c51-99bf-5253745f5eec"
 					(reference "C24")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)

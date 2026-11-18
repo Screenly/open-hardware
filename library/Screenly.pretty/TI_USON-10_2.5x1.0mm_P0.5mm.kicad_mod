@@ -6,7 +6,7 @@
   (fp_text reference D? (at 0.01829 -2.5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value TI_USON-10_2.5x1.0mm_P0.5mm (at 0.01829 2.5) (layer F.Fab)
+  (fp_text value TI_USON-10_2.5x1.0mm_P0.5mm (at 0.01829 2.5) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start -0.25 -1.25) (end -0.5 -1) (layer F.Fab) (width 0.1))

@@ -19,6 +19,7 @@
 	(property "Value" "BatteryHolder_MYOUNG_BS-02_CR2032"
 		(at 0 11.6 0)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "b8994961-4a4d-4763-887f-ec12e171e744")
 		(effects
 			(font
@@ -162,6 +163,16 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 5 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.037)
 			)
 		)
 	)

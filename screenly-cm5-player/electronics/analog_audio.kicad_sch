@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "635d1503-673f-453c-adf8-fc3ab7707653")
 	(paper "A4")
+	(title_block
+		(title "Screenly CM5 Player")
+		(date "2026-11-18")
+		(rev "R0")
+		(company "Screenly")
+	)
 	(lib_symbols
 		(symbol "Screenly:Audio DAC Stereo 112dB I2S TSSOP-20 (PCM5102APWR)"
 			(pin_names

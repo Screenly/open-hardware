@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "f9265863-6ef7-433b-aed8-6b0aec6a61cf")
 	(paper "A4")
+	(title_block
+		(title "Screenly CM5 Player")
+		(date "2026-11-18")
+		(rev "R0")
+		(company "Screenly")
+	)
 	(lib_symbols
 		(symbol "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)"
 			(pin_numbers

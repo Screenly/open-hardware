@@ -289,7 +289,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "R0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -650,9 +650,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "outputs/manufacturing/pcb/SRLY-PCB-000001",
       "specctra_dsn": "",
-      "step": "",
+      "step": "outputs/3d/screenly-cm5-player-r0.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -663,7 +663,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "outputs/manufacturing/assembly/SRLY-ESP-000001/SRLY-ESP-000001.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -691,43 +691,43 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Value",
           "name": "Value",
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Simulation",
           "name": "${EXCLUDE_FROM_SIM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Position Files",
           "name": "${EXCLUDE_FROM_POS_FILES}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -737,12 +737,408 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "action",
+          "name": "action",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "aec_q101",
+          "name": "aec_q101",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "aec_q200",
+          "name": "aec_q200",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "angle",
+          "name": "angle",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "bus",
+          "name": "bus",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "capacitance",
+          "name": "capacitance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "capacity",
+          "name": "capacity",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "circuit",
+          "name": "circuit",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "color",
+          "name": "color",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "current",
+          "name": "current",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "dcr",
+          "name": "dcr",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "dielectric",
+          "name": "dielectric",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "direction",
+          "name": "direction",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "durability",
+          "name": "durability",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "esr",
+          "name": "esr",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "family",
+          "name": "family",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "force",
+          "name": "force",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "function",
+          "name": "function",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "height",
+          "name": "height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "id",
+          "name": "id",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "if",
+          "name": "if",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ilimit",
+          "name": "ilimit",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "impedance",
+          "name": "impedance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "intensity",
+          "name": "intensity",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "interface",
+          "name": "interface",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "iout",
+          "name": "iout",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "iq",
+          "name": "iq",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "irms",
+          "name": "irms",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "isat",
+          "name": "isat",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "lens",
+          "name": "lens",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "plating",
+          "name": "plating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "power",
+          "name": "power",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ppk",
+          "name": "ppk",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "qg",
+          "name": "qg",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ram",
+          "name": "ram",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "rds_on",
+          "name": "rds_on",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ripple",
+          "name": "ripple",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "size",
+          "name": "size",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "stack_height",
+          "name": "stack_height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "storage",
+          "name": "storage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "switch",
+          "name": "switch",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "technology",
+          "name": "technology",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "temp_max",
+          "name": "temp_max",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "temp_min",
+          "name": "temp_min",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "tempco",
+          "name": "tempco",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "tolerance",
+          "name": "tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "topology",
+          "name": "topology",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "type",
+          "name": "type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vclamp",
+          "name": "vclamp",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vdd",
+          "name": "vdd",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vds",
+          "name": "vds",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vf",
+          "name": "vf",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vgs",
+          "name": "vgs",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vgs_max",
+          "name": "vgs_max",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vin_max",
+          "name": "vin_max",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vin_min",
+          "name": "vin_min",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "voltage",
+          "name": "voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vout",
+          "name": "vout",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vrwm",
+          "name": "vrwm",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "vz",
+          "name": "vz",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "wireless",
+          "name": "wireless",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "PartNumber",
+          "name": "PartNumber",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MfrPartNum",
+          "name": "MfrPartNum",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -868,8 +1264,12 @@
         "uuid": "e8a2875a-18ea-4799-b56d-ecb6ae09ef8e"
       }
     ],
-    "used_designators": "#FLG1-14,#G1,#PWR1-186,#PWR305-321,#SYM1,#ScreenlyLogo1,A1-4,C1-77,D1-19,FB1,FID1-2,G1,J1-15,L1-3,MK1,OSHW1,Q1-4,R1-73,SW1-2,ScreenlyLogo1,TP1-33,U1-13",
-    "variants": []
+    "used_designators": "#FLG1-14,#G1,#PWR1-186,#PWR305-321,#SYM1,#ScreenlyLogo1,A1-4,C1-77,D1-19,FB1,FID1-3,G1,J1-15,L1-3,MK1,OSHW1,Q1-4,R1-73,SW1-2,ScreenlyLogo1,TP1-33,U1-13",
+    "variants": [
+      {
+        "name": "eMMC"
+      }
+    ]
   },
   "sheets": [
     [
@@ -925,7 +1325,10 @@
       "Analog Audio"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "ESP_PN_eMMC": "SRLY-ESP-000001",
+    "PCB_PN": "SRLY-PCB-000001"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0

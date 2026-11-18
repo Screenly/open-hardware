@@ -19,6 +19,7 @@
 	(property "Value" "CP_Radial_D6.3mm_P2.50mm"
 		(at 1.25 4.4 0)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "b83f6b00-56ab-48f4-b7a1-f50874e873b5")
 		(effects
 			(font

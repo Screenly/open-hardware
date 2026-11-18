@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "12755947-22e4-4f56-81e2-7ab59d98f2fc")
 	(paper "A4")
+	(title_block
+		(title "Screenly CM5 Player")
+		(date "2026-11-18")
+		(rev "R0")
+		(company "Screenly")
+	)
 	(lib_symbols
 		(symbol "Screenly:Capacitor 100nF 50V X7R 0402 (CL05B104KB54PNC)"
 			(pin_numbers
@@ -3258,6 +3264,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "C62")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -3447,6 +3457,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "R62")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -3953,6 +3967,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "R64")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -4157,6 +4175,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "C60")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -4370,6 +4392,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "U11")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -4731,6 +4757,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "C61")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -5000,6 +5030,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "J14")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -5192,6 +5226,10 @@
 				(path "/e8a2875a-18ea-4799-b56d-ecb6ae09ef8e/a68e040d-2af5-465e-ad8d-29d6e690a86c"
 					(reference "R63")
 					(unit 1)
+					(variant
+						(name "eMMC")
+						(dnp yes)
+					)
 				)
 			)
 		)
