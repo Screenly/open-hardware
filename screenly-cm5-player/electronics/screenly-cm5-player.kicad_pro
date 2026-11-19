@@ -1327,7 +1327,8 @@
   ],
   "text_variables": {
     "ESP_PN_eMMC": "SRLY-ESP-000001",
-    "PCB_PN": "SRLY-PCB-000001"
+    "PCB_PN": "SRLY-PCB-000001",
+    "SCREENLY_LIB": "${KIPRJMOD}/../../library"
   },
   "tuning_profiles": {
     "meta": {

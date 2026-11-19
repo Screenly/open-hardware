@@ -163,6 +163,7 @@
 	)
 	(property "ESP_PN_eMMC" "SRLY-ESP-000001")
 	(property "PCB_PN" "SRLY-PCB-000001")
+	(property "SCREENLY_LIB" "${KIPRJMOD}/../../library")
 	(variants
 		(variant
 			(name "eMMC")
