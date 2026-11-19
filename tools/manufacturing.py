@@ -650,6 +650,9 @@ def cmd_hbom(project_dir, variant, bom, out_json):
         rows = list(csv.DictReader(f))
     registry = part_records([esp, pcb] + [r["PartNumber"].strip() for r in rows if r["PartNumber"].strip()])
 
+    def cpe(pn):
+        return registry.get(pn, {}).get("cpe") or None
+
     def attrs(pn):
         e = registry.get(pn, {})
         props = [("screenly:hbom:countryOfOrigin", e.get("country_of_origin", "Unknown")),
@@ -657,14 +660,17 @@ def cmd_hbom(project_dir, variant, bom, out_json):
                  ("screenly:hbom:containsFirmware", e.get("contains_firmware", "Unknown"))]
         if e.get("ltb_date"):
             props.append(("screenly:hbom:ltbDate", e["ltb_date"]))
+        if e.get("firmware_cpe"):
+            props.append(("screenly:hbom:firmwareCpe", e["firmware_cpe"]))
         return props
 
-    def component(pn, name, manufacturer, description, datasheet, refdes, qty):
+    def component(pn, name, version, manufacturer, description, datasheet, refdes, qty):
         props = ([("screenly:hbom:refdes", refdes)] if refdes else []) + [("screenly:hbom:quantity", str(qty))]
         refs = []
         if datasheet.startswith(("http://", "https://")):
             refs.append(ExternalReference(type=ExternalReferenceType.DOCUMENTATION, url=XsUri(datasheet)))
-        return Component(type=ComponentType.DEVICE, bom_ref=pn, name=name or pn,
+        return Component(type=ComponentType.DEVICE, bom_ref=pn, name=name or pn, version=version or None,
+                         cpe=cpe(pn),
                          manufacturer=OrganizationalEntity(name=manufacturer) if manufacturer else None,
                          description=description or None, external_references=refs,
                          properties=[Property(name=k, value=v) for k, v in props + attrs(pn)])
@@ -675,8 +681,9 @@ def cmd_hbom(project_dir, variant, bom, out_json):
     if not pcb_entry:
         errors.append(f"{pcb} (PCB_PN) is not in the part database")
     else:
-        components.append(component(pcb, pcb_entry["mpn"], pcb_entry["manufacturer"], pcb_entry["description"],
-                                    "", "", 1))
+        # The bare PCB's version is the design revision.
+        components.append(component(pcb, pcb_entry["mpn"], rev, pcb_entry["manufacturer"],
+                                    pcb_entry["description"], "", "", 1))
     for row in rows:
         pn = row["PartNumber"].strip()
         if not pn:
@@ -685,13 +692,16 @@ def cmd_hbom(project_dir, variant, bom, out_json):
         if pn not in registry:
             errors.append(f"{pn} ({row['Reference']}) is not in the part database")
         refs = ",".join(r.strip() for r in row["Reference"].split(","))
-        components.append(component(pn, row["MfrPartNum"], row["Manufacturer"], row.get("Description", ""),
+        # A bought part has no version of its own: the version is its manufacturer part number.
+        components.append(component(pn, row["MfrPartNum"], row["MfrPartNum"], row["Manufacturer"],
+                                    row.get("Description", ""),
                                     row.get("Datasheet", ""), refs, row["QUANTITY"]))
     if errors:
         raise Error("HBOM:\n  " + "\n  ".join(errors))
 
     esp_entry = registry.get(esp, {})
     top = Component(type=ComponentType.DEVICE, bom_ref=esp, name=esp_entry.get("mpn", esp), version=rev,
+                    cpe=cpe(esp),
                     manufacturer=OrganizationalEntity(name=esp_entry.get("manufacturer", company or "Screenly")),
                     description=esp_entry.get("description") or None,
                     properties=[Property(name=k, value=v) for k, v in

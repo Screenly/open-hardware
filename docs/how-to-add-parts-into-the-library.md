@@ -111,7 +111,7 @@ Then record the part's HBOM attributes (see [Part attributes](bom-standard.md#pa
 tools/partsdb.py attributes <PART NUMBER> --lifecycle <Active|NRND|LTB|Obsolete|Preview|Unknown> --firmware <None|Fixed|Updatable|Unknown> [--country '<Country>'] [--ltb-date <YYYY-MM-DD>]
 ```
 
-Take the lifecycle from the manufacturer or a distributor's product status. Set `--firmware Updatable` for any part with field-updatable firmware, such as a TPM or a module with a bootloader. Give `--country` only when the part is made in one known country.
+Take the lifecycle from the manufacturer or a distributor's product status. Set `--firmware Updatable` for any part with field-updatable firmware, such as a TPM or a module with a bootloader. Give `--country` only when the part is made in one known country. For firmware-bearing parts, also give `--cpe 'cpe:2.3:h:<vendor>:<product>:-:*:*:*:*:*:*:*'` and, when NVD lists the firmware separately, `--firmware-cpe 'cpe:2.3:o:...'`. Use NVD's vendor and product naming where it exists.
 
 ## 6. Record Stock
 

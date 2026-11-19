@@ -5,7 +5,7 @@ The database is a directory, given by --db or the PARTSDB_DIR environment
 variable, that holds these JSON files:
 
   registry.json  every part number in use, with the part attributes the
-                 HBOM needs (country of origin, lifecycle, firmware)
+                 HBOM needs (country of origin, lifecycle, firmware, CPE)
   stock.json     quantity per part number and location
   retired.json   deleted part numbers
 
@@ -48,7 +48,9 @@ REGISTRY_FIELDS = {"manufacturer", "mpn", "description", "assigned"}
 RETIRED_FIELDS = REGISTRY_FIELDS | {"deleted"}
 # Part attributes for the HBOM (docs/bom-standard.md, Part attributes). Optional:
 # a missing lifecycle or contains_firmware means Unknown.
-ATTRIBUTE_FIELDS = {"country_of_origin", "lifecycle", "ltb_date", "contains_firmware", "attributes_checked"}
+ATTRIBUTE_FIELDS = {"country_of_origin", "lifecycle", "ltb_date", "contains_firmware", "cpe", "firmware_cpe",
+                    "attributes_checked"}
+CPE = re.compile(r"^cpe:2\.3:[aho](:[^:\s]+){10}$")
 LIFECYCLES = ("Active", "NRND", "LTB", "Obsolete", "Preview", "Unknown")
 FIRMWARE = ("None", "Fixed", "Updatable", "Unknown")
 
@@ -153,6 +155,10 @@ def attribute_errors(entry):
                 datetime.date.fromisoformat(entry[key])
             except ValueError:
                 errors.append(f"{key} must be an ISO 8601 date")
+    if "cpe" in entry and not (CPE.match(entry["cpe"]) and entry["cpe"].startswith("cpe:2.3:h:")):
+        errors.append("cpe must be a CPE 2.3 name of a hardware part (cpe:2.3:h:...)")
+    if "firmware_cpe" in entry and not (CPE.match(entry["firmware_cpe"]) and entry["firmware_cpe"].startswith("cpe:2.3:o:")):
+        errors.append("firmware_cpe must be a CPE 2.3 name of firmware (cpe:2.3:o:...)")
     if "country_of_origin" in entry and not entry["country_of_origin"].strip():
         errors.append("country_of_origin must not be empty; leave it out if unknown")
     return errors
@@ -257,7 +263,8 @@ def cmd_attributes(args):
         raise Error(f"{args.pn}: not in registry")
     entry = registry[args.pn]
     for key, val in (("country_of_origin", args.country), ("lifecycle", args.lifecycle),
-                     ("ltb_date", args.ltb_date), ("contains_firmware", args.firmware)):
+                     ("ltb_date", args.ltb_date), ("contains_firmware", args.firmware),
+                     ("cpe", args.cpe), ("firmware_cpe", args.firmware_cpe)):
         if val is None:
             continue
         if val == "":
@@ -370,6 +377,8 @@ def main():
     s.add_argument("--lifecycle", help=", ".join(LIFECYCLES))
     s.add_argument("--ltb-date", help="last time buy date, ISO 8601; only with --lifecycle LTB")
     s.add_argument("--firmware", help=", ".join(FIRMWARE))
+    s.add_argument("--cpe", help="CPE 2.3 name of the part, cpe:2.3:h:...; for firmware-bearing parts")
+    s.add_argument("--firmware-cpe", help="CPE 2.3 name of the firmware, cpe:2.3:o:..., as used by NVD")
     s.set_defaults(func=cmd_attributes)
 
     s = sub.add_parser("delete", help="delete a part number (early stage only); the number is retired")

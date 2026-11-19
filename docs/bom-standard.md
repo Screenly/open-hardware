@@ -142,8 +142,10 @@ The HBOM needs these attributes for every part that ships. They are kept in the 
 | `LifeCycle`        | `Active`, `NRND`, `LTB`, `Obsolete`, `Preview`, `Unknown` |
 | `LTBDate`          | ISO 8601 date, only with `LifeCycle=LTB`                  |
 | `ContainsFirmware` | `None`, `Fixed`, `Updatable`, `Unknown`                   |
+| `CPE`              | CPE 2.3 name of the part (`cpe:2.3:h:...`), for firmware-bearing parts |
+| `FirmwareCPE`      | CPE 2.3 name of its firmware (`cpe:2.3:o:...`), in NVD's naming |
 
-In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date` and `contains_firmware`, plus `attributes_checked`, the date they were last set. A part without `country_of_origin` has an unknown country of origin. Record a country only when the part is made in one known country; otherwise, the country comes from the shipment and is set per build.
+In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date`, `contains_firmware`, `cpe` and `firmware_cpe`, plus `attributes_checked`, the date they were last set. A part without `country_of_origin` has an unknown country of origin. Record a country only when the part is made in one known country; otherwise, the country comes from the shipment and is set per build.
 
 `ContainsFirmware` values:
 
@@ -266,7 +268,7 @@ Each line becomes one component of type `device`:
 | Source                | CycloneDX                                  |
 | --------------------- | ------------------------------------------ |
 | `PartNumber`          | `bom-ref`                                  |
-| `MfrPartNum`          | `name`                                     |
+| `MfrPartNum`          | `name`, and `version`: a bought part has no version of its own, so its manufacturer part number identifies its model |
 | `Manufacturer`        | `manufacturer` (1.6+)                      |
 | `Description`         | `description`                              |
 | `Datasheet`           | `externalReferences` of type `documentation` |
@@ -276,12 +278,16 @@ Each line becomes one component of type `device`:
 | `LifeCycle`           | property `screenly:hbom:lifeCycle`         |
 | `LTBDate`             | property `screenly:hbom:ltbDate`           |
 | `ContainsFirmware`    | property `screenly:hbom:containsFirmware`  |
+| `CPE`                 | `cpe`, a hardware CPE (`cpe:2.3:h:...`)     |
+| `FirmwareCPE`         | property `screenly:hbom:firmwareCpe`       |
 
 Rules:
 
 - HBOM attributes without a native CycloneDX field go into properties under the `screenly:hbom:` namespace.
 - Do **not** use `metadata.lifecycles` for part lifecycle. It describes the phase of the BOM itself, not of the parts.
 - Every firmware-bearing part (`Fixed` or `Updatable`) has a `bom-ref`, so it can be linked to an SBOM.
+- Every device has a `name`, a `manufacturer` and a `version`, as HBOM checkers such as the [sbomify HBOM Validator](https://sbomify.com/tools/hbom-checker/) require. The assembly and the bare PCB use the design revision (the board title block) as `version`.
+- Firmware-bearing parts carry a `CPE`, so they can be matched against vulnerability data, and a `FirmwareCPE` when the firmware is listed separately, as NVD does for TPM firmware. Other parts don't need an identifier; the HBOM checker's warnings for their missing CPE are expected.
 
 ## CI Checks
 
