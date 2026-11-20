@@ -2,7 +2,7 @@
 # Create the manufacturing files of a KiCad project with kicad-cli.
 #
 # Usage: ./create-manufacturing-files.sh PROJECT_DIR VARIANT
-#   e.g. ./create-manufacturing-files.sh screenly-cm5-player/pcb eMMC
+#   e.g. ./create-manufacturing-files.sh screenly-cm5-player/electronics eMMC
 #
 # Part numbers come from the project text variables (File > Project Setup >
 # Text Variables): PCB_PN for the bare board, ESP_PN_<VARIANT> for the
