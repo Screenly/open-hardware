@@ -17,7 +17,7 @@ A digital signage player built on the Raspberry Pi Compute Module 5, with the CM
 | Item | Location |
 | ---- | -------- |
 | Specification | [screenly-cm5-player/docs/screenly-cm5-player-specifications.md](screenly-cm5-player/docs/screenly-cm5-player-specifications.md) |
-| KiCad project | [screenly-cm5-player/pcb](screenly-cm5-player/pcb) |
+| KiCad project | [screenly-cm5-player/electronics](screenly-cm5-player/electronics) |
 | Bare PCB / assembly (`eMMC` variant) | `SRLY-PCB-000001` / `SRLY-ESP-000001` |
 
 ## Generating Manufacturing Files
