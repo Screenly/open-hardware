@@ -1119,7 +1119,7 @@ def cmd_hbom(project_dir, variant, bom, out_json):
         raise Error("cyclonedx-python-lib is not installed (pip install cyclonedx-python-lib)") from None
     files = project_files(project_dir)
     tv = text_variables(files["pro"])
-    title, rev, company = title_block(load_board(files["pcb"]))
+    _, rev, _ = title_block(load_board(files["pcb"]))
     esp, pcb = tv[f"ESP_PN_{variant}"], tv["PCB_PN"]
     with open(bom, encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
@@ -1160,6 +1160,9 @@ def cmd_hbom(project_dir, variant, bom, out_json):
 
     errors = []
     components = []
+    esp_entry = registry.get(esp)
+    if not esp_entry:
+        errors.append(f"{esp} (ESP_PN_{variant}) is not in the part database")
     pcb_entry = registry.get(pcb)
     if not pcb_entry:
         errors.append(f"{pcb} (PCB_PN) is not in the part database")
@@ -1192,16 +1195,13 @@ def cmd_hbom(project_dir, variant, bom, out_json):
     if errors:
         raise Error("HBOM:\n  " + "\n  ".join(errors))
 
-    esp_entry = registry.get(esp)
-    if not esp_entry:
-        raise Error(f"HBOM: {esp} (ESP_PN_{variant}) is not in the part database")
     top = Component(
         type=ComponentType.DEVICE,
         bom_ref=esp,
-        name=esp_entry.get("mpn", esp),
+        name=esp_entry["mpn"],
         version=rev,
         cpe=cpe(esp),
-        manufacturer=OrganizationalEntity(name=esp_entry.get("manufacturer", company or "Screenly")),
+        manufacturer=OrganizationalEntity(name=esp_entry["manufacturer"]),
         description=esp_entry.get("description") or None,
         properties=[
             Property(name=k, value=v)
