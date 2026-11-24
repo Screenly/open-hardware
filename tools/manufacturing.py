@@ -1192,7 +1192,9 @@ def cmd_hbom(project_dir, variant, bom, out_json):
     if errors:
         raise Error("HBOM:\n  " + "\n  ".join(errors))
 
-    esp_entry = registry.get(esp, {})
+    esp_entry = registry.get(esp)
+    if not esp_entry:
+        raise Error(f"HBOM: {esp} (ESP_PN_{variant}) is not in the part database")
     top = Component(
         type=ComponentType.DEVICE,
         bom_ref=esp,
