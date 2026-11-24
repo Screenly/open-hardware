@@ -1,0 +1,208 @@
+(footprint "Hirose_DF40HC-3.0-100DS-0.4V_2x50_P0.4mm_Vertical_NoCopper"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Hirose DF40HC(3.0)-100DS-0.4V(51) board-to-board receptacle, 100 positions, 0.4 mm pitch, 3.0 mm stacking height. No copper: the pads are in the RaspberryPi-CM5 footprint. Place at the connector centre of the CM5 footprint with the same rotation. Body per Hirose drawing EDC3-315881-01 rev 6.")
+	(tags "Hirose DF40 DF40HC board to board receptacle 0.4mm 100 pin CM5 Compute Module no copper")
+	(property "Reference" "J?"
+		(at 0 -12.350000000000001 0)
+		(layer "F.Fab")
+		(uuid "a82a2f9d-6256-48b4-b7ea-620d6eaf46c8")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Hirose_DF40HC-3.0-100DS-0.4V_2x50_P0.4mm_Vertical_NoCopper"
+		(at 0 12.350000000000001 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0dcafb99-b65c-469e-9208-d8a4179c822b")
+		(effects
+			(font
+				(size 1.0 1.0)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "62142f27-018c-4e78-baa2-b32900e31c6a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "040d0ee9-fb18-4954-9665-54f2e2dc43f2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.14 -11.55)
+		(end 2.14 -11.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "793cf035-d4f0-41e3-b3cd-34cdfc1b02d1")
+	)
+	(fp_line
+		(start 2.14 -11.55)
+		(end 2.14 11.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a7142495-df0e-4ef2-b231-2b804c4d02e1")
+	)
+	(fp_line
+		(start 2.14 11.55)
+		(end -2.14 11.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7f8b70d4-083b-4c92-9bd5-0b06d6cedd02")
+	)
+	(fp_line
+		(start -2.14 11.55)
+		(end -2.14 -11.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "eb97fbe4-dd20-4674-a3f6-1b6bd3c4c16e")
+	)
+	(fp_line
+		(start -0.87 -11.3)
+		(end 1.47 -11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "64ffb049-6c8f-4c6a-bee7-2b4a1b8b5f52")
+	)
+	(fp_line
+		(start 1.47 -11.3)
+		(end 1.47 11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0dabe153-980f-4b26-abfe-93cd20b98844")
+	)
+	(fp_line
+		(start 1.47 11.3)
+		(end -1.47 11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8a7c6fc3-bee6-4f35-8034-7df2ecc33f26")
+	)
+	(fp_line
+		(start -1.47 11.3)
+		(end -1.47 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d413fe50-e679-47a7-a0ea-72f14df52073")
+	)
+	(fp_line
+		(start -1.47 -10.7)
+		(end -0.87 -11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51bed95f-8169-4658-b717-c3216a024692")
+	)
+	(fp_line
+		(start -1.89 -9.9)
+		(end 1.89 -9.9)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "539a4074-ad82-4542-b716-789272ae0a7f")
+	)
+	(fp_line
+		(start 1.89 -9.9)
+		(end 1.89 9.9)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "b0b1d85a-a4be-400e-8b85-f43d5a50c681")
+	)
+	(fp_line
+		(start 1.89 9.9)
+		(end -1.89 9.9)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "1c25da72-3859-4910-a968-2346f753113a")
+	)
+	(fp_line
+		(start -1.89 9.9)
+		(end -1.89 -9.9)
+		(stroke
+			(width 0.05)
+			(type dash)
+		)
+		(layer "F.Fab")
+		(uuid "1c8a79f0-32fd-4e4e-8ea1-23659f57bb51")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(uuid "13e54023-a12a-46c4-8124-5a5760d27b63")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/DF40HC(3.0)-100DS-0.4V.stp"
+		(offset
+			(xyz 0.01 -0.11 1.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

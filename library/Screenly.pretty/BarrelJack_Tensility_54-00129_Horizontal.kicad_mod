@@ -1,0 +1,331 @@
+(footprint "BarrelJack_Tensility_54-00129_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "DC barrel jack 5.5 x 2.1 mm, through hole, right angle, with switch, Tensility 54-00129. Pads fit the Tensility 54-00129/54-00130 and DC-005 style jacks (e.g. XKB DC-005-5A). Pad positions from the Tensility 54-00129 PCB layout: pin 1 center pin (rear), pin 2 sleeve (middle), pin 3 switch (side).")
+	(property "Reference" "J?"
+		(at 0 -12.1 0)
+		(layer "F.SilkS")
+		(uuid "799c138f-63e0-48cf-8345-a8e9f55d6f1f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BarrelJack_Tensility_54-00129_Horizontal"
+		(at 0 5.8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7773519-c5e0-4e6f-a50e-3b49eac8b543")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f5fc3e3-77ed-47d2-8ff8-0a25021d983f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d95fd793-90c7-4824-aad5-b5c066b7c67d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.6 -2.55)
+		(end -4.6 -8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a67a43e2-37bf-4ddf-b27a-57144a283da6")
+	)
+	(fp_line
+		(start -4.6 3.8)
+		(end -4.6 2.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f6a00d73-09e9-4906-b5f8-bc16af542ed3")
+	)
+	(fp_line
+		(start -4.6 3.8)
+		(end -4.007808 3.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9d11bc50-8891-4ee1-bbb7-7970720fb061")
+	)
+	(fp_line
+		(start 4.584369 3.8)
+		(end 3.992177 3.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cdaf1965-a8f8-40aa-ac76-4e6de432b96a")
+	)
+	(fp_line
+		(start 4.584369 3.8)
+		(end 4.584369 -8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c6466a73-89ce-4691-9850-9724538cf940")
+	)
+	(fp_line
+		(start -4.1 -35.2)
+		(end 4.1 -35.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "67b48d22-4140-4cc4-ba28-acb44c26aa53")
+	)
+	(fp_line
+		(start -4.1 -11.7)
+		(end -4.1 -35.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "3a18a000-285c-4106-a4b4-71b6fa1d3709")
+	)
+	(fp_line
+		(start -2.75 -11.7)
+		(end 2.75 -11.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "4bc8a17b-9280-43e2-9d9e-dc355d39bbe4")
+	)
+	(fp_line
+		(start -2.75 -1.7)
+		(end -2.75 -11.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "e1542de9-7170-4f62-af04-649538f99889")
+	)
+	(fp_line
+		(start -2 -45.2)
+		(end 2 -45.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "3ccefda6-1aed-4d9d-afb9-8a7afc6b9548")
+	)
+	(fp_line
+		(start -2 -35.2)
+		(end -2 -45.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "fbbbc127-0f83-4c43-93cc-2d65570f9b2c")
+	)
+	(fp_line
+		(start 0 -46.2)
+		(end 0 -1.2)
+		(stroke
+			(width 0.05)
+			(type dash_dot)
+		)
+		(layer "Dwgs.User")
+		(uuid "a8bc9b66-5daa-4ff5-b528-038e8330a138")
+	)
+	(fp_line
+		(start 2 -45.2)
+		(end 2 -35.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "79ce57e4-a528-46c6-9bcb-d5b2dd59af63")
+	)
+	(fp_line
+		(start 2 -35.2)
+		(end -2 -35.2)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "e488ec80-ef76-4320-b525-5b4402eb48b9")
+	)
+	(fp_line
+		(start 2.75 -11.7)
+		(end 2.75 -1.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "fdb7ab73-1288-4b1b-9975-de4f0eb220cb")
+	)
+	(fp_line
+		(start 2.75 -1.7)
+		(end -2.75 -1.7)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "7e07105b-adb1-41a1-ae67-c26fa3d6ef52")
+	)
+	(fp_line
+		(start 4.1 -35.2)
+		(end 4.1 -11.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "00141bfd-860a-40d2-964b-1b1341d75fd4")
+	)
+	(fp_line
+		(start 4.1 -11.7)
+		(end -4.1 -11.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "f4c286ee-0d51-4b62-863d-2c1ce06ea29f")
+	)
+	(fp_rect
+		(start -4.8 -9.25)
+		(end 4.9 4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "8686a0b0-2539-4586-aaf8-080186986057")
+	)
+	(fp_line
+		(start -4.5 -10.7)
+		(end 4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f2caa4c3-001c-4ae1-a2a9-29bf5a112621")
+	)
+	(fp_line
+		(start -4.5 3.7)
+		(end -4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "57c0ce9a-ec2e-466f-86d0-5926055550a3")
+	)
+	(fp_line
+		(start -4.5 3.7)
+		(end 4.5 3.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f7b937d0-e59d-4007-8ac8-361906e58e10")
+	)
+	(fp_line
+		(start 4.5 3.7)
+		(end 4.5 -10.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fb129fce-ec74-4e47-bf57-10b45197e7c7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -3.5 90)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 2.9)
+		(size 4.6 2)
+		(drill oval 3.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "273627a3-bf50-465c-b760-135dcd4f67be")
+	)
+	(pad "2" thru_hole oval
+		(at 0 -3)
+		(size 4.6 1.8)
+		(drill oval 3.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "111dcf51-45ec-472c-85ed-b33796e80ba0")
+	)
+	(pad "3" thru_hole oval
+		(at -4.7 0)
+		(size 1.8 4.5)
+		(drill oval 0.8 3.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7b020857-6f30-4934-bc7c-c9c21cca48ae")
+	)
+	(embedded_fonts no)
+	(model "${SCREENLY_LIB}/3d-models/54-00129.step"
+		(offset
+			(xyz 0 10.7 6.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -180)
+		)
+	)
+)

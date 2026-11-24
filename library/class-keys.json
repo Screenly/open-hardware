@@ -1,0 +1,1126 @@
+{
+  "ANT": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "bands": {
+      "required": true,
+      "comparison": "all"
+    },
+    "connector": {
+      "required": true,
+      "comparison": "set"
+    },
+    "gain": {
+      "required": false,
+      "comparison": "min"
+    },
+    "vswr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "cable": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "BAT": {
+    "chemistry": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "size": {
+      "required": true,
+      "comparison": "set"
+    },
+    "voltage": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "capacity": {
+      "required": true,
+      "comparison": "min"
+    },
+    "current": {
+      "required": false,
+      "comparison": "min"
+    },
+    "protection": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "un38_3": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "BJT": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "vce": {
+      "required": true,
+      "comparison": "min"
+    },
+    "ic": {
+      "required": true,
+      "comparison": "min"
+    },
+    "hfe": {
+      "required": false,
+      "comparison": "min"
+    },
+    "power": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q101": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "BUZ": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "drive": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "voltage": {
+      "required": true,
+      "comparison": "range"
+    },
+    "frequency": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "spl": {
+      "required": false,
+      "comparison": "min"
+    },
+    "current": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "CAB": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "length": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "conductors": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "pitch": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "contacts": {
+      "required": false,
+      "comparison": "set"
+    },
+    "shielded": {
+      "required": false,
+      "comparison": "exact"
+    }
+  },
+  "CAP": {
+    "value": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "tolerance": {
+      "required": true,
+      "comparison": "max"
+    },
+    "voltage": {
+      "required": true,
+      "comparison": "min"
+    },
+    "dielectric": {
+      "required": false,
+      "comparison": "set"
+    },
+    "technology": {
+      "required": false,
+      "comparison": "set"
+    },
+    "esr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "ripple": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "CMC": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "impedance": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "current": {
+      "required": true,
+      "comparison": "min"
+    },
+    "dcr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "voltage": {
+      "required": false,
+      "comparison": "min"
+    },
+    "cutoff": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "CON": {
+    "interface": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "current": {
+      "required": false,
+      "comparison": "min"
+    },
+    "voltage": {
+      "required": false,
+      "comparison": "min"
+    },
+    "durability": {
+      "required": false,
+      "comparison": "min"
+    },
+    "plating": {
+      "required": false,
+      "comparison": "set"
+    },
+    "size": {
+      "required": false,
+      "comparison": "set"
+    },
+    "switch": {
+      "required": false,
+      "comparison": "set"
+    },
+    "stack_height": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "DIO": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "vr": {
+      "required": false,
+      "comparison": "min"
+    },
+    "if": {
+      "required": false,
+      "comparison": "min"
+    },
+    "vf": {
+      "required": false,
+      "comparison": "max"
+    },
+    "trr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "vz": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "tolerance": {
+      "required": false,
+      "comparison": "max"
+    },
+    "power": {
+      "required": false,
+      "comparison": "min"
+    },
+    "vrwm": {
+      "required": false,
+      "comparison": "min"
+    },
+    "vclamp": {
+      "required": false,
+      "comparison": "max"
+    },
+    "ppk": {
+      "required": false,
+      "comparison": "min"
+    },
+    "direction": {
+      "required": false,
+      "comparison": "set"
+    },
+    "capacitance": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q101": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "DIS": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "diagonal": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "resolution": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "interface": {
+      "required": true,
+      "comparison": "set"
+    },
+    "touch": {
+      "required": true,
+      "comparison": "set"
+    },
+    "brightness": {
+      "required": false,
+      "comparison": "min"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "FBD": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "impedance": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "current": {
+      "required": true,
+      "comparison": "min"
+    },
+    "dcr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "FET": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "vds": {
+      "required": true,
+      "comparison": "min"
+    },
+    "id": {
+      "required": true,
+      "comparison": "min"
+    },
+    "rds_on": {
+      "required": true,
+      "comparison": "max"
+    },
+    "vgs": {
+      "required": true,
+      "comparison": "max"
+    },
+    "vgs_max": {
+      "required": false,
+      "comparison": "min"
+    },
+    "qg": {
+      "required": false,
+      "comparison": "max"
+    },
+    "power": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q101": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "FUS": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "current": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "voltage": {
+      "required": true,
+      "comparison": "min"
+    },
+    "breaking": {
+      "required": false,
+      "comparison": "min"
+    },
+    "speed": {
+      "required": false,
+      "comparison": "set"
+    },
+    "trip": {
+      "required": false,
+      "comparison": "max"
+    },
+    "resistance": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "IND": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "value": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "tolerance": {
+      "required": true,
+      "comparison": "max"
+    },
+    "irms": {
+      "required": true,
+      "comparison": "min"
+    },
+    "isat": {
+      "required": false,
+      "comparison": "min"
+    },
+    "dcr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "shielding": {
+      "required": false,
+      "comparison": "set"
+    },
+    "srf": {
+      "required": false,
+      "comparison": "min"
+    },
+    "q": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "ITC": {
+    "function": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "vdd": {
+      "required": true,
+      "comparison": "range"
+    },
+    "aec_q100": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "LED": {
+    "color": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "if": {
+      "required": true,
+      "comparison": "min"
+    },
+    "vf": {
+      "required": false,
+      "comparison": "max"
+    },
+    "intensity": {
+      "required": false,
+      "comparison": "min"
+    },
+    "angle": {
+      "required": false,
+      "comparison": "min"
+    },
+    "lens": {
+      "required": false,
+      "comparison": "set"
+    },
+    "aec_q102": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "MCU": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "flash": {
+      "required": true,
+      "comparison": "min"
+    },
+    "ram": {
+      "required": false,
+      "comparison": "min"
+    },
+    "vdd": {
+      "required": true,
+      "comparison": "range"
+    },
+    "aec_q100": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "MIC": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "output": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "port": {
+      "required": true,
+      "comparison": "set"
+    },
+    "vdd": {
+      "required": true,
+      "comparison": "range"
+    },
+    "sensitivity": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "snr": {
+      "required": false,
+      "comparison": "min"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "MOD": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "ram": {
+      "required": false,
+      "comparison": "min"
+    },
+    "storage": {
+      "required": false,
+      "comparison": "min"
+    },
+    "wireless": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "OSC": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "frequency": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "stability": {
+      "required": true,
+      "comparison": "max"
+    },
+    "vdd": {
+      "required": true,
+      "comparison": "range"
+    },
+    "output": {
+      "required": true,
+      "comparison": "set"
+    },
+    "current": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "PWR": {
+    "topology": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "vin_min": {
+      "required": true,
+      "comparison": "max"
+    },
+    "vin_max": {
+      "required": true,
+      "comparison": "min"
+    },
+    "vout": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "iout": {
+      "required": true,
+      "comparison": "min"
+    },
+    "ilimit": {
+      "required": false,
+      "comparison": "max"
+    },
+    "frequency": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "dropout": {
+      "required": false,
+      "comparison": "max"
+    },
+    "iq": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q100": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "RES": {
+    "value": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "tolerance": {
+      "required": true,
+      "comparison": "max"
+    },
+    "power": {
+      "required": true,
+      "comparison": "min"
+    },
+    "voltage": {
+      "required": false,
+      "comparison": "min"
+    },
+    "tempco": {
+      "required": false,
+      "comparison": "max"
+    },
+    "technology": {
+      "required": false,
+      "comparison": "set"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "SNS": {
+    "measures": {
+      "required": true,
+      "comparison": "all"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "interface": {
+      "required": true,
+      "comparison": "set"
+    },
+    "vdd": {
+      "required": true,
+      "comparison": "range"
+    },
+    "address": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "current": {
+      "required": false,
+      "comparison": "max"
+    },
+    "aec_q100": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "SPK": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "impedance": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "power": {
+      "required": true,
+      "comparison": "min"
+    },
+    "spl": {
+      "required": false,
+      "comparison": "min"
+    },
+    "resonance": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "STO": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "capacity": {
+      "required": true,
+      "comparison": "min"
+    },
+    "grade": {
+      "required": false,
+      "comparison": "set"
+    },
+    "speed": {
+      "required": false,
+      "comparison": "all"
+    },
+    "form": {
+      "required": false,
+      "comparison": "set"
+    },
+    "bus": {
+      "required": false,
+      "comparison": "set"
+    },
+    "vdd": {
+      "required": false,
+      "comparison": "range"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "SWC": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "circuit": {
+      "required": true,
+      "comparison": "set"
+    },
+    "action": {
+      "required": false,
+      "comparison": "set"
+    },
+    "current": {
+      "required": false,
+      "comparison": "min"
+    },
+    "voltage": {
+      "required": false,
+      "comparison": "min"
+    },
+    "force": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "height": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "durability": {
+      "required": false,
+      "comparison": "min"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "THR": {
+    "type": {
+      "required": true,
+      "comparison": "set"
+    },
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "conductivity": {
+      "required": false,
+      "comparison": "min"
+    },
+    "thickness": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "resistance": {
+      "required": false,
+      "comparison": "max"
+    },
+    "drawing": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  },
+  "XTL": {
+    "family": {
+      "required": true,
+      "comparison": "pattern"
+    },
+    "frequency": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "tolerance": {
+      "required": true,
+      "comparison": "max"
+    },
+    "stability": {
+      "required": true,
+      "comparison": "max"
+    },
+    "load": {
+      "required": true,
+      "comparison": "exact"
+    },
+    "esr": {
+      "required": false,
+      "comparison": "max"
+    },
+    "drive": {
+      "required": false,
+      "comparison": "min"
+    },
+    "aec_q200": {
+      "required": false,
+      "comparison": "exact"
+    },
+    "temp_min": {
+      "required": false,
+      "comparison": "max"
+    },
+    "temp_max": {
+      "required": false,
+      "comparison": "min"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# The BOM resolver reads the class keys from library/class-keys.json; the key tables in
+# docs/part-library-standard.md are the human-readable copy. Fail when the two disagree.
+name: Class keys
+
+on:
+  push:
+    branches: [master]
+    paths: ["docs/part-library-standard.md", "library/class-keys.json", "tools/manufacturing.py",
+            ".github/workflows/class-keys.yml"]
+  pull_request:
+    paths: ["docs/part-library-standard.md", "library/class-keys.json", "tools/manufacturing.py",
+            ".github/workflows/class-keys.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  class-keys:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/manufacturing.py check-class-keys
