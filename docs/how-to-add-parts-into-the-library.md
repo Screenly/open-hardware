@@ -111,7 +111,16 @@ Then record the part's HBOM attributes (see [Part attributes](bom-standard.md#pa
 tools/partsdb.py attributes <PART NUMBER> --lifecycle <Active|NRND|LTB|Obsolete|Preview|Unknown> --firmware <None|Fixed|Updatable|Unknown> [--country '<Country>'] [--ltb-date <YYYY-MM-DD>]
 ```
 
-Take the lifecycle from the manufacturer or a distributor's product status. Set `--firmware Updatable` for any part with field-updatable firmware, such as a TPM or a module with a bootloader. Give `--country` only when the part is made in one known country. For firmware-bearing parts, also give `--cpe 'cpe:2.3:h:<vendor>:<product>:-:*:*:*:*:*:*:*'` and, when NVD lists the firmware separately, `--firmware-cpe 'cpe:2.3:o:...'`. Use NVD's vendor and product naming where it exists.
+Take the lifecycle from the manufacturer or a distributor's product status. Set `--firmware Updatable` for any part with field-updatable firmware, such as a TPM or a module with a bootloader. Give `--country` only when the part is made in one known country. For firmware-bearing parts, also give `--cpe 'cpe:2.3:h:<vendor>:<product>:-:*:*:*:*:*:*:*'` and, when NVD lists the firmware separately, `--firmware-cpe 'cpe:2.3:o:...'`. Use NVD's vendor and product naming where it exists. Each run sets the date the attributes were last validated; when you have rechecked them and nothing changed, run `tools/partsdb.py attributes <PART NUMBER> --confirm`.
+
+Record each distributor the part can be bought from, the preferred one first (see [Distributor part numbers](bom-standard.md#distributor-part-numbers)). The distributor must already be in the distributor table; check with `tools/partsdb.py distributors list`, and add a new one first:
+
+```
+tools/partsdb.py distributors add <NAME> --website <https URL>
+tools/partsdb.py distributor <PART NUMBER> --name <NAME> --part-number '<distributor part number>' [--link '<product page>'] [--first]
+```
+
+Check that the distributor's page shows exactly the registered manufacturer part number before you add it.
 
 ## 6. Record Stock
 
@@ -162,6 +171,7 @@ KiCad keeps loaded footprints in memory, so a footprint changed on disk is not p
 - [ ] Attributes set for on-board or off-board use
 - [ ] Part number registered with `tools/partsdb.py new`
 - [ ] HBOM attributes recorded with `tools/partsdb.py attributes`
+- [ ] Distributor part numbers recorded with `tools/partsdb.py distributor`
 - [ ] `tools/partsdb.py validate` prints `OK`
 - [ ] Symbol and footprint load in KiCad
 - [ ] Pull request opened, with the datasheet revision

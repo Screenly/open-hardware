@@ -25,19 +25,31 @@ A digital signage player built on the Raspberry Pi Compute Module 5, with the CM
 `create-manufacturing-files.sh` creates every file needed to make a board from its KiCad project, with `kicad-cli`:
 
 ```
-PARTSDB_DIR=<part database> ./create-manufacturing-files.sh <project folder> <variant>
+./create-manufacturing-files.sh --project=<project folder> --variant=<variant> \
+    [--distributors=<distributor>,<distributor>,...] [--strict] [--db=<part database>]
 ```
 
-`PARTSDB_DIR` is needed only in this early stage, while the part database is a local folder.[^partsdb]
+`--db` (or the `PARTSDB_DIR` environment variable) is needed only in this early stage, while the part database is a local folder.[^partsdb]
 
-For example: `./create-manufacturing-files.sh screenly-cm5-player/pcb eMMC`.
+For example: `./create-manufacturing-files.sh --project=screenly-cm5-player/electronics --variant=eMMC --distributors=LCSC,DigiKey`.
+
+| Option | Meaning |
+| ------ | ------- |
+| `--project` | KiCad project folder (required) |
+| `--variant` | Assembly variant (required) |
+| `--distributors` | Optional distributor preference list. For each part, the script picks an approved part that meets the symbol's class key fields, preferring parts sold by distributors earlier in the list, then the design's own part (see [Distributor part numbers](docs/bom-standard.md#distributor-part-numbers)). A part sold by none of them gets its own preferred distributor, reported as a fallback. Without it, the design's parts are kept, each with its own preferred distributor. Names come from the distributor table of the part database (`tools/partsdb.py distributors list`), not case-sensitive. |
+| `--strict` | Stop the run instead of falling back, or when a part has no distributor |
+| `--db` | Part database folder; without it, `PARTSDB_DIR` is used |
+| `--help` | Show the usage |
+
+Options also accept a space instead of `=`, e.g. `--variant eMMC`.
 
 The script runs ERC and DRC first and stops on errors. It writes into `<project folder>/outputs`:
 
 | Output | Content |
 | ------ | ------- |
 | `manufacturing/pcb/<PCB_PN>.zip` | Gerbers, drill files, Gerber job file and fabrication notes, ready to upload to a PCB fab |
-| `manufacturing/assembly/<ESP_PN>.zip` | BOM, HBOM (CycloneDX), pick-and-place files (CSV and KiCad `.pos`), assembly drawing (PDF) and assembly notes |
+| `manufacturing/assembly/<ESP_PN>.zip` | BOM, HBOM (CycloneDX), pick-and-place files (CSV and KiCad `.pos`), assembly drawing (PDF) and assembly notes. The BOM is `<ESP_PN>-bom.csv`; with `--distributors`, the list is added in lowercase, e.g. `<ESP_PN>-bom-lcsc-digikey.csv` |
 | `3d/<project>-<revision>.step.zip` | STEP model of the board |
 
 Requirements:
@@ -52,7 +64,11 @@ Requirements:
 
 Everything is generated from the source files, so fix the design or project settings rather than editing the outputs.
 
-[^partsdb]: The part database will become a remote web service. Only `tools/partsdb.py` will change then, and `PARTSDB_DIR` will be replaced by the service's own settings; the script itself stays the same.
+The ERC and DRC step is also a script of its own, `./check-erc-drc.sh --project=<project folder>`. On pull requests, CI runs it in KiCad 10 for every KiCad project the pull request adds.
+
+The Python tools in `tools/` are formatted and linted with [ruff](https://docs.astral.sh/ruff/), configured in `ruff.toml`: run `ruff format tools` and `ruff check tools` before committing.
+
+[^partsdb]: The part database will become a remote web service. Only `tools/partsdb.py` will change then, and `--db` and `PARTSDB_DIR` will be replaced by the service's own settings; the script itself stays the same.
 
 ## License
 

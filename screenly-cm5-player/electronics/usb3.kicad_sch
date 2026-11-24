@@ -2241,7 +2241,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)"
+		(symbol "Screenly:Resistor 120R 1% 0402 (0402WGF1200TCE)"
 			(pin_numbers
 				(hide yes)
 			)
@@ -2285,7 +2285,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C25079.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2296,7 +2296,7 @@
 					)
 				)
 			)
-			(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
+			(property "Description" "120 Ohm 1% 62.5mW 0402 thick film chip resistor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2329,7 +2329,7 @@
 					)
 				)
 			)
-			(property "MfrPartNum" "0402WGJ0121TCE"
+			(property "MfrPartNum" "0402WGF1200TCE"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2340,7 +2340,7 @@
 					)
 				)
 			)
-			(property "tolerance" "5%"
+			(property "tolerance" "1%"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2417,7 +2417,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "R resistor 120 5% 0402 termination series 0402WGJ0121TCE UNI-ROYAL"
+			(property "ki_keywords" "R resistor 120 1% 0402 termination series 0402WGF1200TCE UNI-ROYAL"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2439,7 +2439,7 @@
 					)
 				)
 			)
-			(symbol "Resistor 120R 5% 0402 (0402WGJ0121TCE)_0_1"
+			(symbol "Resistor 120R 1% 0402 (0402WGF1200TCE)_0_1"
 				(rectangle
 					(start -1.016 -2.54)
 					(end 1.016 2.54)
@@ -2452,7 +2452,7 @@
 					)
 				)
 			)
-			(symbol "Resistor 120R 5% 0402 (0402WGJ0121TCE)_1_1"
+			(symbol "Resistor 120R 1% 0402 (0402WGF1200TCE)_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -9358,7 +9358,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
+		(lib_id "Screenly:Resistor 120R 1% 0402 (0402WGF1200TCE)")
 		(at 97.79 54.61 0)
 		(mirror y)
 		(unit 1)
@@ -9402,7 +9402,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C25079.pdf"
 			(at 97.79 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9413,7 +9413,7 @@
 				)
 			)
 		)
-		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
+		(property "Description" "120 Ohm 1% 62.5mW 0402 thick film chip resistor"
 			(at 97.79 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9446,7 +9446,7 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "0402WGJ0121TCE"
+		(property "MfrPartNum" "0402WGF1200TCE"
 			(at 97.79 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9457,7 +9457,7 @@
 				)
 			)
 		)
-		(property "tolerance" "5%"
+		(property "tolerance" "10%"
 			(at 97.79 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -11057,7 +11057,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Screenly:Resistor 120R 5% 0402 (0402WGJ0121TCE)")
+		(lib_id "Screenly:Resistor 120R 1% 0402 (0402WGF1200TCE)")
 		(at 97.79 123.19 0)
 		(mirror y)
 		(unit 1)
@@ -11101,7 +11101,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25530.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C25079.pdf"
 			(at 97.79 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -11112,7 +11112,7 @@
 				)
 			)
 		)
-		(property "Description" "120 Ohm 5% 62.5mW 0402 thick film chip resistor"
+		(property "Description" "120 Ohm 1% 62.5mW 0402 thick film chip resistor"
 			(at 97.79 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -11145,7 +11145,7 @@
 				)
 			)
 		)
-		(property "MfrPartNum" "0402WGJ0121TCE"
+		(property "MfrPartNum" "0402WGF1200TCE"
 			(at 97.79 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -11156,7 +11156,7 @@
 				)
 			)
 		)
-		(property "tolerance" "5%"
+		(property "tolerance" "10%"
 			(at 97.79 123.19 0)
 			(hide yes)
 			(show_name no)

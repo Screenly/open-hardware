@@ -1,0 +1,45 @@
+# ERC and DRC of the KiCad projects a pull request adds: every folder whose .kicad_pro file is new
+# in the pull request is checked with check-erc-drc.sh. Projects that already exist on the base
+# branch are not checked.
+name: ERC and DRC
+
+on:
+  pull_request:
+    paths: ["**.kicad_pro", "**.kicad_sch", "**.kicad_pcb", "check-erc-drc.sh", ".github/workflows/erc-drc.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    outputs:
+      projects: ${{ steps.find.outputs.projects }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: find
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          projects=$(git diff --name-only --diff-filter=A "$BASE"...HEAD -- '*.kicad_pro' \
+            | xargs -r -n1 dirname | sort -u | jq -R . | jq -cs .)
+          echo "New KiCad projects: $projects"
+          echo "projects=$projects" >> "$GITHUB_OUTPUT"
+
+  check:
+    needs: find
+    if: needs.find.outputs.projects != '[]'
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJSON(needs.find.outputs.projects) }}
+    name: ${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./check-erc-drc.sh --project="${{ matrix.project }}"

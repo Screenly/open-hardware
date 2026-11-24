@@ -1,0 +1,25 @@
+# Lint and format check of the Python tools with ruff, configured in ruff.toml.
+name: Ruff
+
+on:
+  push:
+    branches: [master]
+    paths: ["**.py", "ruff.toml", ".github/workflows/ruff.yml"]
+  pull_request:
+    paths: ["**.py", "ruff.toml", ".github/workflows/ruff.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Same version as the local .venv, so CI and local runs agree.
+      - run: pip install ruff==0.17.6
+      - run: ruff check --output-format=github tools
+      - run: ruff format --check --diff tools

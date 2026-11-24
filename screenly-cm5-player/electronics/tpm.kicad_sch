@@ -1175,7 +1175,7 @@
 					)
 				)
 			)
-			(property "family" "SLB9672XU20FW1624XTMA1"
+			(property "family" "SLB9672?U20FW1624XTMA1"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3360,7 +3360,7 @@
 				)
 			)
 		)
-		(property "family" "SLB9672XU20FW1624XTMA1"
+		(property "family" "SLB9672?U20FW1624XTMA1"
 			(at 146.05 93.98 0)
 			(hide yes)
 			(show_name no)

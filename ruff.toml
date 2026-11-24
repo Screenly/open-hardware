@@ -1,0 +1,9 @@
+# Python formatting and linting for the tools in this repository.
+#   .venv/bin/ruff format tools
+#   .venv/bin/ruff check tools
+line-length = 120
+target-version = "py310"
+
+[lint]
+# pycodestyle, Pyflakes, isort, bugbear, pyupgrade, simplify
+select = ["E", "W", "F", "I", "B", "UP", "SIM"]

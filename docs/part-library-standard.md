@@ -86,7 +86,7 @@ Each key has:
 
 Each key is an individual symbol field with the same name as the key. Every symbol in the Screenly KiCad Part Library carries all keys of its class, filled in from the datasheet of the part the symbol is based on. When the symbol is placed in a design, the fields become the requirements for that instance (see [Class key fields](bom-standard.md#class-key-fields)).
 
-This document is the specification of each class. The design checks and the resolver implement it.
+This document is the specification of each class. The design checks and the resolver implement it. The resolver reads each class's keys, with their Required and Comparison attributes, from `library/class-keys.json`. When you change a key table here, change that file in the same commit; CI checks that the two agree (`tools/manufacturing.py check-class-keys`).
 
 A class that has no definition below cannot be used in designs yet. Classes for parts that are not designed in KiCad are in the [Assembly Part Library Standard](assembly-part-library-standard.md).
 

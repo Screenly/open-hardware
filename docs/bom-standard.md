@@ -24,7 +24,7 @@ This keeps designs valid as parts go out of stock or obsolete. The design never 
 
 Stage 2 needs company stock to choose from. Until that stock is built up, every part would be missing and the resolver would replace the parts already chosen for the design. So the stages are introduced in two phases:
 
-1. **Now: design-stage manufacturing files.** `create-manufacturing-files.sh PROJECT_DIR VARIANT` produces the manufacturing files of one assembly variant directly from the design: the BOM from KiCad's BOM export of the variant, and the [HBOM](#hbom) from that BOM plus the [part attributes](#part-attributes) in the company part database. The parts are the ones chosen in the design (the `PartNumber` of each symbol); stock is not checked.
+1. **Now: design-stage manufacturing files.** `create-manufacturing-files.sh --project=DIR --variant=NAME` produces the manufacturing files of one assembly variant. It already resolves the design: for each assembled instance of the variant, it picks an approved part that meets the instance's [class key fields](#class-key-fields), as in [Find candidates](#resolver), and prefers parts sold by the distributors given with `--distributors` (see [Distributor part numbers](#distributor-part-numbers)). Stock is not checked. The BOM and the [HBOM](#hbom) list the picked parts, with the [part attributes](#part-attributes) from the company part database.
 2. **Later, once company stock exists: Stage 2.** The [resolver](#resolver) and [Order Helper](#order-helper) are implemented as described below. They check stock for the build quantity, pick other approved parts from the part database when stock is short, and propose new parts from distributors when no approved part is available. From then on, the manufacturing BOM and HBOM of a build come from the resolved BOM.
 
 ## Principles
@@ -129,6 +129,7 @@ The company part database is private and is not part of this repository. It is c
 - **Assigned part numbers.** Each Screenly part number, with the manufacturer, manufacturer part number and description of the part it was assigned to. Part numbers are never removed or reassigned.
 - **Company stock.** The quantity per part number and location, including stock held at the contract manufacturer.
 - **Part attributes.** The [part attributes](#part-attributes) the HBOM needs, per part number.
+- **Distributor part numbers.** The [distributors](#distributor-part-numbers) each part is bought from.
 
 Part parameters are not stored in the database. They are the class key fields of the symbols in the [Screenly KiCad Part Library](#screenly-kicad-part-library).
 
@@ -145,7 +146,7 @@ The HBOM needs these attributes for every part that ships. They are kept in the 
 | `CPE`              | CPE 2.3 name of the part (`cpe:2.3:h:...`), for firmware-bearing parts |
 | `FirmwareCPE`      | CPE 2.3 name of its firmware (`cpe:2.3:o:...`), in NVD's naming |
 
-In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date`, `contains_firmware`, `cpe` and `firmware_cpe`, plus `attributes_checked`, the date they were last set. A part without `country_of_origin` has an unknown country of origin. Record a country only when the part is made in one known country; otherwise, the country comes from the shipment and is set per build.
+In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date`, `contains_firmware`, `cpe` and `firmware_cpe`, plus `attributes_validated`, the date they were last confirmed against the manufacturer's or a distributor's data. A part without `country_of_origin` has an unknown country of origin. Record a country only when the part is made in one known country; otherwise, the country comes from the shipment and is set per build.
 
 `ContainsFirmware` values:
 
@@ -156,7 +157,45 @@ In the registry they are the fields `country_of_origin`, `lifecycle`, `ltb_date`
 
 An empty `LifeCycle` or `ContainsFirmware` is treated as `Unknown`. Never default to `None` or `No`.
 
-Distributor data (prices, stock, distributor part numbers) is not stored. It is fetched by manufacturer part number when the job runs.
+### Distributor part numbers
+
+The distributors are kept in a table in the company part database. Each has a single-word name, such as `LCSC` or `DigiKey`, and its website. A distributor is added to the table before any part refers to it, and can only be removed when no part refers to it:
+
+```
+tools/partsdb.py distributors list
+tools/partsdb.py distributors add <NAME> --website <https URL>
+tools/partsdb.py distributors update <NAME> --website <https URL>
+tools/partsdb.py distributors remove <NAME>
+```
+
+Each registry entry can list the distributors the part is bought from, in the field `distributor_info`, set with `tools/partsdb.py distributor`. It is an ordered list, the part's preferred distributor first:
+
+| Key | Value |
+| --- | ----- |
+| `distributor` | A name from the distributor table |
+| `part_number` | The distributor's own part number, e.g. `C307331` (LCSC) or `11-CR2032-ND` (DigiKey) |
+| `link` | Optional product page URL |
+| `validated` | ISO 8601 date the part number was last confirmed to point to this exact part at the distributor |
+
+`validated` is set by the tool whenever an entry is written or re-confirmed. It is not touched by `tools/partsdb.py validate`, which only checks the database format.
+
+`create-manufacturing-files.sh` picks the part of each assembled instance from its candidates (approved parts of the instance's class that fit its footprint and meet its class key fields) and adds the columns `Distributor`, `Distributor part number` and `Link` to the assembly BOM. It takes an optional, comma-separated distributor preference list, e.g. `--distributors=LCSC,DigiKey`. The part is selected using these rules in order:
+
+1. The part sold by the earliest distributor in the list. A part sold by none of them ranks after all others.
+2. The design's own part (the `PartNumber` of the instance).
+3. The part that is a candidate for the most instances, for fewer unique parts.
+4. The lowest `PartNumber`.
+
+So the design's own part is kept unless another candidate is sold by a distributor earlier in the list. For example, the TPM's `family` is `SLB9672?U20FW1624XTMA1`: with `--distributors=LCSC,DigiKey` the script picks the SLB9672AU, which LCSC sells; with `--distributors=DigiKey,LCSC`, the design's SLB9672XU. The script lists every substitution.
+
+- Each BOM line gets the first distributor in the list that the picked part has.
+- If the part has none of them, the part's own preferred distributor is used, and the script reports it as a fallback. With `--strict`, the script stops instead.
+- Without `--distributors`, each part gets its own preferred distributor, and the design's own parts are kept.
+- The distributor list is part of the BOM file name, in lowercase: `--distributors=LCSC,DigiKey` writes `<ESP_PN>-bom-lcsc-digikey.csv`; without the list, the file is `<ESP_PN>-bom.csv`. The assembly README names the list too.
+- A part with no distributor gets empty columns and is reported. With `--strict`, the script stops.
+- The script stops if a required key field of an instance is empty, or if the instance's own part doesn't meet its key fields.
+
+Prices and stock are not stored: they change within weeks and are fetched when needed. Purchase prices will come from the purchase records of [Stage 2](#implementation-phases).
 
 ## Stage 2: Order
 
